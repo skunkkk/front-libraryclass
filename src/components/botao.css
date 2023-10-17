@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Gloock&family=Poppins:wght@200&display=swap');
+
+.container-botao {
+  height: 10vh;
+  width: 60vw;
+  border: 1px solid #f1ebe2;
+  border-radius: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f1ebe2;
+  font-size: 2rem;
+  font-family: 'Poppins', sans-serif;
+}
+
