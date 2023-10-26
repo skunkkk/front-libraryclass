@@ -3,6 +3,7 @@
     width: 100vw;
     display: flex;
     flex-direction: column;
+    background-color: blueviolet;
 
 }
 
@@ -25,3 +26,9 @@
 
 }
 
+.posts{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
