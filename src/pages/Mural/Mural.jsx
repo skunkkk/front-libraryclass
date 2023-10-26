@@ -1,5 +1,7 @@
-import React from 'react'
-import './Mural.css'
+import React from 'react';
+import './Mural.css';
+import Post from '../../components/post/post';
+
 export default function Mural() {
     return (
         <div className='container-mural'>
@@ -7,6 +9,8 @@ export default function Mural() {
                 <h1 className="nome-mural">LibraryClass</h1>
                 <img src="logo.png" alt="" className="logo-mural" />
             </div>
+            <Post/>
+            <Post/>
         </div>
 
 
