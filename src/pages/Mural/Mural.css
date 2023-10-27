@@ -1,22 +1,27 @@
 .container-mural {
-    height: 100vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: blueviolet;
+    background-color: #143788;
 
 }
 
-
+.conteudo-mural{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
 .Titulo-mural{
-    border-bottom: 1px solid black;
+    position: fixed;
+    width: 100%;
+    background-color: #143788;
     height: 14vh;
     display: flex;
     justify-content: center;
 }
 
 .nome-mural{
-    color: #f1ebe2;
+    color: white;
     font-family: "Gloock", serif;
     margin-top: 1.9rem;
 }
@@ -27,8 +32,33 @@
 }
 
 .posts{
-    height: 100vh;
     display: flex;
     align-items: center;
     flex-direction: column;
+    width: 100%;
+}
+
+.sidebar{
+    background: linear-gradient(0deg, rgba(241,235,226,1) 0%, rgba(20,55,128,1) 80%);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 15%;
+    height: 100%;
+    position: fixed;
+}
+
+.sidebar a{
+    padding: 15%;
+}
+.opcoes{
+    color: white;
+    font-size: xx-large;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.opcoes :hover{
+    font-size: small;
 }
