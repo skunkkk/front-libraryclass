@@ -13,7 +13,7 @@ export default function Inicio() {
         <img src="logo.png" alt="" className="logo" />
     </div>
     <div className="conteudo">
-        <h1>Meu perfil</h1>
+        <h1 className="titulo-perfil">Meu perfil</h1>
        
         <div className='box-user'>
             <input type="text" required />

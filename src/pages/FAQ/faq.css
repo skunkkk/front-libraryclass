@@ -1,36 +1,43 @@
-.config-div{
+.faq-div{
     color: #0c0b0b;
-    height: 15vh;
+    height: 30vh;
     width: 100vw;
     border-bottom: 1px solid black;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    padding-left: 2rem;
+    align-content: center;
     font-weight: bold;
     font-size: 1.5rem;
-    flex-direction: row;
-    gap: 1rem;
+
+
+   
 }
 
-.Titulo-config{
+.Titulo-faq{
     border-bottom: 1px solid black;
     height: 14vh;
     display: flex;
     justify-content: center;
 }
 
-.nome-config{
+.nome-faq{
     color: #143788;
     font-family: "Gloock", serif;
     margin-top: 1.9rem;
 }
 
-.logo-config{
+.logo-faq{
     height: 14vh;
 
 }
 
-.config1{
-    width: 70%;
+.txtfaq{
+    font-weight: normal;
+    font-family: "Poppins", sans-serif;
+    color: black;
+    text-align: justify;
+    padding: 0.5rem;
 
 }
+

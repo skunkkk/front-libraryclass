@@ -17,10 +17,7 @@ export default function () {
                     <input type="email" required />
                     <label>CEP</label>
                 </div>
-                <div className='box-user'>
-                    <input type="number" required />
-                    <label>Numero da casa</label>
-                </div>
+             
                 <div className='box-user'>
                     <input type="tel" required />
                     <label>Telefone</label>

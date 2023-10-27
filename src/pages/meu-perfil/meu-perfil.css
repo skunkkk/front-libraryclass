@@ -48,6 +48,9 @@
     flex-direction: column;
 }
 
+.titulo-perfil{
+  color: #f1ebe2;
+}
 
 .botao-login{
     width: 40vw;
