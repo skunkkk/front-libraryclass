@@ -12,8 +12,13 @@ import Faq from './pages/FAQ/faq'
 export default function App() {
   return (
     <div className="container-app">
+<<<<<<< HEAD
 
     <Login/>
+=======
+    
+    <Mural/>
+>>>>>>> 232ecd69b273de18765cbdc3f91381deda9f2419
     </div>
   );
 }

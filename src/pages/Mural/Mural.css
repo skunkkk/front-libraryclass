@@ -9,6 +9,9 @@
 .conteudo-mural{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
     width: 100%;
 }
 .Titulo-mural{
@@ -33,6 +36,7 @@
 
 .posts{
     display: flex;
+    margin-top: 100px;
     align-items: center;
     flex-direction: column;
     width: 100%;
