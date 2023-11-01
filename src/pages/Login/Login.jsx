@@ -9,7 +9,7 @@ export default function () {
                 <img src="logo.png" alt="" className="logo" />
             </div>
             <div className="conteudo">
-                <h1>Logar</h1>
+                <h1 className='logar'>Logar</h1>
                
                 <div className='box-user'>
                     <input type="email" required />
