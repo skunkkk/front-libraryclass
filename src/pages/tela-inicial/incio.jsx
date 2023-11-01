@@ -14,9 +14,9 @@ export default function Inicio() {
         <h2>Para onde deseja ir ?</h2>
         <br />
         <br />
-        <Botao />
+        <Botao nomebotao="Mural"/>
         <br />
-        <Botao />
+        <Botao nomebotao="Library"/>
         <div className="botoes-acesso">
           <p className="cadastre-se">Faça seu cadastro</p>
           <a href="" className="aqui">

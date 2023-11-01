@@ -1,10 +1,10 @@
 import React from 'react'
 import './botao.css'
-export default function () {
+export default function (props) {
   return (
   
 <div className='container-botao'>
-    Botao
+    {props.nomebotao}
 </div>
    
   )

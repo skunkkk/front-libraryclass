@@ -12,7 +12,7 @@ import Faq from './pages/FAQ/faq'
 export default function App() {
   return (
     <div className="container-app">
-    
+
     <Inicio/>
     </div>
   );
