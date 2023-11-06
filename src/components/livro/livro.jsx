@@ -33,6 +33,7 @@ function Example() {
             height={300}
           />
           <p className="sumario">  A menina colecionava borboletas é um livro de crônicas da escritora brasileira Bruna Vieira. De uma maneira simples e singela, Bruna escreve sobre situações que aconteceram e acontecem na sua vida, mas que poderia ser a de qualquer garota, inclusive em qualquer idade ou fase da vida. A identificação com as histórias é inevitável.</p>
+              <button className="botao-status">Ver status do livro</button>
         </Modal.Body>
       </Modal>
     </>

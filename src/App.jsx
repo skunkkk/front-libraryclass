@@ -9,16 +9,15 @@ import InicioLibrary from './pages/inicio-library/inicio-library'
 import Config from './pages/Configuração/configuração'
 import Perfil from './pages/meu-perfil/meu-perfil'
 import Faq from './pages/FAQ/faq'
+import StatusLivro from "./pages/status-lirvro/status-livro";
 export default function App() {
   return (
     <div className="container-app">
-<<<<<<< HEAD
 
-    <Login/>
-=======
+    <Cadastro/>
     
-    <Mural/>
->>>>>>> 232ecd69b273de18765cbdc3f91381deda9f2419
+
+
     </div>
   );
 }
