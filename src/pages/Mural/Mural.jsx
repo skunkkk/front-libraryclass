@@ -11,13 +11,7 @@ export default function Mural() {
     // branco : #f1ebe2
         <div className='container-mural'>
             <div style={{padding : '5%'}}></div>
-            <div class="sidebar" >
-                <p></p>
-                <a className='opcoes'>Meu Perfil</a>
-                <a className='opcoes'>Configurações</a>
-                <a className='opcoes'>Bibliotech</a>
-                <a className='opcoes'>FAQ</a>
-            </div>
+       
             <div className='Titulo-mural'>
             {/* <div class="hamburger-menu">
     <input id="menu__toggle" type="checkbox" />

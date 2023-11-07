@@ -18,6 +18,7 @@ export default function MyRoutes() {
             <MenuH />
 
             <Routes>
+                
                 <Route path="/" element={<Inicio />} />
                 <Route path="/Login" element={<Login />} />
                 <Route path="/Configuracao" element={<Configuração />} />

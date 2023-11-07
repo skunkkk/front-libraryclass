@@ -3,10 +3,12 @@ import "./inicio.css";
 
 import Botao from "../../components/Botao";
 import { Link } from "react-router-dom";
+import MenuH from "../../components/menu-h/MenuH";
 
 export default function Inicio() {
   return (
     <div className="container">
+        
       <div className="Titulo">
         <h1 className="nome">LibraryClass</h1>
         <img src="logo.png" alt="" className="logo" />
