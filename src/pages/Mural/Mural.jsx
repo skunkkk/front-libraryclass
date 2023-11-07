@@ -32,7 +32,7 @@ export default function Mural() {
       <li><a class="menu__item" href="#">FAQ</a></li>
     </ul>
   </div> */}
-  <MenuH />
+  {/* <MenuH /> */}
                 <h1 className="nome-mural">LibraryClass</h1>
                 <img src="logo.png" alt="" className="logo-mural" />
             

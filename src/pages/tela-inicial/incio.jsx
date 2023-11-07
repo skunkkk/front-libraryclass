@@ -2,6 +2,7 @@ import React from "react";
 import "./inicio.css";
 
 import Botao from "../../components/Botao";
+import { Link } from "react-router-dom";
 
 export default function Inicio() {
   return (
@@ -14,17 +15,17 @@ export default function Inicio() {
         <h2>Para onde deseja ir ?</h2>
         <br />
         <br />
-        <Botao nomebotao="Mural"/>
+        <Botao nomebotao="Mural" />
         <br />
-        <Botao nomebotao="Library"/>
+        <Botao nomebotao="Library" />
         <div className="botoes-acesso">
           <p className="cadastre-se">Faça seu cadastro</p>
           <a href="" className="aqui">
-            Aqui
+            <Link to={"/Cadastro"}> Aqui</Link>
           </a>
         </div>
         <div className="botao-login-container">
-          <div className="botao-login">Entrar</div>
+          <div className="botao-login" ><Link to={"/Login"}>Entrar</Link></div>
         </div>
       </div>
     </div>

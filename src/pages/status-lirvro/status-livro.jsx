@@ -1,7 +1,7 @@
 import React from "react";
 import "./status-livro.css";
 
-export default function () {
+export default function StatusLivro() {
   return (
     <div className="container">
       <div className="Titulo">

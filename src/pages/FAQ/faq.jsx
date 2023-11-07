@@ -1,6 +1,6 @@
 import React from 'react'
 import './faq.css'
-export default function configuração() {
+export default function Faq() {
   return (
     <div className='config-container'>
 

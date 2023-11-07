@@ -5,7 +5,7 @@ import Livro from '../../components/livro/livro'
 import Botao from "../../components/Botao";
 import { Button, Form } from "react-bootstrap";
 
-export default function Inicio() {
+export default function InicioLibrary() {
   return (
     <div className="container">
       <div className="Titulo">

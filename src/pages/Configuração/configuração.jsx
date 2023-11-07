@@ -1,6 +1,6 @@
 import React from 'react'
 import './configuração.css'
-export default function configuração() {
+export default function Configuração() {
   return (
     <div className='config-container'>
 

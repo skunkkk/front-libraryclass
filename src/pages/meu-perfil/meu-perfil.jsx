@@ -3,7 +3,7 @@ import "./meu-perfil.css";
 
 import Botao from "../../components/Botao";
 
-export default function Inicio() {
+export default function Perfil() {
   return (
     <div className="container-geral">
         <div className="meuperfil-pc"></div>
