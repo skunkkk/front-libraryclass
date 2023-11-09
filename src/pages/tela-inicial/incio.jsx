@@ -7,27 +7,25 @@ import MenuH from "../../components/menu-h/MenuH";
 
 export default function Inicio() {
   return (
-    <div className="container">
+    <div className="container-tela-inicio">
         
-      <div className="Titulo">
+      <div className="Titulo-tela-inicio">
         <h1 className="nome">LibraryClass</h1>
         <img src="logo.png" alt="" className="logo" />
       </div>
-      <div className="conteudo">
+      <div className="conteudo-tela-inicio">
         <h2>Para onde deseja ir ?</h2>
         <br />
         <br />
         <Botao nomebotao="Mural" />
         <br />
         <Botao nomebotao="Library" />
-        <div className="botoes-acesso">
-          <p className="cadastre-se">Faça seu cadastro</p>
-          <a href="" className="aqui">
-            <Link to={"/Cadastro"}> Aqui</Link>
-          </a>
+        <div className="botoes-acesso-tela-inicio">
+          <p className="cadastre-se">Faça seu cadastro <Link to={"/Cadastro"}> Aqui</Link></p>
+          
         </div>
-        <div className="botao-login-container">
-          <div className="botao-login" ><Link to={"/Login"}>Entrar</Link></div>
+        <div className="botao-login-container-tela-inicio">
+          <div className="botao-login-tela-inicio" ><Link to={"/Login"} style={{textDecoration : 'none'}}>Entrar</Link></div>
         </div>
       </div>
     </div>

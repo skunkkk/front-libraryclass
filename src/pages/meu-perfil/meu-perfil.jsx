@@ -5,38 +5,39 @@ import Botao from "../../components/Botao";
 
 export default function Perfil() {
   return (
-    <div className="container-geral">
-        <div className="meuperfil-pc"></div>
-    <div className='container'>
-    <div className="Titulo">
+    <div className='container-perfil'>
+    <div className="Titulo-perfil">
         <h1 className="nome">LibraryClass</h1>
         <img src="logo.png" alt="" className="logo" />
     </div>
-    <div className="conteudo">
+    <div className="conteudo-perfil">
         <h1 className="titulo-perfil">Meu perfil</h1>
        
         <div className='box-user'>
+        <label>Nome</label>
+
             <input type="text" required />
-            <label>Nome</label>
         </div>
         <div className='box-user'>
+        <label>Idade</label>
+
             <input type="text" required />
-            <label>Idade</label>
         </div>
         <div className='box-user'>
+        <label>Sala</label>
+
             <input type="text" required />
-            <label>Sala</label>
         </div>
 
         <div className='box-user'>
+        <label>E-mail</label>
+
             <input type="email" required />
-            <label>E-mail</label>
         </div>
-        <div className="botao-login">Confirmar</div>
+        <div className="botao-login-perfil">Confirmar</div>
 
     </div>
 
-</div>
 </div>
   );
 }

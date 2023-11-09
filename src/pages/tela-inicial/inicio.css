@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Gloock&family=Poppins:wght@200&display=swap");
 
-.container {
+.container-tela-inicio {
   height: 100vh;
   width: 100vw;
-  background-image: url("../../../public/livro-de-leitura-de-mulher-fria-de-tiro-medio-modified.jpg");
+  background-image: url("../../../public/fundolib.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -13,9 +13,9 @@
   gap: 1rem;
 }
 
-.conteudo {
+.conteudo-tela-inicio {
   margin-bottom: -5rem;
-  height: 70vh;
+  height: 75vh;
   width: 80vw;
   background: rgba(0, 0, 0, 0.6);
   display: flex;
@@ -25,7 +25,7 @@
   flex-direction: column;
 }
 
-.Titulo {
+.Titulo-tela-inicio {
   display: flex;
   flex-direction: row;
   margin-top: -6rem;
@@ -43,6 +43,7 @@
 h2 {
   color: #f1ebe2;
   font-family: "Poppins", sans-serif;
+  padding-top: 100px;
 }
 p {
   color: #f1ebe2;
@@ -50,12 +51,17 @@ p {
   font-family: "Poppins", sans-serif;
 }
 
-.botoes-acesso {
+.botoes-acesso-tela-inicio {
   display: flex;
   flex-direction: row;
   height: 25vh;
   gap: 0.5rem;
 }
+.botao-login-container-tela-inicio :hover{
+  background-color: #f1ebe2;
+  
+}
+
 
 .cadastre-se {
   padding-top: 3rem;
@@ -69,7 +75,7 @@ p {
   color: gray;
   text-decoration: underline;
 }
-.botao-login {
+.botao-login-tela-inicio {
 margin-bottom: 4rem;
   border-radius: 2rem;
   height: 8vh;
