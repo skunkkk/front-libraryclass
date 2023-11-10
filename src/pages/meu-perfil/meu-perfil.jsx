@@ -10,33 +10,31 @@ export default function Perfil() {
         <h1 className="nome">LibraryClass</h1>
         <img src="logo.png" alt="" className="logo" />
     </div>
-    <div className="conteudo-perfil">
-        <h1 className="titulo-perfil">Meu perfil</h1>
-       
-        <div className='box-user'>
-        <label>Nome</label>
-
-            <input type="text" required />
-        </div>
-        <div className='box-user'>
-        <label>Idade</label>
-
-            <input type="text" required />
-        </div>
-        <div className='box-user'>
-        <label>Sala</label>
-
-            <input type="text" required />
-        </div>
-
-        <div className='box-user'>
-        <label>E-mail</label>
-
-            <input type="email" required />
-        </div>
-        <div className="botao-login-perfil">Confirmar</div>
-
+    <div class="center">
+  <h1>Meu Perfil</h1>
+  <form>
+    <div class="inputbox">
+      <input type="text" required="required"/>
+      <span>Email</span>
     </div>
+    <div class="inputbox">
+      <input type="text" required="required"/>
+      <span>Nome</span>
+    </div>
+    <div class="inputbox">
+      <input type="text" required="required"/>
+      <span>Idade</span>
+    </div>
+    <div class="inputbox">
+      <input type="text" required="required"/>
+      <span>Senha</span>
+    </div>
+    <div class="inputbox">
+      <input className="botao-login-perfil"type="button" value="Confirmar"/>
+    </div>
+  </form>
+</div>
+
 
 </div>
   );

@@ -17,16 +17,10 @@ export default function Inicio() {
         <h2>Para onde deseja ir ?</h2>
         <br />
         <br />
-        <Botao nomebotao="Mural" />
+        <Botao nomebotao="Login" />
         <br />
-        <Botao nomebotao="Library" />
-        <div className="botoes-acesso-tela-inicio">
-          <p className="cadastre-se">Faça seu cadastro <Link to={"/Cadastro"}> Aqui</Link></p>
-          
-        </div>
-        <div className="botao-login-container-tela-inicio">
-          <div className="botao-login-tela-inicio" ><Link to={"/Login"} style={{textDecoration : 'none'}}>Entrar</Link></div>
-        </div>
+        <Botao nomebotao="Cadastrar" />
+      
       </div>
     </div>
   );
