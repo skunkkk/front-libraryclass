@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Gloock&family=Poppins:wght@200&display=swap");
+
+.container-perfil {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../../../public/fundolib.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.conteudo-perfil {
+  height: 60%;
+  width: 70%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 1rem;
+  flex-direction: column;
+}
+
+.Titulo-perfil {
+  display: flex;
+  flex-direction: row;
+  margin-top: -6rem;
+}
+.nome {
+  color: #f1ebe2;
+  font-family: "Gloock", serif;
+}
+
+.logo {
+  height: 14vh;
+  margin-top: -2rem;
+}
+
+.box-user{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.meu-perfil{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.titulo-perfil{
+  color: #f1ebe2;
+}
+
+
+
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.center {
+  width: 70%;
+  padding: 50px 50px;
+  background: #00000082;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.center h1 {
+  font-size: 2em;
+  border-left: 5px solid rgb(255, 255, 255);
+  padding: 10px;
+  color: #ffffff;
+  letter-spacing: 5px;
+  margin-bottom: 60px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+.center .inputbox {
+  width: 300px;
+  height: 50px;
+  margin-bottom: 50px;
+}
+.center .inputbox input {
+  
+  top: 0;
+  left: 0;
+  width: 100%;
+  outline: none;
+  background: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2em;
+  color: #ffffff;
+}
+.center .inputbox:last-child {
+  margin-bottom: 0;
+}
+.center .inputbox span {
+  
+  top: 14px;
+  left: 20px;
+  font-size: 1em;
+  transition: 0.6s;
+  font-family: sans-serif;
+  opacity: 0.7;
+}
+.center .inputbox input:focus ~ span,
+.center .inputbox input:valid ~ span {
+  transform: translateX(-13px) translateY(-35px);
+  font-size: 1em;
+  opacity: 0.7;
+  
+}
+.center .inputbox [type="button"] {
+  width: 100%;
+    padding: 2%;
+    color: #ffffff;
+    border: solid 1px;
+    text-align: center;
+    border-radius: 40px;
+    border: 2px solid #ffffff;
+}
+/* 
+@media only screen and (max-width: 600px) {
+  
+  } */
