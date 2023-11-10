@@ -66,14 +66,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: linear-gradient(45deg, greenyellow, dodgerblue);
+  height: 100%;
 }
 .center {
-  position: relative;
+  width: 70%;
   padding: 50px 50px;
   background: #00000082;
   border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 .center h1 {
   font-size: 2em;
@@ -86,13 +88,12 @@ body {
   padding-left: 10px;
 }
 .center .inputbox {
-  position: relative;
   width: 300px;
   height: 50px;
   margin-bottom: 50px;
 }
 .center .inputbox input {
-  position: absolute;
+  
   top: 0;
   left: 0;
   width: 100%;
@@ -107,7 +108,7 @@ body {
   margin-bottom: 0;
 }
 .center .inputbox span {
-  position: absolute;
+  
   top: 14px;
   left: 20px;
   font-size: 1em;
@@ -120,6 +121,7 @@ body {
   transform: translateX(-13px) translateY(-35px);
   font-size: 1em;
   opacity: 0.7;
+  
 }
 .center .inputbox [type="button"] {
   width: 100%;
@@ -130,9 +132,7 @@ body {
     border-radius: 40px;
     border: 2px solid #ffffff;
 }
-
+/* 
 @media only screen and (max-width: 600px) {
-  .center {
-    position: block;
-  }
-  }
+  
+  } */

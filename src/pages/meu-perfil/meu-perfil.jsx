@@ -14,7 +14,7 @@ export default function Perfil() {
   <h1>Meu Perfil</h1>
   <form>
     <div class="inputbox">
-      <input type="text" required="required"/>
+      <input type="email" required="required"/>
       <span>Email</span>
     </div>
     <div class="inputbox">
@@ -22,11 +22,11 @@ export default function Perfil() {
       <span>Nome</span>
     </div>
     <div class="inputbox">
-      <input type="text" required="required"/>
+      <input type="number" required="required"/>
       <span>Idade</span>
     </div>
     <div class="inputbox">
-      <input type="text" required="required"/>
+      <input type="password" required="required"/>
       <span>Senha</span>
     </div>
     <div class="inputbox">

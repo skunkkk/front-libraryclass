@@ -10,6 +10,7 @@ import StatusLivro from './pages/status-lirvro/status-livro';
 import Mural from './pages/Mural/Mural';
 import MenuH from './components/menu-h/MenuH';
 import InicioLibrary from './pages/inicio-library/inicio-library';
+<<<<<<< HEAD
 import CriarEmprestimo from './pages/Emprestimo/CriarEmprestimo';
 import VerEmprestimo from './pages/Emprestimo/VerEmprestimo';
 import VerDevolucoes from './pages/Devolução/VerDevolucoes';
@@ -18,6 +19,9 @@ import InserirDevolucao from './pages/Devolução/InserirDevolucao';
 import VerCategoriaApagar from './pages/Categorias/VerCategoria';
 import Avaliacao from './pages/Avaliacao/Avaliacao';
 
+=======
+import Sessoes from './pages/Sessões/Sessoes';
+>>>>>>> 2cb3aa2c21787bc4ef6ab99d040bd3a68c07c888
 
 export default function MyRoutes() {
     return (
@@ -27,6 +31,7 @@ export default function MyRoutes() {
             <Routes>
                 
                 <Route path="/" element={<Inicio />} />
+                <Route path='/sessoes' element={<Sessoes />}/>
                 <Route path="/Login" element={<Login />} />
                 <Route path="/Configuracao" element={<Configuração />} />
                 <Route path="/Cadastro" element={<Cadastro />} />
