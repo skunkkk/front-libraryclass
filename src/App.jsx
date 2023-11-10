@@ -10,6 +10,8 @@ import Config from './pages/Configuração/configuração'
 import Perfil from './pages/meu-perfil/meu-perfil'
 import Faq from './pages/FAQ/faq'
 import StatusLivro from "./pages/status-lirvro/status-livro";
+import CriarEmprestimo from "./pages/Emprestimo/CriarEmprestimo";
+import VerEmprestimo from './pages/Emprestimo/VerEmprestimo'
 export default function App() {
   return (
     <div className="container-app">

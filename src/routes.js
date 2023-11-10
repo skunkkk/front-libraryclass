@@ -10,6 +10,13 @@ import StatusLivro from './pages/status-lirvro/status-livro';
 import Mural from './pages/Mural/Mural';
 import MenuH from './components/menu-h/MenuH';
 import InicioLibrary from './pages/inicio-library/inicio-library';
+import CriarEmprestimo from './pages/Emprestimo/CriarEmprestimo';
+import VerEmprestimo from './pages/Emprestimo/VerEmprestimo';
+import VerDevolucoes from './pages/Devolução/VerDevolucoes';
+import InserirDevolucao from './pages/Devolução/InserirDevolucao';
+
+import VerCategoriaApagar from './pages/Categorias/VerCategoria';
+import Avaliacao from './pages/Avaliacao/Avaliacao';
 
 
 export default function MyRoutes() {
@@ -28,6 +35,13 @@ export default function MyRoutes() {
                 <Route path="/StatusLivro" element={<StatusLivro />} />
                 <Route path="/Mural" element={<Mural />} />
                 <Route path="/Library" element={<InicioLibrary />} />
+                <Route path="/CriarEmprestimo" element={<CriarEmprestimo />} />
+                <Route path="/VerEmprestimo" element={<VerEmprestimo />} />
+                <Route path="/VerDevolucoes" element={<VerDevolucoes />} />
+                <Route path="/InserirDevolucao" element={<InserirDevolucao />} />
+                <Route path="/VerCategoriaApagar" element={<VerCategoriaApagar />} />
+                <Route path="/Avaliacoes" element={<Avaliacao />} />
+       
             </Routes>
         </BrowserRouter>
     )
