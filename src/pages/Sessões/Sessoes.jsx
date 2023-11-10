@@ -1,12 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "../Sessões/Sessoes.css"
+import axios from 'axios';
 export default function Sessoes() {
+  const[descricao, setDescricao]= useState('');
+  
+
+  function enviarDados(){
+    axios.post('http://127.0.0.1:8000/secoes',{descricao:descricao}).then( response=> console.log(response))
+  }
   return (
     <div className='container-sessoes'>
-        <input type='text' placeholder='categoria'/>
-        <input type='text' placeholder='nome'/>
-        <input type='text' placeholder='id do livro'/>
-        <input type='button' value="Enviar"/>
+      <h1>Criar seção</h1>
+      <label>descrição</label>
+        <input type='text' placeholder='descrição'id='descrição' onChange={(elemento)=>setDescricao(elemento.target.value)}/>
+        <input type='button' onClick={enviarDados} value="Enviar"/>
     </div>
   )
 }

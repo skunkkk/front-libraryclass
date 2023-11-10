@@ -11,6 +11,7 @@ import Mural from './pages/Mural/Mural';
 import MenuH from './components/menu-h/MenuH';
 import InicioLibrary from './pages/inicio-library/inicio-library';
 import Sessoes from './pages/Sessões/Sessoes';
+import VerSessoes from './pages/Sessões/VerSessoes';
 
 export default function MyRoutes() {
     return (
@@ -18,7 +19,7 @@ export default function MyRoutes() {
             <MenuH />
 
             <Routes>
-                
+                <Route path='/verSessoes' element={<VerSessoes />}/>
                 <Route path="/" element={<Inicio />} />
                 <Route path='/sessoes' element={<Sessoes />}/>
                 <Route path="/Login" element={<Login />} />
