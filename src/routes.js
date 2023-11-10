@@ -10,7 +10,7 @@ import StatusLivro from './pages/status-lirvro/status-livro';
 import Mural from './pages/Mural/Mural';
 import MenuH from './components/menu-h/MenuH';
 import InicioLibrary from './pages/inicio-library/inicio-library';
-
+import Sessoes from './pages/Sessões/Sessoes';
 
 export default function MyRoutes() {
     return (
@@ -20,6 +20,7 @@ export default function MyRoutes() {
             <Routes>
                 
                 <Route path="/" element={<Inicio />} />
+                <Route path='/sessoes' element={<Sessoes />}/>
                 <Route path="/Login" element={<Login />} />
                 <Route path="/Configuracao" element={<Configuração />} />
                 <Route path="/Cadastro" element={<Cadastro />} />
