@@ -17,9 +17,9 @@ import InserirDevolucao from './pages/Devolução/InserirDevolucao';
 import VerCategoriaApagar from './pages/Categorias/CriarCategoria';
 import Avaliacao from './pages/Avaliacao/Avaliacao';
 import Sessoes from './pages/Sessões/Sessoes';
-<<<<<<< HEAD
+
 import VerSessoes from './pages/Sessões/VerSessoes';
-=======
+
 import VerUmaCategoria from './pages/Categorias/VerUmaCategoria';
 import EditarCategoria from './pages/Categorias/EditarCategoria';
 import DeletarCategoria from './pages/Categorias/DeletarCategoria';
