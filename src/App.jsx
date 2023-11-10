@@ -16,7 +16,7 @@ export default function App() {
   return (
     <div className="container-app">
 
-    <Cadastro />
+    <Inicio/>
     
 
 

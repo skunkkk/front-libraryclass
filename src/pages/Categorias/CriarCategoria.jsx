@@ -11,6 +11,7 @@ export default function VerCategoriaApagar() {
                 <label>ID seção: </label>
                 <input type="text" />
            </div>
+           
             <button>ver categoria</button>
             <button>apagar categoria</button>
     </div>
