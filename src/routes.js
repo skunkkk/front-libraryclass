@@ -10,8 +10,21 @@ import StatusLivro from './pages/status-lirvro/status-livro';
 import Mural from './pages/Mural/Mural';
 import MenuH from './components/menu-h/MenuH';
 import InicioLibrary from './pages/inicio-library/inicio-library';
+import CriarEmprestimo from './pages/Emprestimo/CriarEmprestimo';
+import VerEmprestimo from './pages/Emprestimo/VerEmprestimo';
+import VerDevolucoes from './pages/Devolução/VerDevolucoes';
+import InserirDevolucao from './pages/Devolução/InserirDevolucao';
+import VerCategoriaApagar from './pages/Categorias/CriarCategoria';
+import Avaliacao from './pages/Avaliacao/Avaliacao';
 import Sessoes from './pages/Sessões/Sessoes';
+<<<<<<< HEAD
 import VerSessoes from './pages/Sessões/VerSessoes';
+=======
+import VerUmaCategoria from './pages/Categorias/VerUmaCategoria';
+import EditarCategoria from './pages/Categorias/EditarCategoria';
+import DeletarCategoria from './pages/Categorias/DeletarCategoria';
+
+>>>>>>> a57c8361679153e83e3a2c24ed1651ac0221a867
 
 export default function MyRoutes() {
     return (
@@ -30,6 +43,17 @@ export default function MyRoutes() {
                 <Route path="/StatusLivro" element={<StatusLivro />} />
                 <Route path="/Mural" element={<Mural />} />
                 <Route path="/Library" element={<InicioLibrary />} />
+                <Route path="/CriarEmprestimo" element={<CriarEmprestimo />} />
+                <Route path="/VerEmprestimo" element={<VerEmprestimo />} />
+                <Route path="/VerDevolucoes" element={<VerDevolucoes />} />
+                <Route path="/InserirDevolucao" element={<InserirDevolucao />} />
+                <Route path="/VerCategoriaApagar" element={<VerCategoriaApagar />} />
+                <Route path="/Avaliacoes" element={<Avaliacao />} />
+                <Route path="/VerUmaCategoria" element={<VerUmaCategoria />}/>
+                <Route path="/EditarCategoria" element={<EditarCategoria />}/>
+                <Route path="/DeletarCategoria" element={<DeletarCategoria />}/>
+       
+       
             </Routes>
         </BrowserRouter>
     )
