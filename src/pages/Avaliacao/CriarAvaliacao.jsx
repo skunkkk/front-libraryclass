@@ -1,6 +1,6 @@
 import React from 'react'
 import './Avaliacao.css'
-export default function Avaliacao() {
+export default function CriarAvaliacoes() {
   return (
     <div className='container-avaliacao'>
          <div className='classInput'>
@@ -8,11 +8,7 @@ export default function Avaliacao() {
                 <input type="text" />
                 <button>Criar avaliação</button>
             </div>
-            <div className='classInput'>
-                <label>Ver avaliacao: </label>
-                <input type="text" />
-                <button>Ver avaliações</button>0
-           </div> 
+           
     </div>
   )
 }

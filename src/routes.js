@@ -14,17 +14,19 @@ import CriarEmprestimo from './pages/Emprestimo/CriarEmprestimo';
 import VerEmprestimo from './pages/Emprestimo/VerEmprestimo';
 import VerDevolucoes from './pages/Devolução/VerDevolucoes';
 import InserirDevolucao from './pages/Devolução/InserirDevolucao';
-import VerCategoriaApagar from './pages/Categorias/CriarCategoria';
-import Avaliacao from './pages/Avaliacao/Avaliacao';
+import CriarCategoria from './pages/Categorias/CriarCategoria';
+import Avaliacao from './pages/Avaliacao/CriarAvaliacao';
 import Sessoes from './pages/Sessões/Sessoes';
-
 import VerSessoes from './pages/Sessões/VerSessoes';
-
 import VerUmaCategoria from './pages/Categorias/VerUmaCategoria';
 import EditarCategoria from './pages/Categorias/EditarCategoria';
 import DeletarCategoria from './pages/Categorias/DeletarCategoria';
+import CriarAvaliacoes from './pages/Avaliacao/CriarAvaliacao';
+import VerAvaliacoes from './pages/Avaliacao/VerAvaliacoes';
+import VerCategoriaApagar from './pages/Categorias/CriarCategoria';
+import VerCategoria from './pages/Categorias/verCategoria';
 
->>>>>>> a57c8361679153e83e3a2c24ed1651ac0221a867
+
 
 export default function MyRoutes() {
     return (
@@ -47,13 +49,14 @@ export default function MyRoutes() {
                 <Route path="/VerEmprestimo" element={<VerEmprestimo />} />
                 <Route path="/VerDevolucoes" element={<VerDevolucoes />} />
                 <Route path="/InserirDevolucao" element={<InserirDevolucao />} />
-                <Route path="/VerCategoriaApagar" element={<VerCategoriaApagar />} />
-                <Route path="/Avaliacoes" element={<Avaliacao />} />
+                <Route path="/CriarCategoria    " element={<CriarCategoria />} />
+                <Route path="/CriarAvaliacoes" element={<CriarAvaliacoes/>} />
                 <Route path="/VerUmaCategoria" element={<VerUmaCategoria />}/>
+                <Route path="/InserirCategoria" element={<VerCategoriaApagar />}/>
+                <Route path="/verCategoria" element={<VerCategoria />}/>
                 <Route path="/EditarCategoria" element={<EditarCategoria />}/>
                 <Route path="/DeletarCategoria" element={<DeletarCategoria />}/>
-       
-       
+                <Route path="/VerAvaliacoes" element={<VerAvaliacoes />}/>
             </Routes>
         </BrowserRouter>
     )
