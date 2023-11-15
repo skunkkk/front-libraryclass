@@ -10,7 +10,7 @@ export default function Mural() {
     //     azul : #143788
     // branco : #f1ebe2
         <div className='container-mural'>
-            <div style={{padding : '5%'}}></div>
+            <div style={{padding : '3%'}}></div>
        
             <div className='Titulo-mural'>
             {/* <div class="hamburger-menu">
@@ -29,18 +29,17 @@ export default function Mural() {
   {/* <MenuH /> */}
                 <h1 className="nome-mural">LibraryClass</h1>
                 <img src="logo.png" alt="" className="logo-mural" />
-            
-            </div>
-            <div class="sidebar" style={{right : 0}} >
+            <details className='adm'><summary>?</summary> <div class="sidebar" style={{right : 0}} >
                 <div>
                 <h3>Dúvidas?</h3>
                 <h4>Faça uma pergunta ao administrador</h4>
                 <input placeholder='Escreva aqui...' />
                 </div>
+            </div></details>
             </div>
+            
 
             <div className='conteudo-mural'>
-
                 <div className='posts'>
                     <Post />
                     <Post />
