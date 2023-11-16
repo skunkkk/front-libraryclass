@@ -7,23 +7,54 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   flex-direction: column;
   gap: 1rem;
 }
-
-.conteudo-cadastro{
-  margin-bottom: -5rem;
-  width: 80vw;
-  background: rgba(0, 0, 0, 0.6);
+.conteudo-cadastro-left{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.692);
   display: flex;
   align-items: center;
   border-radius: 1rem;
   flex-direction: column;
 }
+
+
+  .conteudo-cadastro-right{
+    width: 70%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.397);
+    display: flex;
+    align-items: center;
+    border-radius: 1rem;
+    flex-direction: column;
+  }
+
+  .botao-login-cadastro{
+    height: 7vh;
+  }
+
   
-  .conteudo-cad-cadastro .box-user-cadastro input {
+.inputs-login .box-user-login {
+  width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .inputs-login{
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .inputs-login .box-user-login input {
     padding: 10px 0;
+    width: 50%;
+    padding-left: 10px;
     outline: none;
     border: 0;
     background: transparent;
@@ -33,35 +64,42 @@
     margin-bottom: 30px;
   }
   
-  .conteudo-cadastro .box-user-cadastro label {
+  .inputs-login .box-user-login label {
+    position: absolute;
+    
     top: 0;
-    left: 0;
+    left: 280px;
     padding: 10px 0;
     color: #fff;
     font-size: 16px;
     pointer-events: none;
-    transition: .5s;
+    transition: .2s;
   }
   
-  .conteudo-cadastro .box-user-cadastro input:focus~label {
+  .inputs-login .box-user-login input:focus~label {
     top: -20px;
-    left: 0;
     color: #3EAEF4;
     font-size: 0.9rem;
   }
   
-  .conteudo-cadastro .box-user-cadastro input:valid~label {
+  .inputs-login .box-user-login input:valid~label {
     top: -20px;
-    left: 0;
     color: #3EAEF4;
     font-size: 0.9rem;
   }
 
-  .botao-login-cadastro{
-    height: 7vh;
+
+  .inputs-login{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
 
-
+  .frase{
+    font-size: xx-large;
+  }
 /* 
   @media only screen and (min-width: 992px) {
     
