@@ -25,8 +25,7 @@ import CriarAvaliacoes from './pages/Avaliacao/CriarAvaliacao';
 import VerAvaliacoes from './pages/Avaliacao/VerAvaliacoes';
 import VerCategoriaApagar from './pages/Categorias/CriarCategoria';
 import VerCategoria from './pages/Categorias/verCategoria';
-
-
+import MuralADM from './pages/MuralADM/InserirMural';
 
 export default function MyRoutes() {
     return (
@@ -57,6 +56,7 @@ export default function MyRoutes() {
                 <Route path="/EditarCategoria" element={<EditarCategoria />}/>
                 <Route path="/DeletarCategoria" element={<DeletarCategoria />}/>
                 <Route path="/VerAvaliacoes" element={<VerAvaliacoes />}/>
+                <Route path="/MuralADM" element={<MuralADM />}/>
             </Routes>
         </BrowserRouter>
     )
