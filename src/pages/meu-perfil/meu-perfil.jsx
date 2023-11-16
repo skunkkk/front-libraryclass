@@ -5,36 +5,33 @@ import Botao from "../../components/Botao";
 
 export default function Perfil() {
   return (
-    <div className='container-perfil'>
-    <div className="Titulo-perfil">
+    <div className='container-login'>
+    <div className="Titulo">
         <h1 className="nome">LibraryClass</h1>
         <img src="logo.png" alt="" className="logo" />
     </div>
-    <div class="center">
-  <h1>Meu Perfil</h1>
-  <form>
-    <div class="inputbox">
-      <input type="email" required="required"/>
-      <span>Email</span>
+    <div className="conteudo-login">
+        <h1 className='logar'>Perfil</h1>
+       <div className='inputs-login'>
+        <div className='box-user-login'>
+            <input type="email" required />
+            <label>E-mail</label>
+        </div>
+        <div className='box-user-login'>
+            <input type="text" required />
+            <label>Nome</label>
+        </div>
+        <div className='box-user-login'>
+            <input type="text" required />
+            <label>Endereço</label>
+        </div>
+        <div className='box-user-login'>
+            <input type="tel" required />
+            <label>Telefone</label>
+        </div>
+        </div>
+        <div className="botao-login">Confirmar</div>
     </div>
-    <div class="inputbox">
-      <input type="text" required="required"/>
-      <span>Nome</span>
-    </div>
-    <div class="inputbox">
-      <input type="number" required="required"/>
-      <span>Idade</span>
-    </div>
-    <div class="inputbox">
-      <input type="password" required="required"/>
-      <span>Senha</span>
-    </div>
-    <div class="inputbox">
-      <input className="botao-login-perfil"type="button" value="Confirmar"/>
-    </div>
-  </form>
-</div>
-
 
 </div>
   );

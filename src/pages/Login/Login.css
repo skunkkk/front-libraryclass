@@ -13,19 +13,34 @@
 
 .conteudo-login{
    display: flex;
+   width: 50%;
+   height: 60%;
    flex-direction: column;
+   border-radius: 40px;
    justify-content: center;
    align-items: center;
+   background-color: rgba(0, 0, 0, 0.39);
 }
 
 
 .conteudo-login .box-user-login {
+  width: 100%;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
-  
-  .conteudo-login .box-user-login input {
+  .inputs-login{
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .conteudo-login .box-user-login input {
     padding: 10px 0;
+    width: 50%;
+    padding-left: 10px;
     outline: none;
     border: 0;
     background: transparent;
@@ -37,25 +52,24 @@
   
   .conteudo-login .box-user-login label {
     position: absolute;
+    
     top: 0;
-    left: 0;
+    left: 240px;
     padding: 10px 0;
     color: #fff;
     font-size: 16px;
     pointer-events: none;
-    transition: .5s;
+    transition: .2s;
   }
   
   .conteudo-login .box-user-login input:focus~label {
     top: -20px;
-    left: 0;
     color: #3EAEF4;
     font-size: 0.9rem;
   }
   
   .conteudo-login .box-user-login input:valid~label {
     top: -20px;
-    left: 0;
     color: #3EAEF4;
     font-size: 0.9rem;
   }

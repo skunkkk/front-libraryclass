@@ -1,8 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Gloock&family=Poppins:wght@200&display=swap");
-
-.container-perfil {
-  width: 100vw;
+.container-login{
   height: 100vh;
+  width: 100vw;
   background-image: url("../../../public/fundolib.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -13,125 +11,121 @@
   gap: 1rem;
 }
 
-.conteudo-perfil {
-  height: 60%;
-  width: 70%;
-  background: rgba(0, 0, 0, 0.6);
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  border-radius: 1rem;
-  flex-direction: column;
+.conteudo-login{
+   display: flex;
+   width: 50%;
+   height: 60%;
+   flex-direction: column;
+   border-radius: 40px;
+   justify-content: center;
+   align-items: center;
+   background-color: rgba(0, 0, 0, 0.39);
 }
 
-.Titulo-perfil {
-  display: flex;
-  flex-direction: row;
-  margin-top: -6rem;
-}
-.nome {
-  color: #f1ebe2;
-  font-family: "Gloock", serif;
-}
 
-.logo {
-  height: 14vh;
-  margin-top: -2rem;
-}
-
-.box-user{
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-.meu-perfil{
-    height: 100%;
+.conteudo-login .box-user-login {
+  width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .inputs-login{
     width: 100%;
     display: flex;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
-}
+  }
+  .conteudo-login .box-user-login input {
+    padding: 10px 0;
+    width: 50%;
+    padding-left: 10px;
+    outline: none;
+    border: 0;
+    background: transparent;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  
+  .conteudo-login .box-user-login label {
+    position: absolute;
+    
+    top: 0;
+    left: 240px;
+    padding: 10px 0;
+    color: #fff;
+    font-size: 16px;
+    pointer-events: none;
+    transition: .2s;
+  }
+  
+  .conteudo-login .box-user-login input:focus~label {
+    top: -20px;
+    color: #3EAEF4;
+    font-size: 0.9rem;
+  }
+  
+  .conteudo-login .box-user-login input:valid~label {
+    top: -20px;
+    color: #3EAEF4;
+    font-size: 0.9rem;
+  }
 
-.titulo-perfil{
-  color: #f1ebe2;
-}
+  .botao-login{
+    margin-top: 2rem;
+    width: 20vw;
+  }
 
-
-
-
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  .logar{
+    color: #fff;
+  }
+/* 
+.inputs-login{
+  width: 100%;
   display: flex;
+  align-items: center;
   justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-.center {
-  width: 70%;
-  padding: 50px 50px;
-  background: #00000082;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
   flex-direction: column;
 }
-.center h1 {
-  font-size: 2em;
-  border-left: 5px solid rgb(255, 255, 255);
-  padding: 10px;
-  color: #ffffff;
-  letter-spacing: 5px;
-  margin-bottom: 60px;
-  font-weight: bold;
+.center .box-user-login input {
+  padding: 10px 0;
+  width: 100%;
   padding-left: 10px;
-}
-.center .inputbox {
-  width: 300px;
-  height: 50px;
-  margin-bottom: 50px;
-}
-.center .inputbox input {
-  
-  top: 0;
-  left: 0;
-  width: 100%;
   outline: none;
-  background: none;
-  padding: 10px;
-  border-radius: 10px;
-  font-size: 1.2em;
-  color: #ffffff;
+  border: 0;
+  background: transparent;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 30px;
 }
-.center .inputbox:last-child {
-  margin-bottom: 0;
-}
-.center .inputbox span {
+
+.center .box-user-login label {
+  position: absolute;
   
-  top: 14px;
-  left: 20px;
-  font-size: 1em;
-  transition: 0.6s;
-  font-family: sans-serif;
-  opacity: 0.7;
+
+  left: 900px;
+  padding: 10px 0;
+  color: #fff;
+  font-size: 16px;
+  pointer-events: none;
+  transition: .2s;
 }
-.center .inputbox input:focus ~ span,
-.center .inputbox input:valid ~ span {
-  transform: translateX(-13px) translateY(-35px);
-  font-size: 1em;
-  opacity: 0.7;
-  
+
+.center .box-user-login input:focus~label {
+  top: -20px;
+  color: #3EAEF4;
+  font-size: 0.9rem;
 }
-.center .inputbox [type="button"] {
-  width: 100%;
-    padding: 2%;
-    color: #ffffff;
-    border: solid 1px;
-    text-align: center;
-    border-radius: 40px;
-    border: 2px solid #ffffff;
-}
+
+.center .box-user-login input:valid~label {
+  top: -20px;
+  color: #3EAEF4;
+  font-size: 0.9rem;
+} */
 /* 
 @media only screen and (max-width: 600px) {
   

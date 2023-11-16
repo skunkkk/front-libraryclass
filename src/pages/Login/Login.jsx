@@ -9,8 +9,8 @@ export default function () {
                 <img src="logo.png" alt="" className="logo" />
             </div>
             <div className="conteudo-login">
-                <h1 className='logar'>Logar</h1>
-               
+                <h1 className='logar'>Login</h1>
+               <div className='inputs-login'>
                 <div className='box-user-login'>
                     <input type="email" required />
                     <label>E-mail</label>
@@ -18,6 +18,7 @@ export default function () {
                 <div className='box-user-login'>
                     <input type="password" required />
                     <label>Senha</label>
+                </div>
                 </div>
                 <div className="botao-login">Entrar</div>
             </div>

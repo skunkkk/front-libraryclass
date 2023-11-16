@@ -11,7 +11,7 @@ export default function MenuH() {
       </label>
 
       <ul class="menu__box">
-        <div style={{padding : '5%'}}></div>
+        <div style={{padding : '10%'}}></div>
         <li><a class="menu__item" href="#"><Link to={"/Perfil"}>Meu Perfil</Link></a></li>
         <li><a class="menu__item" href="#"><Link to={"/Configuracao"}>Configurações</Link></a></li>
         <li><a class="menu__item" href="#"><Link to={"/Library"}>Bibliotech</Link></a></li>
