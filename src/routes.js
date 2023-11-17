@@ -37,6 +37,7 @@ import InserirFicha from './pages/FichasLivros/InserirFicha';
 import VerFichas from './pages/FichasLivros/VerFichas';
 import VerUnicaFicha from './pages/FichasLivros/VerUnicaFicha';
 
+import CriarAutor from './pages/Autor/CriarAutor';
 export default function MyRoutes() {
     return (
         <BrowserRouter>
@@ -54,6 +55,7 @@ export default function MyRoutes() {
                 <Route path="/StatusLivro" element={<StatusLivro />} />
                 <Route path="/Mural" element={<Mural />} />
                 <Route path="/Library" element={<InicioLibrary />} />
+                <Route path="/Sessoes" element={<Sessoes />} />
                 <Route path="/CriarEmprestimo" element={<CriarEmprestimo />} />
                 <Route path="/VerEmprestimo" element={<VerEmprestimo />} />
                 <Route path="/VerDevolucoes" element={<VerDevolucoes />} />
@@ -78,5 +80,6 @@ export default function MyRoutes() {
 
             </Routes >
         </BrowserRouter >
+              
     )
 }

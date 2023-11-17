@@ -17,9 +17,9 @@ export default function Inicio() {
         <h2>Para onde deseja ir ?</h2>
         <br />
         <br />
-        <Botao nomebotao="Login" />
+        <Botao nome="Login" rota={'/login'} />
         <br />
-        <Botao nomebotao="Cadastrar" />
+        <Botao nome="Cadastrar" rota={'/Cadastro'}/>
       
       </div>
     </div>
