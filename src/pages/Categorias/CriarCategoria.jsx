@@ -13,7 +13,7 @@ export default function CriarCategoria() {
   }
 
   function enviaDados() {
-    axios.post('http://127.0.0.1:8000/categorias',{descricao_categoria:descricao , id_secao:idSecao}).then( response=> history("/VerCategoria"))
+    axios.post('http://127.0.0.1:8000/categorias',{descricao_categoria:descricao , id_secao:idSecao}).then(response=> history("/VerCategoria"))
   }
 
   return (

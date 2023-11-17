@@ -1,7 +1,7 @@
 import React from 'react';
 import './Login.css';
 
-export default function () {
+export default function Login () {
     return (
         <div className='container-login'>
             <div className="Titulo">

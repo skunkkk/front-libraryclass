@@ -27,7 +27,7 @@ function apagar(id_enviado){
             <tr><td> {elemento.id_categorias}</td><td>{elemento.descricao_categoria}</td> <td>{elemento.id_secao}</td> <td><button onClick={()=>{apagar(elemento.id_categorias)}}>Apagar</button></td></tr>
             )}
         </table>
-                <Link to={"/InserirCategoria"}>ir para criar categoria</Link>
+                <Link to={"/CriarAvaliacoes"}>ir para criar avaliação</Link>
     </div>
   )
 }

@@ -60,7 +60,7 @@ export default function MyRoutes() {
                 <Route path="/VerEmprestimo" element={<VerEmprestimo />} />
                 <Route path="/VerDevolucoes" element={<VerDevolucoes />} />
                 <Route path="/InserirDevolucao" element={<InserirDevolucao />} />
-                <Route path="/CriarCategoria    " element={<CriarCategoria />} />
+                <Route path="/CriarCategoria" element={<CriarCategoria />} />
                 <Route path="/CriarAvaliacoes" element={<CriarAvaliacoes />} />
                 <Route path="/VerUmaCategoria" element={<VerUmaCategoria />} />
                 <Route path="/InserirCategoria" element={<VerCategoriaApagar />} />
