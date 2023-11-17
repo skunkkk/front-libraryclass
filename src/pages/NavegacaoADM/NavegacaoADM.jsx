@@ -16,7 +16,7 @@ export default function NavegacaoADM() {
           <td><Link to={"/"} ><button className='button-adm'>Fichas Livros</button></Link></td>
         </tr>
         <tr>
-          <td><Link to={"/"} ><button className='button-adm'>Emprestimos</button></Link></td>
+          <td><Link to={"/CriarEmprestimo"} ><button className='button-adm'>Emprestimos</button></Link></td>
           <td><Link to={"/"} ><button className='button-adm'>Devoluções</button></Link></td>
           <td><Link to={"/CriarCategoria"} ><button className='button-adm'>Categorias</button></Link></td>
 

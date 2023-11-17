@@ -1,25 +1,34 @@
 import React from 'react'
 import './VerEmprestimo.css'
+import { Link } from 'react-router-dom'
 export default function VerEmprestimo() {
     return (
         <div className='container-veremprestimo'>
-            <div className='classInput'>
-                <label>ISBN: </label>
-                <input type="text" />
+            <div className='navbar'>
+                <Link to={'/CriarEmprestimo'}><p>Criar emprestimo  </p></Link>
+                <p>Ver emprestio</p>
+                <Link to={'/NavegacaoADM'}><p>Voltar</p></Link>
             </div>
-            <div className='classInput'>
-                <label>Usuario: </label>
-                <input type="text" />
-            </div>
-            <div className='classInput'>
-                <label>Data: </label>
-                <input type="text" />
-            </div>
-            <div className='classInput'>
-                <label>Observação: </label>
-                <input type="text" />
-            </div>
-            <button>Ver</button>
+            <box className="box1">
+                <div className='box-msgmurais'>
+
+                    <div className="msgmural">
+
+                    </div>
+                    <div className="msgmural">
+
+                    </div>
+                    <div className="msgmural">
+
+                    </div>
+                    <div className="msgmural">
+
+                    </div>
+                    <div className="msgmural">
+
+                    </div>
+                </div>
+            </box>
         </div>
     )
 }
