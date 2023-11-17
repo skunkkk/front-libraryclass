@@ -39,6 +39,11 @@ import VerUnicaFicha from './pages/FichasLivros/VerUnicaFicha';
 
 import CriarAutor from './pages/Autor/CriarAutor';
 import VerMural from './pages/MuralADM/VerMural';
+
+import EditarLivro from './pages/Livro/EditarLivro';
+import InserirLivro from './pages/Livro/InserirLivro';
+import VerLivro from './pages/Livro/VerLivro';
+
 export default function MyRoutes() {
     return (
         <BrowserRouter>
@@ -78,6 +83,10 @@ export default function MyRoutes() {
 
                 < Route path='/InserirReservas' element={<InserirReservas />} />
                 < Route path='/VerMural' element={<VerMural />} />
+                < Route path='/EditarLivro' element={<EditarLivro />} />
+                < Route path='/InserirLivro' element={<InserirLivro />} />
+                < Route path='/VerLivro' element={<VerLivro />} />
+
 
 
             </Routes >

@@ -1,5 +1,5 @@
 body{
-    background-color: #36a9a9;
+    background-color: #143788 ;
     align-items: center;
     text-align: center;
     justify-content: center;
@@ -23,7 +23,7 @@ body{
 }
 
 .button-adm{
-    background-color: #143788;
+    background-color:  #36a9a9;
     color: white;
     width: 95%;
     border: none;
