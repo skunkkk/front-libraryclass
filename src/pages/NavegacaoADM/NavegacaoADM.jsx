@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 export default function NavegacaoADM() {
   return (
     <div className='container-navegacaoADM'>
-      <table>
+      <table className='tabela-adm'>
         <tr>
           <td><Link to={"/Sessoes"} ><button className='button-adm'>  Seções </button></Link></td>
           <td><Link to={"/"} ><button className='button-adm'>Reservas</button></Link></td>
@@ -16,7 +16,7 @@ export default function NavegacaoADM() {
           <td><Link to={"/"} ><button className='button-adm'>Fichas Livros</button></Link></td>
         </tr>
         <tr>
-          <td><Link to={"/"} ><button className='button-adm'>Emprestimos</button></Link></td>
+          <td><Link to={"/CriarEmprestimo"} ><button className='button-adm'>Emprestimos</button></Link></td>
           <td><Link to={"/"} ><button className='button-adm'>Devoluções</button></Link></td>
           <td><Link to={"/CriarCategoria"} ><button className='button-adm'>Categorias</button></Link></td>
 
@@ -24,11 +24,12 @@ export default function NavegacaoADM() {
         <tr>
           <td><Link to={"/CriarAvaliacoes"} ><button className='button-adm'>Avaliações Periódicas</button></Link></td>
           <td><Link to={"/CriarAutor"} ><button className='button-adm'>Autor</button></Link></td>
+          <td><Link to={"/Login"} ><button className='button-adm'>Sair</button></Link></td>
 
         </tr>
-        <Link to={"/Login"} ><button className='button-adm'>Sair</button></Link>
 
       </table>
+
     </div>
   )
 }

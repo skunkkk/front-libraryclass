@@ -1,20 +1,38 @@
+body{
+    background-color: #143788 ;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
 .container-navegacaoADM{
     display: flex;
     height: 100vh;
     width: 100vw;
     justify-content: center;
-  
     text-align: center;
-    background-color: rgb(129, 121, 121);
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.tabela-adm{
+    width: 90%;
+    height: 90%;
+
 }
 
 .button-adm{
-    background-color: rgb(58, 58, 75);
+    background-color:  #36a9a9;
     color: white;
-    width: 100%;
+    width: 95%;
     border: none;
-    height: 100%;
+    height: 90%;
+    font-size: xx-large;
+    font-weight: bold;
+    
 }
+
 
 
 
