@@ -7,7 +7,8 @@ export default function InserirLivro() {
     <input type='text' placeholder="Inserir ISBN do Livro" />
 
 <input type='text' placeholder='Inserir Titulo Livro...'/>
-
+<input type='text' placeholder='Inserir Foto Livro...'/>
+<input type='text' placeholder='Inserir ID sessão...'/>
 
 <input type='text' placeholder='Inserir Sinopse Livro...'/>
 <input type='file' />

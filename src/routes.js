@@ -78,6 +78,7 @@ export default function MyRoutes() {
                 <Route path='/NavegacaoADM' element={<NavegacaoADM />} />
                 <Route path='/VerPublicacao' element={<VerPublicacao />} />
                 <Route path='/InserirPublicacao' element={<InserirPublicacao />} />
+                <Route path='/VerLivro' element={<VerLivro />} />
 
                 < Route path='/VerReservas' element={<VerReservas />} />
 
