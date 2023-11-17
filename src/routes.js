@@ -27,6 +27,7 @@ import VerCategoriaApagar from './pages/Categorias/CriarCategoria';
 import VerCategoria from './pages/Categorias/verCategoria';
 import MuralADM from './pages/MuralADM/InserirMural';
 import NavegacaoADM from './pages/NavegacaoADM/NavegacaoADM';
+import CriarAutor from './pages/Autor/CriarAutor';
 export default function MyRoutes() {
     return (
         <BrowserRouter>
@@ -44,11 +45,12 @@ export default function MyRoutes() {
                 <Route path="/StatusLivro" element={<StatusLivro />} />
                 <Route path="/Mural" element={<Mural />} />
                 <Route path="/Library" element={<InicioLibrary />} />
+                <Route path="/Sessoes" element={<Sessoes />} />
                 <Route path="/CriarEmprestimo" element={<CriarEmprestimo />} />
                 <Route path="/VerEmprestimo" element={<VerEmprestimo />} />
                 <Route path="/VerDevolucoes" element={<VerDevolucoes />} />
                 <Route path="/InserirDevolucao" element={<InserirDevolucao />} />
-                <Route path="/CriarCategoria    " element={<CriarCategoria />} />
+                <Route path='/CriarCategoria'element={<CriarCategoria />}/>
                 <Route path="/CriarAvaliacoes" element={<CriarAvaliacoes/>} />
                 <Route path="/VerUmaCategoria" element={<VerUmaCategoria />}/>
                 <Route path="/InserirCategoria" element={<VerCategoriaApagar />}/>
@@ -58,6 +60,8 @@ export default function MyRoutes() {
                 <Route path="/VerAvaliacoes" element={<VerAvaliacoes />}/>
                 <Route path="/MuralADM" element={<MuralADM />}/>
                 <Route path='/NavegacaoADM'element={<NavegacaoADM />}/>
+                <Route path='/CriarAutor'element={<CriarAutor />}/>
+                
             </Routes>
         </BrowserRouter>
     )

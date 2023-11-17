@@ -4,7 +4,7 @@ import axios from "axios";
 import { Link, useNavigate  } from 'react-router-dom';
 
 
-export default function VerCategoriaApagar() {
+export default function CriarCategoria() {
   const [descricao, setDescricao] = useState("");
   const [idSecao, setIdSecao] = useState(0);
   let history = useNavigate();
