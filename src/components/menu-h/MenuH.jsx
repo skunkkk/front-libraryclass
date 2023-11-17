@@ -14,8 +14,9 @@ export default function MenuH() {
         <div style={{padding : '10%'}}></div>
         <li><a class="menu__item" href="#"><Link to={"/Perfil"}>Meu Perfil</Link></a></li>
         <li><a class="menu__item" href="#"><Link to={"/Configuracao"}>Configurações</Link></a></li>
-        <li><a class="menu__item" href="#"><Link to={"/Library"}>Bibliotech</Link></a></li>
-        <li><a class="menu__item" href="#"><Link to={"/FAQ"}>FAQ</Link></a></li>
+        <li><a class="menu__item" href="#"><Link to={"/Mural  "}>Mural</Link></a></li>
+        <li><a class="menu__item" href="#"><Link to={"/Library"}>LibraryClass</Link></a></li>
+        <li><a class="menu__item" href="#"><Link to={"/FAQ"}>Ajuda</Link></a></li>
       </ul>
     </div>
   )

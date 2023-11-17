@@ -45,6 +45,10 @@ h2 {
   font-family: "Poppins", sans-serif;
   padding-top: 100px;
 }
+
+.h2-inicio{
+  color: white;
+}
 p {
   color: #f1ebe2;
   font-size: 1.2rem;

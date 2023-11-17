@@ -19,10 +19,11 @@
     height: 14vh;
     display: flex;
     justify-content: center;
+    background-color: #143788;
 }
 
 .nome-faq{
-    color: #143788;
+    color: white;
     font-family: "Gloock", serif;
     margin-top: 1.9rem;
 }
