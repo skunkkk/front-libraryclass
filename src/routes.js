@@ -27,15 +27,25 @@ import VerCategoriaApagar from './pages/Categorias/CriarCategoria';
 import VerCategoria from './pages/Categorias/verCategoria';
 import MuralADM from './pages/MuralADM/InserirMural';
 import NavegacaoADM from './pages/NavegacaoADM/NavegacaoADM';
+import InserirPublicacao from './pages/Publicacao/InserirPublicacao';
+import VerPublicacao from './pages/Publicacao/VerPublicacao';
+
+import InserirReservas from './pages/Reservas/InserirReservas';
+import VerReservas from './pages/Reservas/VerReservas';
+
+import InserirFicha from './pages/FichasLivros/InserirFicha';
+import VerFichas from './pages/FichasLivros/VerFichas';
+import VerUnicaFicha from './pages/FichasLivros/VerUnicaFicha';
+
 export default function MyRoutes() {
     return (
         <BrowserRouter>
             <MenuH />
 
             <Routes>
-                <Route path='/verSessoes' element={<VerSessoes />}/>
+                <Route path='/verSessoes' element={<VerSessoes />} />
                 <Route path="/" element={<Inicio />} />
-                <Route path='/sessoes' element={<Sessoes />}/>
+                <Route path='/sessoes' element={<Sessoes />} />
                 <Route path="/Login" element={<Login />} />
                 <Route path="/Configuracao" element={<Configuração />} />
                 <Route path="/Cadastro" element={<Cadastro />} />
@@ -49,16 +59,24 @@ export default function MyRoutes() {
                 <Route path="/VerDevolucoes" element={<VerDevolucoes />} />
                 <Route path="/InserirDevolucao" element={<InserirDevolucao />} />
                 <Route path="/CriarCategoria    " element={<CriarCategoria />} />
-                <Route path="/CriarAvaliacoes" element={<CriarAvaliacoes/>} />
-                <Route path="/VerUmaCategoria" element={<VerUmaCategoria />}/>
-                <Route path="/InserirCategoria" element={<VerCategoriaApagar />}/>
-                <Route path="/verCategoria" element={<VerCategoria />}/>
-                <Route path="/EditarCategoria" element={<EditarCategoria />}/>
-                <Route path="/DeletarCategoria" element={<DeletarCategoria />}/>
-                <Route path="/VerAvaliacoes" element={<VerAvaliacoes />}/>
-                <Route path="/MuralADM" element={<MuralADM />}/>
-                <Route path='/NavegacaoADM'element={<NavegacaoADM />}/>
-            </Routes>
-        </BrowserRouter>
+                <Route path="/CriarAvaliacoes" element={<CriarAvaliacoes />} />
+                <Route path="/VerUmaCategoria" element={<VerUmaCategoria />} />
+                <Route path="/InserirCategoria" element={<VerCategoriaApagar />} />
+                <Route path="/verCategoria" element={<VerCategoria />} />
+                <Route path="/EditarCategoria" element={<EditarCategoria />} />
+                <Route path="/DeletarCategoria" element={<DeletarCategoria />} />
+                <Route path="/VerAvaliacoes" element={<VerAvaliacoes />} />
+                <Route path="/MuralADM" element={<MuralADM />} />
+                <Route path='/NavegacaoADM' element={<NavegacaoADM />} />
+                <Route path='/VerPublicacao' element={<VerPublicacao />} />
+                <Route path='/InserirPublicacao' element={<InserirPublicacao />} />
+
+                < Route path='/VerReservas' element={<VerReservas />} />
+
+                < Route path='/InserirReservas' element={<InserirReservas />} />
+
+
+            </Routes >
+        </BrowserRouter >
     )
 }

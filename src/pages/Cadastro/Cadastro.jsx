@@ -8,47 +8,43 @@ export default function Cadastro() {
                 <h1 className="nome">LibraryClass</h1>
                 <img src="logo.png" alt="" className="logo" />
             </div>
-            <div style={{ display: 'flex', width: '100%', height: '90%', flexDirection: 'row' }}>
-                <div className="conteudo-cadastro-left">
+                <div className="conteudo-cadastro">
                     <h2 style={{ color: 'white', fontSize: '50px' }}>Cadastro</h2>
-                    <div className='inputs-login'>
-                        <div className='box-user-login'>
+                    <div className='inputs-cadastro'>
+                        <div className='box-user-cadastro'>
                             <input type="email" required />
                             <label>E-mail</label>
                         </div>
-                        <div className='box-user-login'>
+                        <div className='box-user-cadastro'>
                             <input type="text" required />
                             <label>Nome</label>
                         </div>
-                        <div className='box-user-login'>
+                        <div className='box-user-cadastro'>
                             <input type="text" required />
                             <label>Endereço</label>
                         </div>
-                        <div className='box-user-login'>
+                        <div className='box-user-cadastro'>
                             <input type="tel" required />
                             <label>Telefone</label>
                         </div>
-                        <div className='box-user-login'>
+                        <div className='box-user-cadastro'>
                             <input type="password" required />
                             <label>Senha</label>
                         </div>
-                        <div className='box-user-login'>
+                        <div className='box-user-cadastro'>
                             <input type="number" required />
                             <label>CEP</label>
                         </div>
-                        <div className='box-user-login'>
+                        <div className='box-user-cadastro'>
                             <input type="number" required />
                             <label>Nº Casa</label>
                         </div>
-
+                        <input type='button' value="Cadastrar" className='botao-cadastro'/>
                     </div>
                 </div>
 
-                <div className="conteudo-cadastro-right">
-                <img src={iconler} alt="" style={{ height: "700px", width: "700px", position: 'absolute', right: '400px' }} />
-                <p className='frase'>"Um Livro é um presente que você sempre pode abrir de novo."</p>
-                </div>
-            </div>
+           
+            
         </div>
     )
 }

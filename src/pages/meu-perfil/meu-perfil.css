@@ -52,7 +52,6 @@
   
   .conteudo-login .box-user-login label {
     position: absolute;
-    
     top: 0;
     left: 240px;
     padding: 10px 0;
@@ -81,6 +80,7 @@
 
   .logar{
     color: #fff;
+    font-size: 50px;
   }
 /* 
 .inputs-login{
@@ -126,7 +126,22 @@
   color: #3EAEF4;
   font-size: 0.9rem;
 } */
-/* 
+
 @media only screen and (max-width: 600px) {
+  .conteudo-login{
+    width: 100%;
+  }
+
+  .conteudo-login .box-user-login label{
+    left: 50px;
+  }
+  .conteudo-login .box-user-login input{
+    width: 80%;
+  }
   
-  } */
+
+  .botao-login{
+    width: 50vw;
+  }
+
+  }
