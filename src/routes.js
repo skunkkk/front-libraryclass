@@ -38,6 +38,7 @@ import VerFichas from './pages/FichasLivros/VerFichas';
 import VerUnicaFicha from './pages/FichasLivros/VerUnicaFicha';
 
 import CriarAutor from './pages/Autor/CriarAutor';
+import VerMural from './pages/MuralADM/VerMural';
 export default function MyRoutes() {
     return (
         <BrowserRouter>
@@ -76,6 +77,7 @@ export default function MyRoutes() {
                 < Route path='/VerReservas' element={<VerReservas />} />
 
                 < Route path='/InserirReservas' element={<InserirReservas />} />
+                < Route path='/VerMural' element={<VerMural />} />
 
 
             </Routes >
