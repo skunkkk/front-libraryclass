@@ -50,7 +50,7 @@ export default function Cadastro() {
                         </div>
                         <div className='box-user-cadastro'>
                             <input type="text" required onChange={(e)=>setId_usuarios(e.target.value)}/>
-                            <label>RA/cpf</label>
+                            <label>RA/CPF</label>
                         </div>
                         <div className='box-user-cadastro'>
                             <input type="text" required onChange={(e)=>setNome(e.target.value)}/>
