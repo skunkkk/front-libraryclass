@@ -22,6 +22,26 @@ export default function VerLivro() {
     <div style={{ display: 'flex', alignItems: 'center', textAlign: 'center', justifyContent: 'center', flexDirection: 'column', width: '100vw', height: '100vh' }}>
       <h1>Livros Cadastrados:</h1>
       <table border={1}>
+        <tr>
+          <td>
+            ISBN LIVROS
+          </td>
+          <td>
+            TITULO DO LIVRO
+          </td>
+          <td>
+            SINOPSE DO LIVRO
+          </td>
+          <td>
+            SECAO QUE ESTA
+          </td>
+          <td>
+            IMAGEM DO LIVRO
+          </td>
+          <td>
+            ACOES
+          </td>
+        </tr>
 
         {data.map(elemento =>
           <tr>
