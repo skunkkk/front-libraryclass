@@ -13,33 +13,27 @@ export default function Cadastro() {
     const [telefone, setTelefone]= useState('');
     const [observacoes, setObservacoes]= useState('...');
 
-    // async function enviarDados(){
-        
-    //     console.log(dadosDoFormulario)
-    //     try{
-    //       const response = await axios.post("http://127.0.0.1:8000/users",dadosDoFormulario)
-    //       console.log(response.data)
-    //     }
-    //     catch(erros){
-    //         console.log(erros)
-    //     }
+     async function enviarDados(){
+        const dadosDoFormulario={
+            id_usuarios,
+            nome,
+            tipo,
+            cep,
+            numero_casa,
+            email,
+            password,
+            telefone,
+            observacoes
+        };
+         try{
+           const response = await axios.post("http://127.0.0.1:8000/users",dadosDoFormulario)
+           console.log(response.data)
+         }
+         catch(erros){
+             console.log(erros)
+         }
        
-
-    // }
-    function exibirDados(){
-        const dadosDoFormulario=new FormData();
-        dadosDoFormulario.append("id_usuarios", id_usuarios);
-        dadosDoFormulario.append("nome", nome);
-        dadosDoFormulario.append("tipo", tipo);
-        dadosDoFormulario.append("cep", cep);
-        dadosDoFormulario.append("numero_casa", numero_casa);
-        dadosDoFormulario.append("email", email);
-        dadosDoFormulario.append("password", password);
-        dadosDoFormulario.append("telefone", telefone);
-        dadosDoFormulario.append("observacoes", observacoes);
-        console.log(dadosDoFormulario)
-
-    }
+        }
     
     return (
         <div className='container-cadastro'>
@@ -53,6 +47,10 @@ export default function Cadastro() {
                         <div className='box-user-cadastro'>
                             <input type="email" required onChange={(e)=>setEmail(e.target.value)}/>
                             <label>E-mail</label>
+                        </div>
+                        <div className='box-user-cadastro'>
+                            <input type="text" required onChange={(e)=>setId_usuarios(e.target.value)}/>
+                            <label>RA/cpf</label>
                         </div>
                         <div className='box-user-cadastro'>
                             <input type="text" required onChange={(e)=>setNome(e.target.value)}/>
@@ -80,7 +78,7 @@ export default function Cadastro() {
                             <input type="text" required onChange={(e)=>setObservacoes(e.target.value)}/>
                             <label>Observações</label>
                         </div>
-                        <input type='button' value="Cadastrar" className='botao-cadastro' onClick={()=>exibirDados}/>
+                        <input type='button' value="Cadastrar" className='botao-cadastro' onClick={()=>enviarDados()}/>
                     </div>
                 </div>
 
