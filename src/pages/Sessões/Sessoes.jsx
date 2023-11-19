@@ -13,7 +13,7 @@ export default function Sessoes() {
   return (
     <div className='container-sessoes'>
       <h1>Criar seção</h1>
-      <label>descrição</label>
+      <label>Descrição</label>
         <input type='text' placeholder='descrição'id='descrição' onChange={(elemento)=>setDescricao(elemento.target.value)}/>
         <input type='button' onClick={enviarDados} value="Enviar"/>
     </div>

@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import MenuH from "../../components/menu-h/MenuH";
 
 export default function Inicio() {
+  
   return (
     <div className="container-tela-inicio">
         

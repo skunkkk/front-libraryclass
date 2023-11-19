@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useState } from 'react'
 
 export default function InserirLivro() {
@@ -35,10 +36,10 @@ export default function InserirLivro() {
 <input type='text' placeholder='Inserir ID sessão...' onChange={(e)=>setId_secao(e.target.value)}/>
 
 <input type='text' placeholder='Inserir Sinopse Livro...' onChange={(e)=>setSinopse_livros(e.target.value)}/>
-<input type='file' />
 
-    <input type='button' value="Deletar Livro" />
-    <input type='button' value="Enviar Livro" OnClick={()=>adicionarLivro()}/>
+
+
+    <input type='button' value="Enviar Livro" onClick={()=>adicionarLivro()}/>
 </div>
 )
 }
