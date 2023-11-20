@@ -1,27 +1,52 @@
 import React, { useState } from 'react';
 import './Login.css';
 import axios from 'axios';
+import jwt from 'jsonwebtoken';
+
 
 export default function Login () {
-    const [email, setEmail] = useState();
-    const [password, setPassword] = useState();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
 
-    async function fazerLogin(){
-        const dados={
-            email,password
+    
+    function checar(){
 
-        }
-        try{
-            const response = await axios.post("http://127.0.0.1:8000/login",dados)
+// ...
 
-            const {access_token}=response.data 
-            localStorage.setItem("token",access_token)
-            console.log(response.data)
-        }
-                catch(erros){
-                    console.log(erros)
-                }
+// Assumindo que você tem o token armazenado em algum lugar (por exemplo, no localStorage)
+const token = localStorage.getItem('token');
+
+// Decodificar e verificar o token
+jwt.verify(token, 'sua_chave_secreta', (err, decodedToken) => {
+  if (err) {
+    // O token é inválido ou expirou
+    console.error('Token inválido:', err);
+  } else {
+    // Token válido, `decodedToken` contém as informações do payload
+    console.log(decodedToken);
+  }
+});
     }
+    const handleLogin = async () => {
+        // Realize a solicitação para o backend para autenticação
+        const response = await fetch('http://127.0.0.1:8000/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ email, password }),
+        });
+    
+        if (response.ok) {
+          const data = await response.json();
+    
+          // Armazene o token no armazenamento local
+          localStorage.setItem('authData', JSON.stringify(data));
+          console.log('Login bem-sucedido! Token armazenado:', data.token);
+        } else {
+          console.error('Falha na autenticação');
+        }
+      };
 
     return (
         <div className='container-login'>
@@ -41,7 +66,9 @@ export default function Login () {
                     <label>Senha</label>
                 </div>
                 </div>
-                <button type='button' className="botao-login" onClick={()=>fazerLogin()}>Entrar</button>
+                <button type='button' className="botao-login" onClick={()=>handleLogin()}>Entrar</button>
+
+                <input type='button' value="checar" className='botao-cadastro' onClick={()=>checar()}/>
             </div>
 
         </div>

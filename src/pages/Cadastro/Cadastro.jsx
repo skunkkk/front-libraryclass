@@ -79,6 +79,9 @@ export default function Cadastro() {
                             <label>Observações</label>
                         </div>
                         <input type='button' value="Cadastrar" className='botao-cadastro' onClick={()=>enviarDados()}/>
+                        <br />
+                        
+
                     </div>
                 </div>
 
