@@ -11,24 +11,18 @@ export default function Login () {
     
     function checar(){
 
-// ...
 
-// Assumindo que você tem o token armazenado em algum lugar (por exemplo, no localStorage)
 const token = localStorage.getItem('token');
 
-// Decodificar e verificar o token
 jwt.verify(token, 'sua_chave_secreta', (err, decodedToken) => {
   if (err) {
-    // O token é inválido ou expirou
     console.error('Token inválido:', err);
   } else {
-    // Token válido, `decodedToken` contém as informações do payload
     console.log(decodedToken);
   }
 });
     }
     const handleLogin = async () => {
-        // Realize a solicitação para o backend para autenticação
         const response = await fetch('http://127.0.0.1:8000/login', {
           method: 'POST',
           headers: {
