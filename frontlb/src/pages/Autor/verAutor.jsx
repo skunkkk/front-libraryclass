@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import './Autor.css'
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 export default function VerAutor() {
   const [data,setData]=useState([])
 
+  function apagar(id){
+    console.log(id);
+  }
   useEffect(()=>{
     axios.get('http://localhost:8000/autor').then((response)=>{setData(response.data)});
   },[])
@@ -12,15 +16,23 @@ export default function VerAutor() {
     <div className='container-Autor'>
        <div className='autores'>
             <h1>autores</h1>
-            <div>
 
-            {data.map((elemento)=>(
-              <div>
-                <div>{elemento.autor_nome}</div>
-                <div>{elemento.autor_nacionalidade}</div>
-              <br />
-              </div>
-            ))}
+            <table>
+              <tr><th>id do autor</th><th>nome do autor</th><th>nacionalidade do autor</th> <th>ações</th></tr>
+              {data.map((elemento)=>(
+                <tr>
+                  <td>{elemento.id}</td>
+                  <td>{elemento.autor_nome}</td>
+                  <td>{elemento.autor_nacionalidade}</td>
+                  <td>
+                    <button onClick={()=>apagar(elemento.id)}>Apagar</button>
+                    <Link to={`/editarautor/${elemento.id}`}>Editar</Link>
+                  </td>
+                </tr>
+              ))}
+
+            </table>
+            <div>
             </div>
        </div>
     </div>
