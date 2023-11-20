@@ -1,27 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Login.css';
 import axios from 'axios';
-import jwt from 'jsonwebtoken';
-
+import { useJwt } from "react-jwt";
+const token = localStorage.getItem('authData');
 
 export default function Login () {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    
-    function checar(){
+  const { decodedToken, hasExpired  } = useJwt(token);
+  console.log(token)
 
-
-const token = localStorage.getItem('token');
-
-jwt.verify(token, 'sua_chave_secreta', (err, decodedToken) => {
-  if (err) {
-    console.error('Token inválido:', err);
-  } else {
-    console.log(decodedToken);
-  }
-});
+  useEffect(() => {
+    if (hasExpired) {
+      console.log('O token expirou.');
+    } else {
+      console.log('Token decodificado:', decodedToken);
     }
+  }, [decodedToken, hasExpired]);
+
     const handleLogin = async () => {
         const response = await fetch('http://127.0.0.1:8000/login', {
           method: 'POST',
@@ -62,7 +59,7 @@ jwt.verify(token, 'sua_chave_secreta', (err, decodedToken) => {
                 </div>
                 <button type='button' className="botao-login" onClick={()=>handleLogin()}>Entrar</button>
 
-                <input type='button' value="checar" className='botao-cadastro' onClick={()=>checar()}/>
+                <input type='button' value="checar" className='botao-cadastro' />
             </div>
 
         </div>
