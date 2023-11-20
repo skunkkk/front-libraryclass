@@ -50,7 +50,7 @@ export default function CriarEmprestimo() {
                 <input type="text" />
             </div>
            
-            <button onClick={()=>adicionarEmprestimo()}>Criar</button>br
+            <button onClick={()=>adicionarEmprestimo()}>Criar</button>
             </div>
         </div>
     )

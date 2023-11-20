@@ -42,6 +42,7 @@ import Sessoes from './pages/Sessões/Sessoes';
 import NotFound from './pages/NotFound/NotFound';
 import VerAutor from './pages/Autor/VerAutor';
 import MenuH from './components/menu-h/MenuH';
+import EditarAutor from './pages/Autor/EditarAutor';
 export default function MyRoutes() {
     return (
         <BrowserRouter>
@@ -82,6 +83,8 @@ export default function MyRoutes() {
                 < Route path='/Sessoes' element={<Sessoes />} />
                 < Route path='/CriarAutor' element={<CriarAutor />} />
                 < Route path='/VerAutor' element={<VerAutor />} />
+                < Route path='/editarautor/:id' element={<EditarAutor />} />
+
                 < Route path='/VerAvaliacao' element={<VerAvaliacoes />} />
 
                 < Route path='/verficha' element={<VerFichas />} />
