@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 import axios from 'axios';
 import React, { useState } from 'react'
 
-=======
-import React, { useState, axios } from "react";
-import './Livro.css'
-import { Link } from "react-router-dom";
->>>>>>> fac1cec3b61dd7313ffaacb55191533e578128b2
 export default function InserirLivro() {
   const [isbn_livros, setIsbn_livros] = useState("");
   const [titulo_livros, setTitulo_livros] = useState("");
@@ -76,7 +70,6 @@ export default function InserirLivro() {
         className="input-livro"
       />
 
-<<<<<<< HEAD
 <input type='text' placeholder='Inserir Sinopse Livro...' onChange={(e)=>setSinopse_livros(e.target.value)}/>
 
 
@@ -84,25 +77,4 @@ export default function InserirLivro() {
     <input type='button' value="Enviar Livro" onClick={()=>adicionarLivro()}/>
 </div>
 )
-=======
-      <input
-        type="text"
-        placeholder="Inserir Sinopse Livro..."
-        onChange={(e) => setSinopse_livros(e.target.value)}
-        className="input-livro"
-      />
-      <input type="file" 
-       className="file-livro"
-      />
-
-      <input type="button" value="Deletar Livro" />
-      <input
-        type="button"
-        value="Enviar Livro"
-        OnClick={() => adicionarLivro()}
-      />
-      </div>
-    </div>
-  );
->>>>>>> fac1cec3b61dd7313ffaacb55191533e578128b2
 }
