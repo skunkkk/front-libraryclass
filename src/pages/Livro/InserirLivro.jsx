@@ -1,10 +1,6 @@
 import axios from 'axios';
-<<<<<<< HEAD
 import React, { useState } from 'react'
 
-=======
-import React, { useState } from "react";
->>>>>>> 9b8d559cbc23204480ad49712601b3801d8bf1d4
 import "./Livro.css";
 import { Link } from "react-router-dom";
 
