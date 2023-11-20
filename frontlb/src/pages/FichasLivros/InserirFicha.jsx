@@ -1,6 +1,7 @@
 import React from 'react'
 
 export default function InserirFicha() {
+  
   return (
     <div style={{display : 'flex', alignItems : 'center', textAlign : 'center', justifyContent : 'center', flexDirection : 'column', width : '100vw', height : '100vh'}}>
     <h1>Inserir Ficha:</h1>
