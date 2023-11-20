@@ -1,6 +1,10 @@
 import axios from 'axios';
+<<<<<<< HEAD
 import React, { useState } from 'react'
 
+=======
+import React, { useState } from "react";
+>>>>>>> 9b8d559cbc23204480ad49712601b3801d8bf1d4
 import "./Livro.css";
 import { Link } from "react-router-dom";
 
@@ -86,13 +90,8 @@ export default function InserirLivro() {
     <input type='button' value="Enviar Livro" onClick={()=>adicionarLivro()}/>
 </div>
 
-        <input
-          type="text"
-          placeholder="Inserir Sinopse Livro..."
-          onChange={(e) => setSinopse_livros(e.target.value)}
-          className="input-livro"
-        />
 
+<<<<<<< HEAD
         <input
           type="button"
           value="Enviar Livro"
@@ -112,6 +111,8 @@ export default function InserirLivro() {
         value="Enviar Livro"
         onClick={() => adicionarLivro()}
       />
+=======
+>>>>>>> 9b8d559cbc23204480ad49712601b3801d8bf1d4
       </div>
 
    
