@@ -7,7 +7,7 @@ export default function NavegacaoADM() {
       <table className='tabela-adm'>
         <tr>
           <td><Link to={"/Sessoes"} ><button className='button-adm'>  Seções </button></Link></td>
-          <td><Link to={"/"} ><button className='button-adm'>Reservas</button></Link></td>
+          <td><Link to={"/InserirReservas"} ><button className='button-adm'>Reservas</button></Link></td>
           <td><Link to={"/"} ><button className='button-adm'>Publicações</button></Link></td>
         </tr>
         <tr>

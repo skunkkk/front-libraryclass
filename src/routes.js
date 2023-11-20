@@ -16,7 +16,6 @@ import VerDevolucoes from './pages/Devolução/VerDevolucoes';
 import InserirDevolucao from './pages/Devolução/InserirDevolucao';
 import CriarCategoria from './pages/Categorias/CriarCategoria';
 import Avaliacao from './pages/Avaliacao/CriarAvaliacao';
-import Sessoes from './pages/Sessões/Sessoes';
 import VerSessoes from './pages/Sessões/VerSessoes';
 import VerUmaCategoria from './pages/Categorias/VerUmaCategoria';
 import EditarCategoria from './pages/Categorias/EditarCategoria';
@@ -44,15 +43,17 @@ import EditarLivro from './pages/Livro/EditarLivro';
 import InserirLivro from './pages/Livro/InserirLivro';
 import VerLivro from './pages/Livro/VerLivro';
 
+import Sessoes from './pages/Sessões/Sessoes';
+
 export default function MyRoutes() {
     return (
         <BrowserRouter>
             <MenuH />
 
             <Routes>
-                <Route path='/verSessoes' element={<VerSessoes />} />
+            
                 <Route path="/" element={<Inicio />} />
-                <Route path='/sessoes' element={<Sessoes />} />
+            
                 <Route path="/Login" element={<Login />} />
                 <Route path="/Configuracao" element={<Configuração />} />
                 <Route path="/Cadastro" element={<Cadastro />} />
@@ -61,7 +62,6 @@ export default function MyRoutes() {
                 <Route path="/StatusLivro" element={<StatusLivro />} />
                 <Route path="/Mural" element={<Mural />} />
                 <Route path="/Library" element={<InicioLibrary />} />
-                <Route path="/Sessoes" element={<Sessoes />} />
                 <Route path="/CriarEmprestimo" element={<CriarEmprestimo />} />
                 <Route path="/VerEmprestimo" element={<VerEmprestimo />} />
                 <Route path="/VerDevolucoes" element={<VerDevolucoes />} />
@@ -79,14 +79,15 @@ export default function MyRoutes() {
                 <Route path='/VerPublicacao' element={<VerPublicacao />} />
                 <Route path='/InserirPublicacao' element={<InserirPublicacao />} />
                 <Route path='/VerLivro' element={<VerLivro />} />
-
-                < Route path='/VerReservas' element={<VerReservas />} />
-
                 < Route path='/InserirReservas' element={<InserirReservas />} />
                 < Route path='/VerMural' element={<VerMural />} />
                 < Route path='/EditarLivro' element={<EditarLivro />} />
                 < Route path='/InserirLivro' element={<InserirLivro />} />
                 < Route path='/VerLivro' element={<VerLivro />} />
+                < Route path='/VerReservas' element={<VerReservas />} />
+                < Route path='/VerSessoes' element={<VerSessoes />} />
+                < Route path='/Sessoes' element={<Sessoes />} />
+             
 
 
 
