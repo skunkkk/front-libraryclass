@@ -12,6 +12,7 @@ export default function StatusLivro() {
         <div className="status-container">
           <p>Disponibilidade :</p>
           <p className="disponibilidade">Disponivel/Indiponivel</p>
+          <button class="btn-reserva">Fazer reserva</button>
           <div className="faq-status">
             <div className="disponibilidade-div">
             <p className="faq-satus-font">Se o livro não estiver disponivel, espere até que volte para a biblioteca.</p>

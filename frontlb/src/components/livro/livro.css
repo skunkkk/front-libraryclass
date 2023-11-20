@@ -56,3 +56,28 @@
     -webkit-user-select: none;
     touch-action: manipulation;
 }
+
+
+.container-resenhas{
+    width: 90vw;
+    height: auto;
+    background-color: rgb(245, 223, 223);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+.inserir-resenha{
+    height: 10vh;
+    width: 75vw;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
