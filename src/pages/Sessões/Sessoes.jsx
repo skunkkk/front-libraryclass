@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import "../Sessões/Sessoes.css"
 import axios from 'axios';
-import { useNavigate,  } from 'react-router-dom';
-export default function Sessoes() {
+import { Link, useNavigate,  } from 'react-router-dom';
+export default function InserirSessoes() {
   const[descricao, setDescricao]= useState('');
   
   const history=useNavigate()
@@ -12,6 +12,11 @@ export default function Sessoes() {
   }
   return (
     <div className='container-sessoes'>
+         <div className='navbar'>
+        <p>Inserir Seção</p>
+        <Link to={'/VerSessoes'}><p>Ver Seções</p></Link>
+        <Link to={'/NavegacaoADM'}><p>Voltar</p></Link>
+      </div>
       <h1>Criar seção</h1>
       <label>Descrição</label>
         <input type='text' placeholder='descrição'id='descrição' onChange={(elemento)=>setDescricao(elemento.target.value)}/>

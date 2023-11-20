@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 
 export default function VerSessoes() {
     const[data, setData]= useState([]);
@@ -12,6 +13,11 @@ console.log(data);
 
   return (
     <div style={{color:'black'}}>
+        <div className='navbar'>
+        <Link to={'/Sessoes'}> <p>Inserir Seção</p></Link>
+       <p>Ver Seções</p>
+        <Link to={'/NavegacaoADM'}><p>Voltar</p></Link>
+      </div>
         <h1>testando</h1>
         <table border={1}>
             <tr><th>id</th><th>descrição</th></tr>
