@@ -2,17 +2,19 @@
 import React, { useState } from 'react'
 import './CriarEmprestimo.css'
 import { Link } from 'react-router-dom'
+import axios from 'axios';
 export default function CriarEmprestimo() {
     const [id_emprestimos,setId_emprestimos]=useState("");
     const[data_emprestimos,setData_emprestimos] = useState("");
     const[id_usuarios,setId_usuarios]= useState ("");
-    const[isbn_livros, setIsbnlivros] = useState("");
+    const[isbn_livros, setIsbn_livros] = useState("");
 
     async function adicionarEmprestimo(){
         const dados = { 
         id_emprestimos,
         data_emprestimos,
-        id_usuarios
+        id_usuarios,
+        isbn_livros
     };
     try{
         const response = await axios.post("http://127.0.0.1:8000/emprestimos",dados);
@@ -31,7 +33,11 @@ export default function CriarEmprestimo() {
         <Link to={'/NavegacaoADM'}><p>Voltar</p></Link>
       </div>
       <div className="box1">
-            <div className='classInput' onChange={(e=>set(e.target.value))}>
+      <div className='classInput' onChange={(e=>setId_emprestimos(e.target.value))}>
+                <label>ID: </label>
+                <input type="text" />
+            </div>
+            <div className='classInput' onChange={(e=>setIsbn_livros(e.target.value))}>
                 <label>ISBN: </label>
                 <input type="text" />
             </div>
@@ -49,4 +55,4 @@ export default function CriarEmprestimo() {
         </div>
     )
 }
->>>>>>> da5c1ec8e6dcaf309257784520574866c6f08fd6
+
