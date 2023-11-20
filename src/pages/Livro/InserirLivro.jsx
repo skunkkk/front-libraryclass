@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 import axios from 'axios';
 import React, { useState } from 'react'
+=======
+import axios from "axios";
+import React, { useState } from "react";
+import "./Livro.css";
+import { Link } from "react-router-dom";
+>>>>>>> 74ecd74e30edbd2149aab0a1e649554459d8bf83
 
 export default function InserirLivro() {
   const [isbn_livros, setIsbn_livros] = useState("");
@@ -36,40 +43,47 @@ export default function InserirLivro() {
         height: "100vh",
       }}
     >
-       <div className='navbar'>
+      <div className="navbar">
         <p>Inserir livro</p>
-        <Link to={'/EditarLivro'}><p>Editar livro</p></Link>
-        <Link to={'/VerLivro'}><p>Ver Livro</p></Link>
-        <Link to={'/NavegacaoADM'}><p>Voltar</p></Link>
+        <Link to={"/EditarLivro"}>
+          <p>Editar livro</p>
+        </Link>
+        <Link to={"/VerLivro"}>
+          <p>Ver Livro</p>
+        </Link>
+        <Link to={"/NavegacaoADM"}>
+          <p>Voltar</p>
+        </Link>
       </div>
       <h1>Inserir Livro:</h1>
       <div className="container-inputs-inserir">
-      <input
-        type="text"
-        placeholder="Inserir ISBN do Livro"
-        onChange={(e) => setIsbn_livros(e.target.value)}
-        className="input-livro"
-      />
+        <input
+          type="text"
+          placeholder="Inserir ISBN do Livro"
+          onChange={(e) => setIsbn_livros(e.target.value)}
+          className="input-livro"
+        />
 
-      <input
-        type="text"
-        placeholder="Inserir Titulo Livro..."
-        onChange={(e) => setTitulo_livros(e.target.value)}
-        className="input-livro"
-      />
-      <input
-        type="file"
-        placeholder="Inserir Foto Livro..."
-        onChange={(e) => setFoto_livros(e.target.files[0])}
-        className="file-livro"
-      />
-      <input
-        type="text"
-        placeholder="Inserir ID sessão..."
-        onChange={(e) => setId_secao(e.target.value)}
-        className="input-livro"
-      />
+        <input
+          type="text"
+          placeholder="Inserir Titulo Livro..."
+          onChange={(e) => setTitulo_livros(e.target.value)}
+          className="input-livro"
+        />
+        <input
+          type="file"
+          placeholder="Inserir Foto Livro..."
+          onChange={(e) => setFoto_livros(e.target.files[0])}
+          className="file-livro"
+        />
+        <input
+          type="text"
+          placeholder="Inserir ID sessão..."
+          onChange={(e) => setId_secao(e.target.value)}
+          className="input-livro"
+        />
 
+<<<<<<< HEAD
 <input type='text' placeholder='Inserir Sinopse Livro...' onChange={(e)=>setSinopse_livros(e.target.value)}/>
 
 
@@ -77,4 +91,37 @@ export default function InserirLivro() {
     <input type='button' value="Enviar Livro" onClick={()=>adicionarLivro()}/>
 </div>
 )
+=======
+        <input
+          type="text"
+          placeholder="Inserir Sinopse Livro..."
+          onChange={(e) => setSinopse_livros(e.target.value)}
+          className="input-livro"
+        />
+
+        <input
+          type="button"
+          value="Enviar Livro"
+          onClick={() => adicionarLivro()}
+        />
+           <input
+        type="text"
+        placeholder="Inserir Sinopse Livro..."
+        onChange={(e) => setSinopse_livros(e.target.value)}
+        className="input-livro"
+      />
+      <input type="file" className="file-livro" />
+
+      <input type="button" value="Deletar Livro" />
+      <input
+        type="button"
+        value="Enviar Livro"
+        OnClick={() => adicionarLivro()}
+      />
+      </div>
+
+   
+    </div>
+  );
+>>>>>>> 74ecd74e30edbd2149aab0a1e649554459d8bf83
 }
