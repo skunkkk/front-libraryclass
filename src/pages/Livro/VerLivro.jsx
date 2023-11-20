@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 export default function VerLivro() {
   const [data, setData] = useState([]);
-  const [id, setID] = useState(null);
 
   useEffect(() => {
     axios
@@ -14,8 +13,7 @@ export default function VerLivro() {
 
   console.log(data);
 
-  function apagar(id_enviado) {
-    setID(id_enviado);
+  function apagar(id) {
     axios.delete(`http://127.0.0.1:8000/livros/${id}`);
   }
 

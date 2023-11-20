@@ -11,16 +11,16 @@ export default function InserirLivro() {
   const [id_secao, setId_secao] = useState("");
 
   async function adicionarLivro() {
-    const dados = {
-      isbn_livros,
-      titulo_livros,
-      foto_livros,
-      sinopse_livros,
-      id_secao,
-    };
+    const formData = new FormData();
+  formData.append('isbn_livros', isbn_livros);
+  formData.append('titulo_livros', titulo_livros);
+  formData.append('foto_livros', foto_livros);
+  formData.append('sinopse_livros', sinopse_livros);
+  formData.append('id_secao', id_secao);
 
+console.log(formData);
     try {
-      const response = await axios.post("http://127.0.0.1:8000/livros", dados);
+      const response = await axios.post("http://127.0.0.1:8000/livros", formData);
       console.log(response.data);
     } catch (erros) {
       console.log(erros);
