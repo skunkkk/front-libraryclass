@@ -1,0 +1,44 @@
+.faq-div{
+    color: #0c0b0b;
+    height: 30vh;
+    width: 100vw;
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+
+
+   
+}
+
+.Titulo-faq{
+    border-bottom: 1px solid black;
+    height: 14vh;
+    display: flex;
+    justify-content: center;
+    background-color: #143788;
+}
+
+.nome-faq{
+    color: white;
+    font-family: "Gloock", serif;
+    margin-top: 1.9rem;
+}
+
+.logo-faq{
+    height: 14vh;
+
+}
+
+.txtfaq{
+    font-weight: normal;
+    font-family: "Poppins", sans-serif;
+    color: black;
+    text-align: justify;
+    padding: 0.5rem;
+
+}
+
