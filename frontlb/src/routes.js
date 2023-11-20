@@ -41,12 +41,13 @@ import VerLivro from './pages/Livro/VerLivro';
 import Sessoes from './pages/Sessões/Sessoes';
 import NotFound from './pages/NotFound/NotFound';
 import VerAutor from './pages/Autor/VerAutor';
+import MenuH from './components/menu-h/MenuH';
 export default function MyRoutes() {
     return (
         <BrowserRouter>
-
+            <MenuH/>
             <Routes>
-            
+
                 <Route path="/" element={<Inicio />} />
             
                 <Route path="/Configuracao" element={<Configuração />} />
