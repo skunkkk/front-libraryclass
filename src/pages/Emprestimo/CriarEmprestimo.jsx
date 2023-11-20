@@ -42,11 +42,8 @@ export default function CriarEmprestimo() {
                 <label>Data: </label>
                 <input type="text" />
             </div>
-            <div className='classInput' onChange={(e=>set(e.target.value))}>
-                <label>Observação: </label>
-                <input type="text" />
-            </div>
-            <button onClick={()=>adicionarEmprestimo()}>Criar</button><br />
+           
+            <button onClick={()=>adicionarEmprestimo()}>Criar</button>br
             </div>
         </div>
     )
