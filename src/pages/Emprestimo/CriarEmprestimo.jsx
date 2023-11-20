@@ -46,7 +46,7 @@ export default function CriarEmprestimo() {
                 <label>Observação: </label>
                 <input type="text" />
             </div>
-            <button onClick={()=>adicionarEmprestimo()}>Criar</button>
+            <button onClick={()=>adicionarEmprestimo()}>Criar</button><br />
             </div>
         </div>
     )
