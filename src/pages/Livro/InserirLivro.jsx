@@ -1,12 +1,9 @@
-<<<<<<< HEAD
 import axios from 'axios';
 import React, { useState } from 'react'
-=======
 import axios from "axios";
 import React, { useState } from "react";
 import "./Livro.css";
 import { Link } from "react-router-dom";
->>>>>>> 74ecd74e30edbd2149aab0a1e649554459d8bf83
 
 export default function InserirLivro() {
   const [isbn_livros, setIsbn_livros] = useState("");
@@ -83,15 +80,13 @@ export default function InserirLivro() {
           className="input-livro"
         />
 
-<<<<<<< HEAD
 <input type='text' placeholder='Inserir Sinopse Livro...' onChange={(e)=>setSinopse_livros(e.target.value)}/>
 
 
 
     <input type='button' value="Enviar Livro" onClick={()=>adicionarLivro()}/>
 </div>
-)
-=======
+
         <input
           type="text"
           placeholder="Inserir Sinopse Livro..."
@@ -121,7 +116,6 @@ export default function InserirLivro() {
       </div>
 
    
-    </div>
+  
   );
->>>>>>> 74ecd74e30edbd2149aab0a1e649554459d8bf83
 }
