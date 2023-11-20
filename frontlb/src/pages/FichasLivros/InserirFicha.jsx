@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React from 'react'
 import { useState } from 'react'
 
@@ -14,7 +15,7 @@ export default function InserirFicha() {
     idEmprestimo
   }
   async function enviarDados(){
-    const response=await axios.post('http://localhost:8000/fichalivros',dados);
+    const response=await axios.post('http://localhost:8000/fichadoLivro',dados);
     console.log(response.data);
   }
 
@@ -22,7 +23,7 @@ export default function InserirFicha() {
   return (
     <div style={{display : 'flex', alignItems : 'center', textAlign : 'center', justifyContent : 'center', flexDirection : 'column', width : '100vw', height : '100vh'}}>
     <h1>Inserir Ficha:</h1>
-    id ficha livro
+    
     <label htmlFor="">Id da ficha</label>
     <input type="text" onChange={(e)=>setIdFicha(e.target.value)} />
     <label htmlFor="">id da multa</label>
@@ -33,7 +34,8 @@ export default function InserirFicha() {
     <input type="text" onChange={(e)=>setIdEmprestimo(e.target.value)} />
              
 <input type='text' placeholder='Inserir Ficha...'/>
-    <input type='button' value="Enviar Ficha" />
+    
+    <button type='button'onClick={()=>enviarDados()}>Enviar Ficha</button>
 </div>
   )
 }
