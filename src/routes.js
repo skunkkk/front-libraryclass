@@ -86,7 +86,8 @@ export default function MyRoutes() {
                 < Route path='/VerMural' element={<VerMural />} />
                 < Route path='/EditarLivro' element={<EditarLivro />} />
                 < Route path='/InserirLivro' element={<InserirLivro />} />
-                < Route path='/VerLivro' element={<VerLivro />} />
+              
+                < Route path='/CriarAutor' element={<CriarAutor />} />
 
 
 

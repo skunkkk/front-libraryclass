@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react'
-import axios from "axios";
-import React, { useState } from "react";
+
 import "./Livro.css";
 import { Link } from "react-router-dom";
 
@@ -111,7 +110,7 @@ export default function InserirLivro() {
       <input
         type="button"
         value="Enviar Livro"
-        OnClick={() => adicionarLivro()}
+        onClick={() => adicionarLivro()}
       />
       </div>
 
