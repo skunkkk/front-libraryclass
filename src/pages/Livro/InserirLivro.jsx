@@ -1,6 +1,4 @@
 import axios from 'axios';
-import React, { useState } from 'react'
-import axios from "axios";
 import React, { useState } from "react";
 import "./Livro.css";
 import { Link } from "react-router-dom";
