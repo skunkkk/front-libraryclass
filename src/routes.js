@@ -45,7 +45,7 @@ import VerLivro from './pages/Livro/VerLivro';
 
 import Sessoes from './pages/Sessões/Sessoes';
 import NotFound from './pages/NotFound/NotFound';
-
+import VerAutor from './pages/Autor/VerAutor';
 export default function MyRoutes() {
     return (
         <BrowserRouter>
@@ -90,6 +90,8 @@ export default function MyRoutes() {
                 < Route path='/VerSessoes' element={<VerSessoes />} />
                 < Route path='/Sessoes' element={<Sessoes />} />
                 < Route path='/CriarAutor' element={<CriarAutor />} />
+                < Route path='/VerAutor' element={<VerAutor />} />
+
                 < Route path='/*' element={<NotFound />} />
 
 
