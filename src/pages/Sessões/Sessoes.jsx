@@ -19,7 +19,7 @@ export default function InserirSessoes() {
       </div>
       <h1>Criar seção</h1>
       <label>Descrição</label>
-        <input type='text' placeholder='descrição'id='descrição' onChange={(elemento)=>setDescricao(elemento.target.value)}/>
+        <input type='text' placeholder='descrição'id='descrição' className="input-livro" onChange={(elemento)=>setDescricao(elemento.target.value)}/>
         <input type='button' onClick={enviarDados} value="Enviar"/>
     </div>
   )

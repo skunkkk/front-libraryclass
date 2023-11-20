@@ -12,7 +12,7 @@ console.log(data);
 
 
   return (
-    <div style={{color:'black'}}>
+    <div className='container-sessoes'>
         <div className='navbar'>
         <Link to={'/Sessoes'}> <p>Inserir Seção</p></Link>
        <p>Ver Seções</p>
