@@ -1,0 +1,25 @@
+.post{
+    border-bottom: 2px solid black;
+    margin-top: 10px;
+    height: 35vh;
+    width: 100vw;
+    background-color: #f1ebe2;
+    color: #0c0b0b;
+    border-radius: 10px;
+    text-align: center;
+}
+
+@media only screen and (min-width : 1025px) {
+    .post{
+        width: 50%;
+
+    }
+}
+
+
+@media only screen and (max-width : 600px) {
+    
+    .post{
+        width: 85%;
+    }
+}

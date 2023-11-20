@@ -1,0 +1,48 @@
+.container-muraladm{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    flex-direction: column;
+}
+
+.txtarea{
+    width: 30vw;
+    height: auto;
+}
+
+.btn-enviar{
+    margin-top: 1rem;
+
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    height: 15vh;
+    width: 100vw;
+    background-color: transparent;
+    border-bottom: 1px solid black;
+    margin-bottom: 3rem;
+}
+
+.box1{
+    height: 85vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-msgmurais{
+    border: 1px solid black;
+    height: auto;
+    width: 80vw;
+    gap: 1rem;
+}
+
+.msgmural{
+    border: 1px solid black;
+    height: 30vh;
+}
