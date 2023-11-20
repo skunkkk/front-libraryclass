@@ -13,7 +13,7 @@ export default function NavegacaoADM() {
         <tr>
           <td><Link to={"/MuralADM"} ><button className='button-adm'>Murais</button></Link></td>
           <td><Link to={"/InserirLivro"} ><button className='button-adm'>Livro</button></Link></td>
-          <td><Link to={"/"} ><button className='button-adm'>Fichas Livros</button></Link></td>
+          <td><Link to={"/verficha"} ><button className='button-adm'>Fichas Livros</button></Link></td>
         </tr>
         <tr>
           <td><Link to={"/CriarEmprestimo"} ><button className='button-adm'>Emprestimos</button></Link></td>
