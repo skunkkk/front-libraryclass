@@ -84,6 +84,13 @@ export default function MyRoutes() {
                 < Route path='/VerAutor' element={<VerAutor />} />
                 < Route path='/VerAvaliacao' element={<VerAvaliacoes />} />
 
+                < Route path='/verficha' element={<VerFichas />} />
+                < Route path='/editarficha' element={<VerAvaliacoes />} />
+                < Route path='/verumaficha' element={<VerUnicaFicha />} />
+
+
+
+
                 < Route path='/*' element={<NotFound />} />
 
 
