@@ -85,32 +85,7 @@ export default function InserirLivro() {
     <input type='button' value="Enviar Livro" onClick={()=>adicionarLivro()}/>
 </div>
 
-        <input
-          type="text"
-          placeholder="Inserir Sinopse Livro..."
-          onChange={(e) => setSinopse_livros(e.target.value)}
-          className="input-livro"
-        />
 
-        <input
-          type="button"
-          value="Enviar Livro"
-          onClick={() => adicionarLivro()}
-        />
-           <input
-        type="text"
-        placeholder="Inserir Sinopse Livro..."
-        onChange={(e) => setSinopse_livros(e.target.value)}
-        className="input-livro"
-      />
-      <input type="file" className="file-livro" />
-
-      <input type="button" value="Deletar Livro" />
-      <input
-        type="button"
-        value="Enviar Livro"
-        OnClick={() => adicionarLivro()}
-      />
       </div>
 
    
