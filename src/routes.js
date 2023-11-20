@@ -91,6 +91,7 @@ export default function MyRoutes() {
                 < Route path='/Sessoes' element={<Sessoes />} />
                 < Route path='/CriarAutor' element={<CriarAutor />} />
                 < Route path='/VerAutor' element={<VerAutor />} />
+                < Route path='/VerAvaliacao' element={<VerAvaliacoes />} />
 
                 < Route path='/*' element={<NotFound />} />
 

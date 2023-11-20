@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react'
 import './CriarEmprestimo.css'
 import { Link } from 'react-router-dom'
@@ -48,3 +49,4 @@ export default function CriarEmprestimo() {
         </div>
     )
 }
+>>>>>>> da5c1ec8e6dcaf309257784520574866c6f08fd6
