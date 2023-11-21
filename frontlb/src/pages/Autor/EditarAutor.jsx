@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom';
-
+import './EditarAutor.css';
 export default function EditarAutor() {
   const {id} =useParams();
   const [autor_nome, setAutor_nome] = useState("");
@@ -29,14 +29,17 @@ const response=axios.put(`http://127.0.0.1:8000/autor/${id}/`,dados);
     return (<div>Autor nao encontrado</div>)
   }else{
     return (
-      <div>
+      <div className='container-Autor'>
         <div className="navbar-reservas">
 
-<Link to={"/criarrautor"}>
-  <p>Criar Autor</p>
+<Link to={"/editarautor/:id"}>
+  <p>Editar Autor</p>
 </Link>
 <Link to={"/VerAutor"}>
   <p>Ver Autor</p>
+</Link> 
+<Link to={"/CriarAutor"}>
+  <p>Criar Autor</p>
 </Link> 
 
 <Link to={"/NavegacaoADM"}>
@@ -44,14 +47,16 @@ const response=axios.put(`http://127.0.0.1:8000/autor/${id}/`,dados);
 </Link> 
 
 </div> 
-          <div>
+<div className='alinhar-reservas'>
+          <div className='inputs-autor'>
           <label>ID: </label>
-          <input type="text" value={dadosForms.id} disabled  />
+          <input type="text" className="input-autor" value={dadosForms.id} disabled  />
           <label>Nome do autor: </label>
-          <input type="text" value={dadosForms.autor_nome} onChange={(e)=>setAutor_nome(e.target.value)}/>
+          <input type="text" className="input-autor" value={dadosForms.autor_nome} onChange={(e)=>setAutor_nome(e.target.value)}/>
           <label>Nacionalidade do autor: </label>
-          <input type="text" value={dadosForms.autor_nacionalidade} onChange={(e)=>setAutor_nacionalidade(e.target.value)} />
-          <button onClick={()=>editar()}>Editar autor</button>
+          <input className="input-autor" type="text" value={dadosForms.autor_nacionalidade} onChange={(e)=>setAutor_nacionalidade(e.target.value)} />
+          <button className='button-reservas' onClick={()=>editar()}>Editar autor</button>
+          </div>
           </div>
       </div>
     )

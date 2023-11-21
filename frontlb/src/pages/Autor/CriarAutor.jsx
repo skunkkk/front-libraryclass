@@ -26,18 +26,21 @@ export default function CriarAutor() {
     <div className='container-Autor'>
       <div className="navbar-reservas">
 
-        <Link to={"/Editarautor"}>
-          <p>Editar Autor</p>
-        </Link>
-        <Link to={"/VerAutor"}>
-          <p>Ver Autor</p>
-        </Link> 
-        
-        <Link to={"/NavegacaoADM"}>
-          <p>Voltar</p>
-        </Link> 
-       
-      </div> 
+<Link to={"/editarautor/:id"}>
+  <p>Editar Autor</p>
+</Link>
+<Link to={"/VerAutor"}>
+  <p>Ver Autor</p>
+</Link> 
+<Link to={"/CriarAutor"}>
+  <p>Criar Autor</p>
+</Link> 
+
+<Link to={"/NavegacaoADM"}>
+  <p>Voltar</p>
+</Link> 
+
+</div> 
       <div className='alinharInput'>
         <div className='classInput'>
                 <label>ID: </label>

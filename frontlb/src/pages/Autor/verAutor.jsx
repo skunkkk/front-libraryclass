@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
+import '../Autor/VerAutor.css';
 import { Link } from 'react-router-dom';
 export default function VerAutor() {
   const [data,setData]=useState([])
@@ -15,8 +16,12 @@ export default function VerAutor() {
     <div className='container-Autor'>
       <div className="navbar-reservas">
 
-<Link to={"/Editarautor"}>
+<Link to={"/editarautor/:id"}>
   <p>Editar Autor</p>
+</Link>
+
+<Link to={"/CriarAutor"}>
+  <p>Criar Autor</p>
 </Link>
 <Link to={"/VerAutor"}>
   <p>Ver Autor</p>
