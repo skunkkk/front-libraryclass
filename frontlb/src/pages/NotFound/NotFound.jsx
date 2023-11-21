@@ -9,6 +9,7 @@ const NotFound = () => {
         <p style={styles.paragraph}>
           Parece que você tentou acessar uma página que não existe.
         </p>
+        <br />
         <Link to="/" style={styles.link}>
           Voltar à página inicial
         </Link>
