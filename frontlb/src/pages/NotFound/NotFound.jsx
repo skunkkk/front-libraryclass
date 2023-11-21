@@ -3,7 +3,6 @@ import "./NotFound.css";
 import { Link } from "react-router-dom";
 export default function NotFound() {
   return (
-<<<<<<< HEAD
     <div className="container-notfound">
        
       <div className="box1-nf">
@@ -17,7 +16,6 @@ export default function NotFound() {
         <Link to={"/Mural"}><button class="button-71" role="button">Voltar ao mural</button></Link>
 
 
-=======
     <div style={styles.container}>
       <div style={styles.textContainer}>
         <h1 style={styles.heading}>404 - Página não encontrada</h1>
@@ -28,7 +26,6 @@ export default function NotFound() {
         <Link to="/" style={styles.link}>
           Voltar à página inicial
         </Link>
->>>>>>> fe9cf8171004f320dec85408ea546e00d99e738d
       </div>
       <div className="box2-nf">
         <img src={"../../../nficon.png"} alt="" />
