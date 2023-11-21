@@ -40,15 +40,22 @@
   margin-top: -0.5rem;
 }
 
-h2 {
+.h2Inicio{
   color: #f1ebe2;
   font-family: "Poppins", sans-serif;
   padding-top: 100px;
 }
-
-.h2-inicio{
-  color: white;
+.botaoInicio{
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 5rem;
+  height: 10vh;
+  width: 25vw;
+  font-size: 2rem;
+  font-family: "Poppins", sans-serif;
 }
+
+
 p {
   color: #f1ebe2;
   font-size: 1.2rem;

@@ -15,12 +15,12 @@ export default function Inicio() {
         <img src="logo.png" alt="" className="logo" />
       </div>
       <div className="conteudo-tela-inicio">
-        <h2>Para onde deseja ir ?</h2>
+        <h2 className="h2Inicio">Para onde deseja ir ?</h2>
         <br />
         <br />
-        <Botao nome="Login" rota={'/login'} />
+       <button className="botaoInicio">Login</button>
         <br />
-        <Botao nome="Cadastrar" rota={'/Cadastro'}/>
+        <button className="botaoInicio">Cadastro</button>
       
       </div>
     </div>
