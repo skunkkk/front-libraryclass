@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import './VerEmprestimo.css'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
-import { response } from 'express'
 export default function VerEmprestimo() {
     const [data,setData]=useState([])
 

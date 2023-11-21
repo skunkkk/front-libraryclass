@@ -43,6 +43,10 @@ import NotFound from './pages/NotFound/NotFound';
 import VerAutor from './pages/Autor/VerAutor';
 import MenuH from './components/menu-h/MenuH';
 import EditarAutor from './pages/Autor/EditarAutor';
+import CriarEmprestimo from './pages/Emprestimo/CriarEmprestimo';
+import VerEmprestimo from './pages/Emprestimo/VerEmprestimo';
+import Cadastro from './pages/Cadastro/Cadastro';
+import Login from './pages/Login/Login';
 export default function MyRoutes() {
     return (
         <BrowserRouter>
@@ -90,6 +94,18 @@ export default function MyRoutes() {
                 < Route path='/verficha' element={<VerFichas />} />
                 < Route path='/editarficha' element={<InserirFicha />} />
                 < Route path='/verumaficha' element={<VerUnicaFicha />} />
+
+                < Route path='/veremprestimo' element={<VerEmprestimo />} />
+                < Route path='/criaremprestimo' element={<CriarEmprestimo />} />\
+
+                < Route path='/cadastro' element={<Cadastro />} />
+                < Route path='/login' element={<Login />} />
+
+
+
+
+
+
 
 
 

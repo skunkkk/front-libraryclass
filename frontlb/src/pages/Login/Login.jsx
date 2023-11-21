@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './Login.css';
-import axios from 'axios';
 import { useJwt } from "react-jwt";
 const token = localStorage.getItem('authData');
 

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './Cadastro.css';
-import iconler from '../Cadastro/iconler.png';
 import axios from 'axios';
 export default function Cadastro() {
     const [id_usuarios, setId_usuarios]= useState('');
