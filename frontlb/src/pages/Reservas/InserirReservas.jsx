@@ -1,20 +1,11 @@
 import React from "react";
+import '../Reservas/InserirReservas.css'
 import { Link } from "react-router-dom";
 
 export default function InserirReservas() {
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        textAlign: "center",
-
-        flexDirection: "column",
-        width: "100vw",
-        height: "100vh",
-      }}
-    >
-      <div className="navbar">
+    <div className="container-reservas">
+      <div className="navbar-reservas">
         <p>Inserir reservas</p>
 
         <Link to={"/VerReservas"}>
@@ -24,20 +15,16 @@ export default function InserirReservas() {
           <p>Voltar</p>
         </Link>
       </div>  
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: "1rem",
-        }}
-      >
+      <div className="alinhar-reservas">
+      <div className="reservas">
         <h1>Inserir Reservas:</h1>
         <input
           type="text"
           placeholder="Inserir reserva..."
-          className="input-livro"
+          className="input-reservas"
         />
-        <input type="button" value="Enviar Reserva" />
+        <input type="button" className="button-reservas" value="Enviar Reserva" />
+      </div>
       </div>
     </div>
   );

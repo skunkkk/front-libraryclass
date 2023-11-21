@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 export default function EditarAutor() {
   const {id} =useParams();
@@ -30,6 +30,20 @@ const response=axios.put(`http://127.0.0.1:8000/autor/${id}/`,dados);
   }else{
     return (
       <div>
+        <div className="navbar-reservas">
+
+<Link to={"/criarrautor"}>
+  <p>Criar Autor</p>
+</Link>
+<Link to={"/VerAutor"}>
+  <p>Ver Autor</p>
+</Link> 
+
+<Link to={"/NavegacaoADM"}>
+  <p>Voltar</p>
+</Link> 
+
+</div> 
           <div>
           <label>ID: </label>
           <input type="text" value={dadosForms.id} disabled  />

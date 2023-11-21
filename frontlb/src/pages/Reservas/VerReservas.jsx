@@ -3,17 +3,8 @@ import { Link } from "react-router-dom";
 
 export default function VerReservas() {
   return (
-    <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        textAlign: "center",
-        flexDirection: "column",
-        width: "100vw",
-        height: "100vh",
-      }}
-    >
-       <div className="navbar">
+    <div className="container-reservas">
+       <div className="navbar-reservas">
        <Link to={"/InserirReservas"}>
         <p>Inserir reservas</p>
         </Link>
@@ -24,15 +15,13 @@ export default function VerReservas() {
           <p>Voltar</p>
         </Link>
       </div>
+      <div className="alinhar-reservas">
+      <div className="reservas">
       <h1>Reservas Feitas:</h1>
       <li></li>
-      <div style={{
-        display: "flex",
-        flexDirection: "column",
-        gap: "1rem"
-      }}>
-      <input type="text" placeholder="Inserir reserva para deletar" className="input-livro" />
-      <input type="button" value="Deletar Reserva"/>
+      <input type="text" placeholder="Inserir reserva para deletar" className="input-reservas" />
+      <input type="button" value="Deletar Reserva" className="button-reservas"/>
+    </div>
     </div>
     </div>
   );

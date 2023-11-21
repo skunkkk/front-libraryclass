@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import './Autor.css'
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 export default function VerAutor() {
@@ -14,6 +13,20 @@ export default function VerAutor() {
   console.log(data)
   return (
     <div className='container-Autor'>
+      <div className="navbar-reservas">
+
+<Link to={"/Editarautor"}>
+  <p>Editar Autor</p>
+</Link>
+<Link to={"/VerAutor"}>
+  <p>Ver Autor</p>
+</Link> 
+
+<Link to={"/NavegacaoADM"}>
+  <p>Voltar</p>
+</Link> 
+
+</div> 
        <div className='autores'>
             <h1>autores</h1>
 
