@@ -3,15 +3,20 @@ import './Autor.css'
 export default function EditarAutor() {
   return (
     <div className='container-Autor'>
-    <div className='autores'>
-         <div className='autor'>
-         Autor 1
-         </div>
-         <div className='autor'>
-         Autor 2
-         </div>
+      <h1>Editar autor</h1>
+        <div className='classInput'>
+                <label>ID: </label>
+                <input type="text" />
+            </div>
+            <div className='classInput' onChange={(e) => setAutor_nome(e.target.value)}>
+                <label>Nome do autor: </label>
+                <input type="text" />
+           </div>
+           <div className='classInput'onChange={(e) => setAutor_nacionalidade(e.target.value)}>
+                <label>Nacionalidade do autor: </label>
+                <input type="text" />
+           </div>
+            <button onClick={()=>adicionarAutor()}>Criar autor</button>
     </div>
-    <button>Editar </button>
- </div>
   )
 }
