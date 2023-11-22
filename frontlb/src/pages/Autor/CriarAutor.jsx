@@ -20,7 +20,7 @@ export default function CriarAutor() {
     }
     catch(erros){
       console.log(erros);
-    }
+    };
   }
   return (
     <div className='container-Autor'>
