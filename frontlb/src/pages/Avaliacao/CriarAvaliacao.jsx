@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Avaliacao.css';
+import './CriarAvaliacao.css';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 export default function CriarAvaliacoes() {

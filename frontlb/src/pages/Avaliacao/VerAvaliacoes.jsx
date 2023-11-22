@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
-
+import './VerAvaliacoes.css'
 export default function VerAvaliacoes() {
     const [data,setData]=useState([])
 
@@ -10,7 +10,7 @@ export default function VerAvaliacoes() {
   },[])
   console.log(data)
   return (
-    <div className='container-avaliacao'>
+    <div className='container-veravaliacao'>
         <div className="navbar-reservas">
 
 <Link to={"/CriarAvaliacoes"}>
@@ -24,11 +24,11 @@ export default function VerAvaliacoes() {
 </Link> 
 
 </div> 
-<div className='alinhar-inputs'>
-        <h1>ver lista de avaliacoes periodicas feitas</h1>
+<div className='alinhar-inputs-ver'>
+        <h1>Avaliacoes Periodicas Feitas :</h1>
     
-    <table>
-        <tr><td>id avaliacoes</td><td>descricao</td><td>isbn</td></tr>
+    <table >
+        <tr className='dados-avaliacao'><td>id avaliacoes</td><td>descricao</td><td>isbn</td></tr>
         {data.map((elemento)=>(
             <tr><td>{elemento.id_avaliacoesPeriodicas}</td><td>{elemento.descricao}</td><td>{elemento.isbn_livros}</td></tr>
         ))}

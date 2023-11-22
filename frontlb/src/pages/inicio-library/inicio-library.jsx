@@ -5,6 +5,7 @@ import Botao from "../../components/Botao";
 import { Button, Form } from "react-bootstrap";
 import CardLivro from "./CardLivro";
 import axios from "axios";
+import Logo from '../inicio-library/logo512.png'
 
 export default function InicioLibrary() {
   const [dados, setDados] = useState([]);
@@ -23,13 +24,15 @@ export default function InicioLibrary() {
   );
 
   return (
-    <div className="container">
+    <div className="container-inicio-library">
       <div className="Titulo">
         <h1 className="nome">LibraryClass</h1>
         <img src="logo.png" alt="" className="logo" />
       </div>
       <div className="container-search">
+        
         <Form className="d-flex">
+          
           <Form.Control
             type="search"
             placeholder="Procurar livros"
@@ -39,6 +42,8 @@ export default function InicioLibrary() {
             onChange={handlePesquisaChange}
           />
         </Form>
+        
+      
       </div>
       <div className="row row-cols-1 row-cols-md-4 g-4">
         {livrosFiltrados.map((elemento) => (
@@ -48,6 +53,7 @@ export default function InicioLibrary() {
                 titulo={elemento.titulo_livros}
                 imagem={`http://localhost:8000/storage/livros/${elemento.foto_livros.split("/")[1]}`}
               />
+              
             </div>
           </div>
         ))}

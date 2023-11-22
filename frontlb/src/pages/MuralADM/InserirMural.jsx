@@ -10,16 +10,16 @@ export default function InserirMural() {
   const [tipo, setTipo] = useState("");
   const [descricao, setDescricao] = useState("");
 
-  async function adicionarMural(){
-    id_mural,
-    tipo,
-    descricao
-  };
-  try{
-    const response = await axios.post("http://127.0.0.1:8000/mural",dados);
-    console.log(response.data);
+  // async function adicionarMural(){
+  //   id_mural,
+  //   tipo,
+  //   descricao
+  // };
+  // try{
+  //   const response = await axios.post("http://127.0.0.1:8000/mural",dados);
+  //   console.log(response.data);
   
-  };
+  // };
   return (
     <div className="container-muraladm">
       <div className="navbar">

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Gloock&family=Poppins:wght@200&display=swap");
 
-.container {
+.container-inicio-library {
   height: 100vh;
   width: 100vw;
   background-image: url("../../../public/fundolib.jpg");
