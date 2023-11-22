@@ -55,9 +55,11 @@ const response=axios.put(`http://127.0.0.1:8000/autor/${id}/`,dados);
           <input type="text" className="input-autor" value={dadosForms.autor_nome} onChange={(e)=>setAutor_nome(e.target.value)}/>
           <label>Nacionalidade do autor: </label>
           <input className="input-autor" type="text" value={dadosForms.autor_nacionalidade} onChange={(e)=>setAutor_nacionalidade(e.target.value)} />
-          <button className='button-reservas' onClick={()=>editar()}>Editar autor</button>
+        </div>
+         
           </div>
-          </div>
+          <button className='button-autor' onClick={()=>editar()}>Editar autor</button>
+          
       </div>
     )
   }

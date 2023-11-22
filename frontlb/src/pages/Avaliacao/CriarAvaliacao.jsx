@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Avaliacao.css';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 export default function CriarAvaliacoes() {
   const [id_avaliacoesPeriodicas, setId_avaliacoesPeriodicas] = useState("");
@@ -24,22 +24,37 @@ export default function CriarAvaliacoes() {
   }
   return (
     <div className='container-avaliacao'>
+       <div className="navbar-reservas">
+
+<Link to={"/CriarAvaliacoes"}>
+  <p>Criar Avaliação</p>
+</Link>
+<Link to={"/VerAvaliacoes"}>
+  <p>Ver Avaliações</p>
+</Link> 
+<Link to={"/NavegacaoADM"}>
+  <p>Voltar</p>
+</Link> 
+
+</div> 
+       <div className='alinhar-inputs'>
          <div className='classInput' onChange={(e) => setId_avaliacoesPeriodicas(e.target.value)}>
                 <label>ID avaliação: </label>
-                <input type="text" />
+                <input type="text" className='input-avaliacao' />
               
             </div>
             <div className='classInput' onChange={(e) => setIsbn_livros(e.target.value)}>
                 <label>ISBN: </label>
-                <input type="text" />
+                <input type="text" className='input-avaliacao'/>
                 
             </div>
             <div className='classInput' onChange={(e) => setDescricao(e.target.value)}>
                 <label>Descrição: </label>
-                <input type="text" />
+                <input type="text" className='input-avaliacao' />
                
             </div>
-            <button onClick={()=>adicionarAvaliacoes()}>Criar avaliação</button>
+            </div>
+            <button className='button-avaliacao' onClick={()=>adicionarAvaliacoes()}>Criar avaliação</button>
            
     </div>
   )

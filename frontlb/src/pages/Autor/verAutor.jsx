@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
-import '../Autor/VerAutor.css';
+import './VerAutor.css';
 import { Link } from 'react-router-dom';
 export default function VerAutor() {
   const [data,setData]=useState([])
@@ -13,7 +13,7 @@ export default function VerAutor() {
   },[])
   console.log(data)
   return (
-    <div className='container-Autor'>
+    <div className='container-VerAutor'>
       <div className="navbar-reservas">
 
 <Link to={"/editarautor/:id"}>
@@ -32,11 +32,15 @@ export default function VerAutor() {
 </Link> 
 
 </div> 
+<div className='alinhar-autores'>
        <div className='autores'>
-            <h1>autores</h1>
+            <h1>Autores</h1>
 
-            <table>
-              <tr><th>id do autor</th><th>nome do autor</th><th>nacionalidade do autor</th> <th>ações</th></tr>
+            <table >
+              <tr className='autores-caracter'><th>id do autor</th>
+              <th>nome do autor</th>
+              <th>nacionalidade do autor</th>
+              <th>ações</th></tr>
               {data.map((elemento)=>(
                 <tr>
                   <td>{elemento.id}</td>
@@ -52,6 +56,7 @@ export default function VerAutor() {
             </table>
             <div>
             </div>
+       </div>
        </div>
     </div>
   )
