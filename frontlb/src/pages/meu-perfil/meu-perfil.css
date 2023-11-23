@@ -133,7 +133,7 @@
   }
 
   .conteudo-login .box-user-login label{
-    left: 50px;
+    margin-left: -10rem;
   }
   .conteudo-login .box-user-login input{
     width: 80%;
@@ -143,5 +143,26 @@
   .botao-login{
     width: 50vw;
   }
+
+  }
+
+  @media only screen and (max-width: 1107px) {
+    .conteudo-login .box-user-login label{
+      margin-left: -6rem;
+    }
+
+  }
+
+  @media only screen and (max-width: 699px) {
+    .conteudo-login .box-user-login label{
+      margin-left: -9rem;
+    }
+
+  }
+
+  @media only screen and (max-width: 430px) {
+    .conteudo-login .box-user-login label{
+      margin-left: -11.5rem;
+    }
 
   }
