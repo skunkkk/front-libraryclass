@@ -7,8 +7,8 @@ export default function NavegacaoADM() {
       <table className='tabela-adm'>
         <tr>
           <td><Link to={"/Sessoes"} ><button className='button-adm'>  Seções </button></Link></td>
-          <td><Link to={"/InserirReservas"} ><button className='button-adm'>Reservas</button></Link></td>
-          <td><Link to={"/"} ><button className='button-adm'>Publicações</button></Link></td>
+          <td><Link to={"/InserirReservas "} ><button className='button-adm'>Reservas</button></Link></td>
+          <td><Link to={"/InserirPublicacao"} ><button className='button-adm'>Publicações</button></Link></td>
         </tr>
         <tr>
           <td><Link to={"/MuralADM"} ><button className='button-adm'>Murais</button></Link></td>
@@ -17,7 +17,7 @@ export default function NavegacaoADM() {
         </tr>
         <tr>
           <td><Link to={"/CriarEmprestimo"} ><button className='button-adm'>Emprestimos</button></Link></td>
-          <td><Link to={"/"} ><button className='button-adm'>Devoluções</button></Link></td>
+          <td><Link to={"/InserirDevolucao"} ><button className='button-adm'>Devoluções</button></Link></td>
           <td><Link to={"/CriarCategoria"} ><button className='button-adm'>Categorias</button></Link></td>
 
         </tr>

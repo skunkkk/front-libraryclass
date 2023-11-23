@@ -20,11 +20,10 @@ export default function VerAutor() {
   <p>Editar Autor</p>
 </Link>
 
+  <p>Ver Autor</p>
+
 <Link to={"/CriarAutor"}>
   <p>Criar Autor</p>
-</Link>
-<Link to={"/VerAutor"}>
-  <p>Ver Autor</p>
 </Link> 
 
 <Link to={"/NavegacaoADM"}>

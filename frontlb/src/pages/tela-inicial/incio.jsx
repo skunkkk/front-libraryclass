@@ -18,9 +18,9 @@ export default function Inicio() {
         <h2 className="h2Inicio">Para onde deseja ir ?</h2>
         <br />
         <br />
-       <button className="botaoInicio">Login</button>
+     <Link to={"/Login"}>  <button className="botaoInicio">Login</button></Link>
         <br />
-        <button className="botaoInicio">Cadastro</button>
+       <Link to={"/Cadastro"}><button className="botaoInicio">Cadastro</button></Link> 
       
       </div>
     </div>

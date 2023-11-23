@@ -1,12 +1,15 @@
 
-
+@keyframes sweep {
+    0%    {opacity: 0; margin-left: -10px}
+    100%  {opacity: 1; margin-left: 0px}
+  }
 
 .container-mural {
-    
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: #143788;
+    background-color: #767676;
 
 }
 
@@ -17,15 +20,13 @@
     align-items: center;
     text-align: center;
     justify-content: center;
-    width: 100vw;
     
     
 }
-.Titulo-mural{
+.titulo-mural{
     width: 100%;
-    position: fixed;
     background-color: #143788;
-    height: 14vh;
+    
     display: flex;
     justify-content: center;
 }
@@ -86,9 +87,50 @@
 .adm{
     position: fixed;
     right: 10%;
-    bottom: 90%;
-    transition-duration: .25s;
+    bottom: 86%;
+}
 
+.adm-janela{
+    animation: sweep .5s ease-in-out;
+}
+
+.enviar-adm{
+    border: 4px solid black;
+    border-radius: 50px;
+    width: 50%;
+    background-color: #f1ebe2;
+
+}
+
+.titulo-mural-enviar{
+    display: flex;
+    border-radius: 50px 50px 0 0 ;
+    padding: 20px;
+    color: white;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: #767676;
+}
+
+.inputs-mural{
+    display: flex ;
+    padding: 50px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.inputs-mural input{
+    border-radius: 10px;
+    border: none;
+}
+.button-mural{
+    background-color: #767676;
+    width: 20%;
+    border: 3px solid #f1ebe2;
+    font-size: x-large;
+    font-family: Poppins;
 }
 
 summary::-webkit-details-marker {
@@ -100,6 +142,8 @@ summary {
     font-size: xx-large;
     color: white;
 }
+
+
 @media only screen and (max-width: 600px) {
     .sidebar {
         width: 100%;
@@ -108,5 +152,15 @@ summary {
 
     .container-mural{
         flex-direction: column;
+    }
+
+    .enviar-adm{
+        width: 100%;
+    }
+    .button-mural{
+        width: 50%;
+    }
+    .post{
+        width: 100%;
     }
     }

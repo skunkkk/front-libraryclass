@@ -26,7 +26,7 @@ export default function CriarEmprestimo() {
   }
 
   return (
-    <div className="container">
+    <div className="container-criaremprestimo">
       <div className="navbar">
         <p>Criar empréstimo</p>
         <Link to={'/VerEmprestimo'}>
