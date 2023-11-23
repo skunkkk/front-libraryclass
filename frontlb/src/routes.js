@@ -91,7 +91,7 @@ export default function MyRoutes() {
 
                 < Route path='/VerAvaliacao' element={<VerAvaliacoes />} />
 
-                < Route path='/verficha' element={<VerFichas />} />
+                < Route path='/VerFichas' element={<VerFichas />} />
                 < Route path='/editarficha' element={<InserirFicha />} />
                 < Route path='/verumaficha' element={<VerUnicaFicha />} />
 

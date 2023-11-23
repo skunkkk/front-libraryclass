@@ -7,14 +7,13 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 export default function InserirMural() {
   const [id_mural, setId_mural] = useState("");
-  const [tipo, setTipo] = useState("");
+
   const [descricao, setDescricao] = useState("");
 
 
   async function adicionarMural(){
     const dados = {
     id_mural,
-    tipo,
     descricao
   };
   try{
@@ -39,8 +38,8 @@ export default function InserirMural() {
       </div>
       <div className="box1">
         <h1>Inserir mensagem no mural</h1>
-        <textarea className="txtarea"></textarea>
-        <button className="btn-enviar">Enviar</button>
+        <textarea className="txtarea" onChange={(e)=>setDescricao(e.target.value)}></textarea>
+        <button className="btn-enviar" onClick={()=>adicionarMural()}>Enviar</button>
       </div>
     </div>
   );
