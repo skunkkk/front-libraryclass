@@ -23,21 +23,16 @@ import MuralADM from './pages/MuralADM/InserirMural';
 import NavegacaoADM from './pages/NavegacaoADM/NavegacaoADM';
 import InserirPublicacao from './pages/Publicacao/InserirPublicacao';
 import VerPublicacao from './pages/Publicacao/VerPublicacao';
-
 import InserirReservas from './pages/Reservas/InserirReservas';
 import VerReservas from './pages/Reservas/VerReservas';
-
 import InserirFicha from './pages/FichasLivros/InserirFicha';
 import VerFichas from './pages/FichasLivros/VerFichas';
 import VerUnicaFicha from './pages/FichasLivros/VerUnicaFicha';
-
 import CriarAutor from './pages/Autor/CriarAutor';
 import VerMural from './pages/MuralADM/VerMural';
-
 import EditarLivro from './pages/Livro/EditarLivro';
 import InserirLivro from './pages/Livro/InserirLivro';
 import VerLivro from './pages/Livro/VerLivro';
-
 import Sessoes from './pages/Sessões/Sessoes';
 import NotFound from './pages/NotFound/NotFound';
 import VerAutor from './pages/Autor/VerAutor';
@@ -47,6 +42,7 @@ import CriarEmprestimo from './pages/Emprestimo/CriarEmprestimo';
 import VerEmprestimo from './pages/Emprestimo/VerEmprestimo';
 import Cadastro from './pages/Cadastro/Cadastro';
 import Login from './pages/Login/Login';
+
 export default function MyRoutes() {
     return (
         <BrowserRouter>
@@ -92,8 +88,9 @@ export default function MyRoutes() {
                 < Route path='/VerAvaliacao' element={<VerAvaliacoes />} />
 
                 < Route path='/VerFichas' element={<VerFichas />} />
-                < Route path='/editarficha' element={<InserirFicha />} />
-                < Route path='/verumaficha' element={<VerUnicaFicha />} />
+                < Route path='/InserirFicha' element={<InserirFicha />} />
+
+                < Route path='/VerUmaFicha' element={<VerUnicaFicha />} />
 
                 < Route path='/veremprestimo' element={<VerEmprestimo />} />
                 < Route path='/criaremprestimo' element={<CriarEmprestimo />} />\
