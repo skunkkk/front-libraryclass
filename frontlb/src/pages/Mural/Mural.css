@@ -2,11 +2,11 @@
 
 
 .container-mural {
-    
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: #143788;
+    background-color: #767676;
 
 }
 
@@ -17,7 +17,6 @@
     align-items: center;
     text-align: center;
     justify-content: center;
-    width: 100vw;
     
     
 }
@@ -89,6 +88,10 @@
     bottom: 90%;
     transition-duration: .25s;
 
+}
+
+.enviar-adm{
+    width: 50%;
 }
 
 summary::-webkit-details-marker {
