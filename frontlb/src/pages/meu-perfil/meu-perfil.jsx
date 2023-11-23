@@ -42,7 +42,8 @@ export default function Perfil() {
       <div className="conteudo-login">
         <h1 className="logar">Perfil</h1>
         <div className="inputs-login">
-          <div className="box-user-login">
+            
+            <div className="box-user-login">
             <label>ID: </label>
             <input
               type="text"
@@ -50,6 +51,8 @@ export default function Perfil() {
               value={dadosForms.id}
               disabled
             />
+            </div>
+          <div className="box-user-login">
             <input
               type="email"
               required
