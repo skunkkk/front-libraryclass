@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Mural.css';
 import Post from '../../components/post/post';
 import MenuH from '../../components/menu-h/MenuH';
 
 export default function Mural() {
+    const [data, setData]= useState([]);
+    
      return (
     //     preto : #ocobob
     //     verde : #36a9a9
