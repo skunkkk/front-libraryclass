@@ -10,9 +10,8 @@ export default function Mural() {
     //     azul : #143788
     // branco : #f1ebe2
         <div className='container-mural'>
-            <div style={{padding : '3%'}}></div>
-       
-            <div className='Titulo-mural'>
+            
+            <div className='titulo-mural'>
             {/* <div class="hamburger-menu">
     <input id="menu__toggle" type="checkbox" />
     <label class="menu__btn" for="menu__toggle">
@@ -42,9 +41,21 @@ export default function Mural() {
             <div className='conteudo-mural'>
                 <div className='posts'>
                     <div className='enviar-adm'>
+                        <div className='titulo-mural-enviar'>
+                        <h2>Postar Mensagem</h2>
+                        </div>
+                        <div className='inputs-mural'>
+                        <p style={{color : 'black'}}>Titulo:</p>
                         <input placeholder='Escreva aqui... '/>
+                        <p style={{color : 'black'}}>Mensagem:</p>
+                        <input placeholder='Escreva aqui... '/>
+                        
+                        <p style={{color : 'black'}}>Cargo:</p>
+                        <input placeholder='Escreva aqui... '/>
+                        </div>
+                        <button className='button-mural'>Enviar</button>
                     </div>
-                    <Post titulo="Agressão virtual" mensagem="estou sofrendo bullying no facebook kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk" cargo="Aluno"/>
+                    <Post titulo="Agressão virtual" mensagem="Venho por meio desta denunciar um caso alarmante de cyberbullying que está ocorrendo nas redes sociais, causando sérios danos emocionais e psicológicos à vítima. Trata-se de um incidente envolvendo a usuária [Nome da Vítima], residente na cidade de [Cidade], que vem sendo alvo de ataques virtuais constantes." cargo="Aluno"/>
                     <Post />
                     <Post />
                     <Post />
