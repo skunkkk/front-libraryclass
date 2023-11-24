@@ -8,36 +8,36 @@ export default function InserirReservas() {
   const [data_reservas, setData_reservas] = useState();
   const [isbn_livros, setIsbn_livros] = useState();
   const [id_usuarios, setId_usuarios] = useState();
-  const[descricao,setDescricao]=useState();
-  const[titulo_livros,setTitulo_livros]=useState();
-  const[data_emprestimos,setData_emprestimos]=useState();
+  const [descricao, setDescricao] = useState();
+  const [titulo_livros, setTitulo_livros] = useState();
+  const [data_emprestimos, setData_emprestimos] = useState();
 
-
-  async function liberarReserva(){
-    const dados ={
+  async function liberarReserva() {
+    const dados = {
       id_reservas,
       descricao,
       titulo_livros,
-      data_emprestimos
-
+      data_emprestimos,
     };
 
-    try{
-      const response = await axios.post("http://127.0.0.1:8000/publicacoes",dados);
+    try {
+      const response = await axios.post(
+        "http://127.0.0.1:8000/reservas",
+        dados
+      );
       console.log(response.data);
-
-    }catch (erros){
+    } catch (erros) {
       console.log(erros);
     }
   }
 
-  async function negar(){
-  
-    try{
-      const response = await  axios.delete(`http://127.0.0.1:8000/reservas/${id_reservas}`);
+  async function negar() {
+    try {
+      const response = await axios.delete(
+        `http://127.0.0.1:8000/reservas/${id_reservas}`
+      );
       console.log(response.data);
-
-    }catch (erros){
+    } catch (erros) {
       console.log(erros);
     }
   }
@@ -73,39 +73,51 @@ export default function InserirReservas() {
             placeholder="Inserir reserva..."
             className="input-reservas"
             aria-label="Search"
-            onChange={(e)=>setId_reservas(e.target.value)}
+            onChange={(e) => setId_reservas(e.target.value)}
           />
-          <div> 
-           <input
-            type="text"
-            placeholder="Seção" 
-            className="input-reservas"
-            onChange={(e)=>setDescricao(e.target.value)}
-          />
-           <input
-            type="text"
-            placeholder="Livro"
-            className="input-reservas"
-            onChange={(e)=>setTitulo_livros(e.target.value)}
-          />
-           <input
-            type="text"
-            placeholder="Data de entrega"
-            className="input-reservas"
-            onChange={(e)=>setData_emprestimos(e.target.value)}
-          />
+          <div>
+            <input
+              type="text"
+              placeholder="Seção"
+              className="input-reservas"
+              onChange={(e) => setDescricao(e.target.value)}
+            />
+            <input
+              type="text"
+              placeholder="Livro"
+              className="input-reservas"
+              onChange={(e) => setTitulo_livros(e.target.value)}
+            />
+            <input
+              type="text"
+              placeholder="Data de entrega"
+              className="input-reservas"
+              onChange={(e) => setData_emprestimos(e.target.value)}
+            />
           </div>
           <input
             type="button"
             className="button-reservas"
-            value="Liberar Reserva" onClick={()=>liberarReserva()}
+            value="Liberar Reserva"
+            onClick={() => liberarReserva()}
           />
           <div>
-          <input
-            type="button"
-            className="button-reservas"
-            value="Negar Reserva" onClick={()=>negar()}
-          />
+            <input
+              type="button"
+              className="button-reservas"
+              value="Negar Reserva"
+              onClick={() => negar()}
+            />
+
+            <div className="botao-redirect">
+              <div>
+                <input
+                  type="button"
+                  className="button-r.ativas"
+                  value="R.Ativas"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
