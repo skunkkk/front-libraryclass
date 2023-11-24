@@ -43,6 +43,7 @@ export default function InserirReservas() {
   }
   return (
     <div className="container-reservas">
+      
       <div className="navbar-reservas">
         <p>Inserir reservas</p>
 
@@ -53,62 +54,22 @@ export default function InserirReservas() {
           <p>Voltar</p>
         </Link>
       </div>
+
+
       <div className="alinhar-reservas">
         <div className="reservas">
           <h1>Reservas</h1>
-          {/* <div className="container-search">
-        <Form className="d-flex">
-          <Form.Control
-            type="search"
-            placeholder="Inserir reserva"
-            className="input-reservas"
-            aria-label="Search"
-            value={""}
-            onChange={(e)=>setId_reservas(e.target.value)}
-          />
-        </Form>
-      </div> */}
-          <input
-            type="search"
-            placeholder="Inserir reserva..."
-            className="input-reservas"
-            aria-label="Search"
-            onChange={(e)=>setId_reservas(e.target.value)}
-          />
-          <div> 
-           <input
-            type="text"
-            placeholder="Seção" 
-            className="input-reservas"
-            onChange={(e)=>setDescricao(e.target.value)}
-          />
-           <input
-            type="text"
-            placeholder="Livro"
-            className="input-reservas"
-            onChange={(e)=>setTitulo_livros(e.target.value)}
-          />
-           <input
-            type="text"
-            placeholder="Data de entrega"
-            className="input-reservas"
-            onChange={(e)=>setData_emprestimos(e.target.value)}
-          />
+          <div><button className="btn btn-primary">Reservas Ativas</button> <button className="btn btn-secondary">Emprestimos Finalizadas</button></div>
+          <label htmlFor="">Digite o numero da reserva para filtrar</label>
+          <input type="search" name="" id="" />
+      <table>
+        <tr><th>Nº Reserva</th><th>Local do livro</th><th>Nome Livro</th><th>Data da entrega</th><th>Ações</th></tr>
+        <tr><td>101</td><td>1A</td><td>Divergente</td><td>21/06/1996</td><td><button className="btn btn-success">Liberar Reserva</button> <button className="btn btn-danger">Negar Emprestimo</button></td></tr>
+
+        
+      </table>
           </div>
-          <input
-            type="button"
-            className="button-reservas"
-            value="Liberar Reserva" onClick={()=>liberarReserva()}
-          />
-          <div>
-          <input
-            type="button"
-            className="button-reservas"
-            value="Negar Reserva" onClick={()=>negar()}
-          />
           </div>
-        </div>
-      </div>
     </div>
   );
 }

@@ -1,11 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./inicio-library.css";
-import Livro from "../../components/livro/livro";
-import Botao from "../../components/Botao";
 import { Button, Form } from "react-bootstrap";
 import CardLivro from "./CardLivro";
 import axios from "axios";
-import Logo from "../inicio-library/logo512.png";
 
 export default function InicioLibrary() {
   const [dados, setDados] = useState([]);
