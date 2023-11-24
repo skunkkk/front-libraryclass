@@ -43,6 +43,7 @@ export default function InserirReservas() {
   }
   return (
     <div className="container-reservas">
+      
       <div className="navbar-reservas">
         <p>Inserir reservas</p>
 
@@ -53,9 +54,12 @@ export default function InserirReservas() {
           <p>Voltar</p>
         </Link>
       </div>
+
+
       <div className="alinhar-reservas">
         <div className="reservas">
           <h1>Reservas</h1>
+<<<<<<< HEAD
           {/* <div className="container-search">
         <Form className="d-flex">
           <Form.Control
@@ -118,9 +122,19 @@ export default function InserirReservas() {
                 />
               </div>
             </div>
+=======
+          <div><button className="btn btn-primary">Reservas Ativas</button> <button className="btn btn-secondary">Emprestimos Finalizadas</button></div>
+          <label htmlFor="">Digite o numero da reserva para filtrar</label>
+          <input type="search" name="" id="" />
+      <table>
+        <tr><th>Nº Reserva</th><th>Local do livro</th><th>Nome Livro</th><th>Data da entrega</th><th>Ações</th></tr>
+        <tr><td>101</td><td>1A</td><td>Divergente</td><td>21/06/1996</td><td><button className="btn btn-success">Liberar Reserva</button> <button className="btn btn-danger">Negar Emprestimo</button></td></tr>
+
+        
+      </table>
           </div>
-        </div>
-      </div>
+>>>>>>> a8f1b62a2d44af4d5012e8f3722f36dcdbc8849b
+          </div>
     </div>
   );
 }
