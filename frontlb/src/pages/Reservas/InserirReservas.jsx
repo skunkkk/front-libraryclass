@@ -1,5 +1,5 @@
 import React from "react";
-import '../Reservas/InserirReservas.css'
+import "../Reservas/InserirReservas.css";
 import { Link } from "react-router-dom";
 
 export default function InserirReservas() {
@@ -14,17 +14,21 @@ export default function InserirReservas() {
         <Link to={"/NavegacaoADM"}>
           <p>Voltar</p>
         </Link>
-      </div>  
-      <div className="alinhar-reservas">
-      <div className="reservas">
-        <h1>Inserir Reservas:</h1>
-        <input
-          type="text"
-          placeholder="Inserir reserva..."
-          className="input-reservas"
-        />
-        <input type="button" className="button-reservas" value="Enviar Reserva" />
       </div>
+      <div className="alinhar-reservas">
+        <div className="reservas">
+          <h1>Inserir Reservas:</h1>
+          <input
+            type="text"
+            placeholder="Inserir reserva..."
+            className="input-reservas"
+          />
+          <input
+            type="button"
+            className="button-reservas"
+            value="Enviar Reserva"
+          />
+        </div>
       </div>
     </div>
   );

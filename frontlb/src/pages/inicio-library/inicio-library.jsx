@@ -1,19 +1,21 @@
 import React, { useEffect, useState } from "react";
 import "./inicio-library.css";
-import Livro from '../../components/livro/livro'
+import Livro from "../../components/livro/livro";
 import Botao from "../../components/Botao";
 import { Button, Form } from "react-bootstrap";
 import CardLivro from "./CardLivro";
 import axios from "axios";
-import Logo from '../inicio-library/logo512.png'
+import Logo from "../inicio-library/logo512.png";
 
 export default function InicioLibrary() {
   const [dados, setDados] = useState([]);
   const [pesquisa, setPesquisa] = useState("");
 
   useEffect(() => {
-    axios.get('http://localhost:8000/maisemprestados').then((response) => setDados(response.data))
-  }, [])
+    axios
+      .get("http://localhost:8000/maisemprestados")
+      .then((response) => setDados(response.data));
+  }, []);
 
   const handlePesquisaChange = (e) => {
     setPesquisa(e.target.value);
@@ -30,9 +32,7 @@ export default function InicioLibrary() {
         <img src="logo.png" alt="" className="logo" />
       </div>
       <div className="container-search">
-        
         <Form className="d-flex">
-          
           <Form.Control
             type="search"
             placeholder="Procurar livros"
@@ -42,18 +42,17 @@ export default function InicioLibrary() {
             onChange={handlePesquisaChange}
           />
         </Form>
-        
-      
       </div>
       <div className="row row-cols-1 row-cols-md-4 g-4">
         {livrosFiltrados.map((elemento) => (
           <div key={elemento.isbn_livros} className="col">
-            <div className="card" style={{ width: '200px', height: '200px' }}>
+            <div className="card" style={{ width: "200px", height: "200px" }}>
               <CardLivro
                 titulo={elemento.titulo_livros}
-                imagem={`http://localhost:8000/storage/livros/${elemento.foto_livros.split("/")[1]}`}
+                imagem={`http://localhost:8000/storage/livros/${
+                  elemento.foto_livros.split("/")[1]
+                }`}
               />
-              
             </div>
           </div>
         ))}

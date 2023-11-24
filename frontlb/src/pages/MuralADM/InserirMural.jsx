@@ -10,21 +10,18 @@ export default function InserirMural() {
 
   const [descricao, setDescricao] = useState("");
 
-
-  async function adicionarMural(){
+  async function adicionarMural() {
     const dados = {
-    id_mural,
-    descricao
-  };
-  try{
-    const response = await axios.post("http://127.0.0.1:8000/mural",dados);
-    console.log(response.data);
-  
+      id_mural,
+      descricao,
+    };
+    try {
+      const response = await axios.post("http://127.0.0.1:8000/murais", dados);
+      console.log(response.data);
+    } catch (erros) {
+      console.log(erros);
+    }
   }
-  catch(erros){
-    console.log(erros);
-  };
-}
   return (
     <div className="container-muraladm">
       <div className="navbar">
@@ -38,8 +35,13 @@ export default function InserirMural() {
       </div>
       <div className="box1">
         <h1>Inserir mensagem no mural</h1>
-        <textarea className="txtarea" onChange={(e)=>setDescricao(e.target.value)}></textarea>
-        <button className="btn-enviar" onClick={()=>adicionarMural()}>Enviar</button>
+        <textarea
+          className="txtarea"
+          onChange={(e) => setDescricao(e.target.value)}
+        ></textarea>
+        <button className="btn-enviar" onClick={() => adicionarMural()}>
+          Enviar
+        </button>
       </div>
     </div>
   );

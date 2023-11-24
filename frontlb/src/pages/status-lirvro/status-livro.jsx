@@ -15,8 +15,14 @@ export default function StatusLivro() {
           <button class="btn-reserva">Fazer reserva</button>
           <div className="faq-status">
             <div className="disponibilidade-div">
-            <p className="faq-satus-font">Se o livro não estiver disponivel, espere até que volte para a biblioteca.</p>
-            <p  className="faq-satus-font">Se caso Estiver com dificuldades para consultar o status, porcure ajuda na secretaria da escola</p>
+              <p className="faq-satus-font">
+                Se o livro não estiver disponivel, espere até que volte para a
+                biblioteca.
+              </p>
+              <p className="faq-satus-font">
+                Se caso Estiver com dificuldades para consultar o status,
+                porcure ajuda na secretaria da escola
+              </p>
             </div>
           </div>
         </div>

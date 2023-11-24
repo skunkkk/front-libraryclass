@@ -32,10 +32,13 @@ export default function VerLivro() {
         <Link to={"/InserirLivro"}>
           <p>Inserir livro</p>
         </Link>
-        <Link to={"/EditarLivro"}> <p>Editar livro</p> </Link>
-      
-          <p>Ver Livro</p>
-       
+        <Link to={"/EditarLivro"}>
+          {" "}
+          <p>Editar livro</p>{" "}
+        </Link>
+
+        <p>Ver Livro</p>
+
         <Link to={"/NavegacaoADM"}>
           <p>Voltar</p>
         </Link>

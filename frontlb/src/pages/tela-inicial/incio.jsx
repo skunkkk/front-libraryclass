@@ -6,10 +6,8 @@ import { Link } from "react-router-dom";
 import MenuH from "../../components/menu-h/MenuH";
 
 export default function Inicio() {
-  
   return (
     <div className="container-tela-inicio">
-        
       <div className="Titulo-tela-inicio">
         <h1 className="nome">LibraryClass</h1>
         <img src="logo.png" alt="" className="logo" />
@@ -18,10 +16,14 @@ export default function Inicio() {
         <h2 className="h2Inicio">Para onde deseja ir ?</h2>
         <br />
         <br />
-     <Link to={"/Login"}>  <button className="botaoInicio">Login</button></Link>
+        <Link to={"/Login"}>
+          {" "}
+          <button className="botaoInicio">Login</button>
+        </Link>
         <br />
-       <Link to={"/Cadastro"}><button className="botaoInicio">Cadastro</button></Link> 
-      
+        <Link to={"/Cadastro"}>
+          <button className="botaoInicio">Cadastro</button>
+        </Link>
       </div>
     </div>
   );

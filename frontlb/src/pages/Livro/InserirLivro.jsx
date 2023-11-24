@@ -1,5 +1,5 @@
-import axios from 'axios';
-import React, { useState } from 'react'
+import axios from "axios";
+import React, { useState } from "react";
 
 import "./Livro.css";
 import { Link } from "react-router-dom";
@@ -13,15 +13,18 @@ export default function InserirLivro() {
 
   async function adicionarLivro() {
     const formData = new FormData();
-  formData.append('isbn_livros', isbn_livros);
-  formData.append('titulo_livros', titulo_livros);
-  formData.append('foto_livros', foto_livros);
-  formData.append('sinopse_livros', sinopse_livros);
-  formData.append('id_secao', id_secao);
+    formData.append("isbn_livros", isbn_livros);
+    formData.append("titulo_livros", titulo_livros);
+    formData.append("foto_livros", foto_livros);
+    formData.append("sinopse_livros", sinopse_livros);
+    formData.append("id_secao", id_secao);
 
-console.log(formData);
+    console.log(formData);
     try {
-      const response = await axios.post("http://127.0.0.1:8000/livros", formData);
+      const response = await axios.post(
+        "http://127.0.0.1:8000/livros",
+        formData
+      );
       console.log(response.data);
     } catch (erros) {
       console.log(erros);
@@ -79,18 +82,18 @@ console.log(formData);
           className="input-livro"
         />
 
-<input type='text' placeholder='Inserir Sinopse Livro...' onChange={(e)=>setSinopse_livros(e.target.value)}/>
+        <input
+          type="text"
+          placeholder="Inserir Sinopse Livro..."
+          onChange={(e) => setSinopse_livros(e.target.value)}
+        />
 
-
-
-    <input type='button' value="Enviar Livro" onClick={()=>adicionarLivro()}/>
-</div>
-
-
-
+        <input
+          type="button"
+          value="Enviar Livro"
+          onClick={() => adicionarLivro()}
+        />
       </div>
-
-   
-  
+    </div>
   );
 }
