@@ -34,27 +34,22 @@ export default function VerPublicacao() {
           <th>Id Usuarios</th>
           <th>Id Mural </th>
         </tr>
-        {data.map((elemento) => (
-          <tr>
-            <td>{elemento.id_publicacao}</td>
-            <td>{elemento.mensagem}</td>
-            <td>{elemento.id_usuarios}</td>
-            <td>{elemento.id_mural}</td>
+   
             <td>
               {" "}
               <input
                 type="text"
                 placeholder="Inserir publicação para deletar"
-                onChange={(e) => setId_publicacao(e.target.value)}
+                onChange={(e) => (e.target.value)}
               />
             </td>
             <input
               type="button"
               value="Deletar Publicação"
-              onClick={() => apagar(elemento.id_publicacao)}
+              
             />
-          </tr>
-        ))}
+      
+      
       </table>
       <li></li>
     </div>
