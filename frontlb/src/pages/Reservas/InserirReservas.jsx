@@ -13,19 +13,28 @@ export default function InserirReservas() {
   const[data_emprestimos,setData_emprestimos]=useState();
 
 
-  async function adicionarReserva(){
+  async function liberarReserva(){
     const dados ={
       id_reservas,
-      data_reservas,
-      isbn_livros,
-      id_usuarios,
       descricao,
       titulo_livros,
       data_emprestimos
 
     };
+
     try{
       const response = await axios.post("http://127.0.0.1:8000/publicacoes",dados);
+      console.log(response.data);
+
+    }catch (erros){
+      console.log(erros);
+    }
+  }
+
+  async function negar(){
+  
+    try{
+      const response = await  axios.delete(`http://127.0.0.1:8000/reservas/${id_reservas}`);
       console.log(response.data);
 
     }catch (erros){
@@ -60,9 +69,10 @@ export default function InserirReservas() {
         </Form>
       </div> */}
           <input
-            type="text"
+            type="search"
             placeholder="Inserir reserva..."
             className="input-reservas"
+            aria-label="Search"
             onChange={(e)=>setId_reservas(e.target.value)}
           />
           <div> 
@@ -88,13 +98,13 @@ export default function InserirReservas() {
           <input
             type="button"
             className="button-reservas"
-            value="Liberar Reserva" onClick={()=>adicionarReserva()}
+            value="Liberar Reserva" onClick={()=>liberarReserva()}
           />
           <div>
           <input
             type="button"
             className="button-reservas"
-            value="Negar Reserva" onClick={""}
+            value="Negar Reserva" onClick={()=>negar()}
           />
           </div>
         </div>
