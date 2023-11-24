@@ -42,7 +42,11 @@ import CriarEmprestimo from './pages/Emprestimo/CriarEmprestimo';
 import VerEmprestimo from './pages/Emprestimo/VerEmprestimo';
 import Cadastro from './pages/Cadastro/Cadastro';
 import Login from './pages/Login/Login';
+<<<<<<< HEAD
 import VerUmLivro from './pages/inicio-library/VerUmLivro';
+=======
+import ReservasAtivas from './pages/Reservas/ReservasAtivas';
+>>>>>>> d3cf7ee5e7f99eaaf284f4facb934c87431a14e9
 
 export default function MyRoutes() {
     return (
@@ -74,6 +78,7 @@ export default function MyRoutes() {
                 <Route path='/InserirPublicacao' element={<InserirPublicacao />} />
                 <Route path='/VerLivro' element={<VerLivro />} />
                 < Route path='/InserirReservas' element={<InserirReservas />} />
+                < Route path='/ReservasAtivas' element={<ReservasAtivas />} />
                 < Route path='/VerMural' element={<VerMural />} />
                 < Route path='/EditarLivro' element={<EditarLivro />} />
                 < Route path='/InserirLivro' element={<InserirLivro />} />

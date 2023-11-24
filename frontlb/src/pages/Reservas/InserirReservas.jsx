@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+ import React, { useState } from "react";
 import "../Reservas/InserirReservas.css";
 import { Form, Link } from "react-router-dom";
 import axios from "axios";
@@ -8,36 +8,36 @@ export default function InserirReservas() {
   const [data_reservas, setData_reservas] = useState();
   const [isbn_livros, setIsbn_livros] = useState();
   const [id_usuarios, setId_usuarios] = useState();
-  const[descricao,setDescricao]=useState();
-  const[titulo_livros,setTitulo_livros]=useState();
-  const[data_emprestimos,setData_emprestimos]=useState();
+  const [descricao, setDescricao] = useState();
+  const [titulo_livros, setTitulo_livros] = useState();
+  const [data_emprestimos, setData_emprestimos] = useState();
 
-
-  async function liberarReserva(){
-    const dados ={
+  async function liberarReserva() {
+    const dados = {
       id_reservas,
       descricao,
       titulo_livros,
-      data_emprestimos
-
+      data_emprestimos,
     };
 
-    try{
-      const response = await axios.post("http://127.0.0.1:8000/publicacoes",dados);
+    try {
+      const response = await axios.post(
+        "http://127.0.0.1:8000/reservas",
+        dados
+      );
       console.log(response.data);
-
-    }catch (erros){
+    } catch (erros) {
       console.log(erros);
     }
   }
 
-  async function negar(){
-  
-    try{
-      const response = await  axios.delete(`http://127.0.0.1:8000/reservas/${id_reservas}`);
+  async function negar() {
+    try {
+      const response = await axios.delete(
+        `http://127.0.0.1:8000/reservas/${id_reservas}`
+      );
       console.log(response.data);
-
-    }catch (erros){
+    } catch (erros) {
       console.log(erros);
     }
   }
@@ -59,17 +59,71 @@ export default function InserirReservas() {
       <div className="alinhar-reservas">
         <div className="reservas">
           <h1>Reservas</h1>
-          <div><button className="btn btn-primary">Reservas Ativas</button> <button className="btn btn-secondary">Emprestimos Finalizadas</button></div>
-          <label htmlFor="">Digite o numero da reserva para filtrar</label>
-          <input type="search" name="" id="" />
-      <table>
-        <tr><th>Nº Reserva</th><th>Local do livro</th><th>Nome Livro</th><th>Data da entrega</th><th>Ações</th></tr>
-        <tr><td>101</td><td>1A</td><td>Divergente</td><td>21/06/1996</td><td><button className="btn btn-success">Liberar Reserva</button> <button className="btn btn-danger">Negar Emprestimo</button></td></tr>
+          {/* <div className="container-search">
+        <Form className="d-flex">
+          <Form.Control
+            type="search"
+            placeholder="Inserir reserva"
+            className="input-reservas"
+            aria-label="Search"
+            value={""}
+            onChange={(e)=>setId_reservas(e.target.value)}
+          />
+        </Form>
+      </div> */}
+          <input
+            type="search"
+            placeholder="Inserir reserva..."
+            className="input-reservas"
+            aria-label="Search"
+            onChange={(e) => setId_reservas(e.target.value)}
+          />
+          <div>
+            <input
+              type="text"
+              placeholder="Seção"
+              className="input-reservas"
+              onChange={(e) => setDescricao(e.target.value)}
+            />
+            <input
+              type="text"
+              placeholder="Livro"
+              className="input-reservas"
+              onChange={(e) => setTitulo_livros(e.target.value)}
+            />
+            <input
+              type="text"
+              placeholder="Data de entrega"
+              className="input-reservas"
+              onChange={(e) => setData_emprestimos(e.target.value)}
+            />
+          </div>
+          <input
+            type="button"
+            className="button-reservas"
+            value="Liberar Reserva"
+            onClick={() => liberarReserva()}
+          />
+          <div>
+            <input
+              type="button"
+              className="button-reservas"
+              value="Negar Reserva"
+              onClick={() => negar()}
+            />
 
-        
-      </table>
+            <div className="botao-redirect">
+              <div>
+                <input
+                  type="button"
+                  className="button-r.ativas"
+                  value="R.Ativas"
+                />
+              </div>
+            </div>
           </div>
-          </div>
+    </div>
+    </div>
     </div>
   );
 }

@@ -21,7 +21,7 @@ export default function VerUmLivro() {
                 <CardResenha/>
                 <CardResenha/>
                 <CardResenha/>
-            </div>
+             </div>
         </div>
     )
 }
