@@ -40,7 +40,7 @@ export default function ReservasAtivas() {
           <th>Nome Livro:</th>
           <th>Data entrega:</th>
              </tr>
-             
+             <br></br>
             </table>
            
       <div>

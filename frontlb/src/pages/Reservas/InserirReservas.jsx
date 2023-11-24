@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../Reservas/InserirReservas.css";
 import { Form, Link } from "react-router-dom";
 import axios from "axios";
@@ -41,9 +41,16 @@ export default function InserirReservas() {
       console.log(erros);
     }
   }
+
+  useEffect(() => {
+    axios.get(`http://127.0.0.1:8000/maisemprestados`).then((res) => {
+      setDados(res.data);
+    });
+  }, []);
+
+  console.log(dados);
   return (
     <div className="container-reservas">
-      
       <div className="navbar-reservas">
         <p>Inserir reservas</p>
 
@@ -55,21 +62,40 @@ export default function InserirReservas() {
         </Link>
       </div>
 
-
       <div className="alinhar-reservas">
         <div className="reservas">
           <h1>Reservas</h1>
-          <div><button className="btn btn-primary">Reservas Ativas</button> <button className="btn btn-secondary">Emprestimos Finalizadas</button></div>
+          <div>
+            <button className="btn btn-primary">Reservas Ativas</button>{" "}
+            <button className="btn btn-secondary">
+              Emprestimos Finalizadas
+            </button>
+          </div>
           <label htmlFor="">Digite o numero da reserva para filtrar</label>
           <input type="search" name="" id="" />
-      <table>
-        <tr><th>Nº Reserva</th><th>Local do livro</th><th>Nome Livro</th><th>Data da entrega</th><th>Ações</th></tr>
-        <tr><td>101</td><td>1A</td><td>Divergente</td><td>21/06/1996</td><td><button className="btn btn-success">Liberar Reserva</button> <button className="btn btn-danger">Negar Emprestimo</button></td></tr>
-
-        
-      </table>
-          </div>
-          </div>
+          <table>
+            <tr>
+              <th>Nº Reserva</th>
+              <th>Local do livro</th>
+              <th>Nome Livro</th>
+              <th>Data da entrega</th>
+              <th>Ações</th>
+            </tr>
+            {dados.map((dado) => (
+              <tr>
+                <td>{dado.id_reservas}</td>
+                <td>{dado.descricao}</td>
+                <td>{dado.titulo_livros}</td>
+                <td>{dado.data_reserva}</td>
+                <td>
+                  <button className="btn btn-success">Liberar Reserva</button>{" "}
+                  <button className="btn btn-danger">Negar Emprestimo</button>
+                </td>
+              </tr>
+            ))}
+          </table>
+        </div>
+      </div>
     </div>
   );
 }
