@@ -42,6 +42,7 @@ import CriarEmprestimo from './pages/Emprestimo/CriarEmprestimo';
 import VerEmprestimo from './pages/Emprestimo/VerEmprestimo';
 import Cadastro from './pages/Cadastro/Cadastro';
 import Login from './pages/Login/Login';
+import VerUmLivro from './pages/inicio-library/VerUmLivro';
 
 export default function MyRoutes() {
     return (
@@ -97,6 +98,7 @@ export default function MyRoutes() {
 
                 < Route path='/cadastro' element={<Cadastro />} />
                 < Route path='/login' element={<Login />} />
+                < Route path='/VerUmLivro' element={<VerUmLivro />} />
 
 
 
