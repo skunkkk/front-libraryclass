@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../Reservas/InserirReservas.css";
 import { Form, Link } from "react-router-dom";
 import axios from "axios";
@@ -11,19 +11,14 @@ export default function InserirReservas() {
   const[descricao,setDescricao]=useState();
   const[titulo_livros,setTitulo_livros]=useState();
   const[data_emprestimos,setData_emprestimos]=useState();
+const [dados,setDados]=useState([]);
 
-
-  async function liberarReserva(){
-    const dados ={
-      id_reservas,
-      descricao,
-      titulo_livros,
-      data_emprestimos
-
-    };
+  async function liberarReserva(id){
 
     try{
-      const response = await axios.post("http://127.0.0.1:8000/publicacoes",dados);
+      const response = await axios.put(`http://127.0.0.1:8000/reservas/${id}`,{
+        status_reserva:1
+      });
       console.log(response.data);
 
     }catch (erros){
@@ -41,6 +36,12 @@ export default function InserirReservas() {
       console.log(erros);
     }
   }
+
+  useEffect(()=>{
+    axios.get(`http://127.0.0.1:8000/maisemprestados`).then((res)=>{setDados(res.data)})
+  },[])
+
+  console.log(dados)
   return (
     <div className="container-reservas">
       
@@ -64,7 +65,10 @@ export default function InserirReservas() {
           <input type="search" name="" id="" />
       <table>
         <tr><th>Nº Reserva</th><th>Local do livro</th><th>Nome Livro</th><th>Data da entrega</th><th>Ações</th></tr>
-        <tr><td>101</td><td>1A</td><td>Divergente</td><td>21/06/1996</td><td><button className="btn btn-success">Liberar Reserva</button> <button className="btn btn-danger">Negar Emprestimo</button></td></tr>
+        {dados.map((dado)=>(
+          <tr><td>{dado.id_reservas}</td><td>{dado.descricao}</td><td>{dado.titulo_livros}</td><td>{dado.data_reserva}</td><td><button className="btn btn-success">Liberar Reserva</button> <button className="btn btn-danger">Negar Emprestimo</button></td></tr>
+        ))}
+        
 
         
       </table>
