@@ -1,24 +1,15 @@
-import React, { useEffect, useState } from "react";
-import "../Reservas/InserirReservas.css";
-import { Form, Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 export default function InserirReservas() {
   const [id_reservas, setId_reservas] = useState();
-  const [data_reservas, setData_reservas] = useState();
-  const [isbn_livros, setIsbn_livros] = useState();
-  const [id_usuarios, setId_usuarios] = useState();
-  const [descricao, setDescricao] = useState();
-  const [titulo_livros, setTitulo_livros] = useState();
-  const [data_emprestimos, setData_emprestimos] = useState();
-  const [dados,setDados]=useState([]);
-  async function liberarReserva() {
-    
 
+  async function liberarReserva() {
     try {
       const response = await axios.post(
         "http://127.0.0.1:8000/reservas",
-        dados
+        { id_reservas }
       );
       console.log(response.data);
     } catch (erros) {
@@ -37,80 +28,81 @@ export default function InserirReservas() {
     }
   }
 
-  useEffect(() => {
-    axios.get(`http://127.0.0.1:8000/maisemprestados`).then((res) => {
-      setDados(res.data);
-    });
-  }, []);
-
-  console.log(dados);
   return (
-    <div className="container-reservas">
-      <div className="navbar-reservas">
-        <p>Inserir reservas</p>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        textAlign: "center",
+        justifyContent: "center",
+        height: "100vh",
+        fontFamily: "Arial, sans-serif",
+      }}
+    >
+      <div className="container-reservas" style={{ width: "80%", margin: "auto" }}>
+        <div className="navbar-reservas" style={{ background: "#333", color: "white", padding: "10px", marginBottom: "20px" }}>
+          <p style={{ fontSize: "1.5em", fontWeight: "bold", margin: 0 }}>
+            Inserir reservas
+          </p>
+          <Link to={"/VerReservas"} style={{ textDecoration: "none", color: "white", marginLeft: "20px" }}>
+            <p style={{ fontSize: "1.2em", margin: 0 }}>Ver reservas</p>
+          </Link>
+          <Link to={"/NavegacaoADM"} style={{ textDecoration: "none", color: "white", marginLeft: "20px" }}>
+            <p style={{ fontSize: "1.2em", margin: 0 }}>Voltar</p>
+          </Link>
+        </div>
 
-        <Link to={"/VerReservas"}>
-          <p>Ver reservas</p>
-        </Link>
-        <Link to={"/NavegacaoADM"}>
-          <p>Voltar</p>
-        </Link>
-      </div>
-
-      <div className="alinhar-reservas">
-        <div className="reservas">
-          <h1>Reservas</h1>
-          {/* <div className="container-search">
-        <Form className="d-flex">
-          <Form.Control
-            type="search"
-            placeholder="Inserir reserva"
-            className="input-reservas"
-            aria-label="Search"
-            value={""}
-            onChange={(e)=>setId_reservas(e.target.value)}
-          />
-        </Form>
-      </div> */}
-          <input
-            type="search"
-            placeholder="Inserir reserva..."
-            className="input-reservas"
-            aria-label="Search"
-            onChange={(e) => setId_reservas(e.target.value)}
-          />
-          <div>
-            <button className="btn btn-primary">Reservas Ativas</button>{" "}
-            <button className="btn btn-secondary">
-              Emprestimos Finalizadas
-            </button>
-          </div>
-          <input
-            type="button"
-            className="button-reservas"
-            value="Liberar Reserva"
-            onClick={() => liberarReserva()}
-          />
-          <div>
+        <div className="alinhar-reservas">
+          <div className="reservas">
+            <h1 style={{ marginBottom: "10px" }}>Pesquisar reserva</h1>
             <input
-              type="button"
-              className="button-reservas"
-              value="Negar Reserva"
-              onClick={() => negar()}
+              type="search"
+              placeholder="Insira o codigo da reserva..."
+              className="input-reservas"
+              aria-label="Search"
+              onChange={(e) => setId_reservas(e.target.value)}
             />
-
-            <div className="botao-redirect">
-              <div>
-                <input
-                  type="button"
-                  className="button-r.ativas"
-                  value="R.Ativas"
-                />
-              </div>
-            </div>
+            <table style={{ width: "100%", marginTop: "20px" }}>
+              <thead>
+                <tr>
+                  <th>ID reserva</th>
+                  <th>Localização livro</th>
+                  <th>Título livro</th>
+                  <th>CPF/RA do retirante</th>
+                  <th>Usuário retirante</th>
+                  <th>Ações</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>2AB</td>
+                  <td>NARNIA</td>
+                  <td>12345678sp</td>
+                  <td>João</td>
+                  <td>
+                    <div>
+                      <button
+                        className="btn btn-primary"
+                        onClick={() => liberarReserva()}
+                      >
+                        Liberar reserva
+                      </button>{" "}
+                      <button
+                        className="btn btn-danger"
+                        onClick={() => negar()}
+                      >
+                        Cancelar reserva
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-    </div>
-    </div>
+        </div>
+      </div>
     </div>
   );
 }

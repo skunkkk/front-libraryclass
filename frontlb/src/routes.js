@@ -43,6 +43,7 @@ import VerEmprestimo from './pages/Emprestimo/VerEmprestimo';
 import Cadastro from './pages/Cadastro/Cadastro';
 import Login from './pages/Login/Login';
 import ReservasAtivas from './pages/Reservas/ReservasAtivas';
+import VizualizarLivroUnico from './pages/Livro/VizualizarLivroUnico';
 
 export default function MyRoutes() {
     return (
@@ -103,6 +104,7 @@ export default function MyRoutes() {
 
 
 
+                < Route path='/livroUnico' element={<VizualizarLivroUnico />} />
 
 
 
