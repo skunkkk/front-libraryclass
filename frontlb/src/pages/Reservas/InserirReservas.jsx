@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
-=======
- import React, { useState } from "react";
->>>>>>> b3b034de449f089e729ffb0ce1dfb09467086131
 import "../Reservas/InserirReservas.css";
 import { Form, Link } from "react-router-dom";
 import axios from "axios";
@@ -15,14 +11,9 @@ export default function InserirReservas() {
   const [descricao, setDescricao] = useState();
   const [titulo_livros, setTitulo_livros] = useState();
   const [data_emprestimos, setData_emprestimos] = useState();
-
+  const [dados,setDados]=useState([]);
   async function liberarReserva() {
-    const dados = {
-      id_reservas,
-      descricao,
-      titulo_livros,
-      data_emprestimos,
-    };
+    
 
     try {
       const response = await axios.post(
@@ -69,8 +60,6 @@ export default function InserirReservas() {
       <div className="alinhar-reservas">
         <div className="reservas">
           <h1>Reservas</h1>
-<<<<<<< HEAD
-=======
           {/* <div className="container-search">
         <Form className="d-flex">
           <Form.Control
@@ -90,40 +79,12 @@ export default function InserirReservas() {
             aria-label="Search"
             onChange={(e) => setId_reservas(e.target.value)}
           />
->>>>>>> b3b034de449f089e729ffb0ce1dfb09467086131
           <div>
             <button className="btn btn-primary">Reservas Ativas</button>{" "}
             <button className="btn btn-secondary">
               Emprestimos Finalizadas
             </button>
           </div>
-<<<<<<< HEAD
-          <label htmlFor="">Digite o numero da reserva para filtrar</label>
-          <input type="search" name="" id="" />
-          <table>
-            <tr>
-              <th>Nº Reserva</th>
-              <th>Local do livro</th>
-              <th>Nome Livro</th>
-              <th>Data da entrega</th>
-              <th>Ações</th>
-            </tr>
-            {dados.map((dado) => (
-              <tr>
-                <td>{dado.id_reservas}</td>
-                <td>{dado.descricao}</td>
-                <td>{dado.titulo_livros}</td>
-                <td>{dado.data_reserva}</td>
-                <td>
-                  <button className="btn btn-success">Liberar Reserva</button>{" "}
-                  <button className="btn btn-danger">Negar Emprestimo</button>
-                </td>
-              </tr>
-            ))}
-          </table>
-        </div>
-      </div>
-=======
           <input
             type="button"
             className="button-reservas"
@@ -148,7 +109,6 @@ export default function InserirReservas() {
               </div>
             </div>
           </div>
->>>>>>> b3b034de449f089e729ffb0ce1dfb09467086131
     </div>
     </div>
     </div>

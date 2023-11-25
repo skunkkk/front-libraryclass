@@ -1,13 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import "../Reservas/ReservasAtivas.css";
 import { Form, Link } from "react-router-dom";
 import axios from "axios";
+import EmprestimoCard from './EmprestimosCard';
+
 
 export default function ReservasAtivas() {
+  const [dados,setDados]=useState([]);
   
   useEffect(() => {
-    axios.get(`http://127.0.0.1:8000/verReservasAtivas`).then((res) => {
+    axios.get(`http://127.0.0.1:8000/obterReservaAtivas`).then((res) => {
       setDados(res.data);
     });
   }, []);
@@ -48,34 +51,9 @@ export default function ReservasAtivas() {
         <div className='search'>
 
         </div>
-        <div className='card-ficha'>
-            <table border={1} >
-                <tr style={{
-                      display: "flex",
-                      alignItems: "center",
-                      textAlign: "center",
-                      justifyContent: "center",
-                      flexDirection: "column",
-                      
-                }}>
-                  
-          <th>Nome retirante:</th>
-          <th>Nome Livro:</th>
-          <th>Data entrega:</th>
-             </tr>
-             <br></br>
-            </table>
-           
-      <div>
-      <input
-        type="button"
-        className='button-devolucao'
-        value="Devolução">
-            
-        </input>
-      </div>
-
-        </div>
+        <EmprestimoCard/>
+        <EmprestimoCard/>
+        <EmprestimoCard/>
 
 
 
