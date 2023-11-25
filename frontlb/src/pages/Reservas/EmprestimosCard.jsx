@@ -1,28 +1,25 @@
 import React from 'react';
 
-const EmprestimoCard = () => {
-    const emprestimo = {
-        nome_retirante: 'João Silva',
-        nome_livro: 'Aventuras no Espaço',
-        data_entrega: '2023-12-01', 
-    };
+const EmprestimoCard = ({ id_reserva,nome_retirante, nome_livro, data_entrega }) => {
 
     return (
-        <div className="card p-6 mb-2" style={{width:'50%'}}>
+        <div className="card p-6 mb-2" style={{ width: '100%' }}>
             <div >
             </div>
             <div className="card-body d-flex align-items-center">
                 <div className="flex-shrink-0 mr-3">
+                    <div><strong>Id reserva:</strong></div>
                     <div><strong>Nome Retirante:</strong></div>
                     <div><strong>Nome Livro:</strong></div>
                     <div><strong>Data Entrega:</strong></div>
                 </div>
-                <div className="mr-3 flex-grow-1"> 
-                    <div>{emprestimo.nome_retirante}</div>
-                    <div>{emprestimo.nome_livro}</div>
-                    <div>{emprestimo.data_entrega}</div>
+                <div className="mr-3 flex-grow-1" style={{ paddingLeft: 10 }}>
+                    <div>{id_reserva}</div>
+                    <div>{nome_retirante}</div>
+                    <div>{nome_livro}</div>
+                    <div>{data_entrega}</div>
                 </div>
-                <div style={{paddingLeft:20}}>
+                <div >
                     <button className="btn btn-primary px-4 py-2">Devolver Livro</button>
                 </div>
             </div>
