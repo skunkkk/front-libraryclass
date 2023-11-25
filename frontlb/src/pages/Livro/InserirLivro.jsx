@@ -1,7 +1,5 @@
 import axios from "axios";
 import React, { useState } from "react";
-
-import "./Livro.css";
 import { Link } from "react-router-dom";
 
 export default function InserirLivro() {
@@ -30,6 +28,7 @@ export default function InserirLivro() {
       console.log(erros);
     }
   }
+
   return (
     <div
       style={{
@@ -42,57 +41,97 @@ export default function InserirLivro() {
         height: "100vh",
       }}
     >
-      <div className="navbar">
-        <p>Inserir livro</p>
-        <Link to={"/EditarLivro"}>
+      <Link to="/EditarLivro" style={{ textDecoration: "none", color: "#007bff" }}>
           <p>Editar livro</p>
         </Link>
-        <Link to={"/VerLivro"}>
+        <Link to="/VerLivro" style={{ textDecoration: "none", color: "#007bff" }}>
           <p>Ver Livro</p>
         </Link>
-        <Link to={"/NavegacaoADM"}>
+        <Link to="/NavegacaoADM" style={{ textDecoration: "none", color: "#007bff" }}>
           <p>Voltar</p>
         </Link>
-      </div>
+        
       <h1>Inserir Livro:</h1>
-      <div className="container-inputs-inserir">
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
         <input
           type="text"
           placeholder="Inserir ISBN do Livro"
           onChange={(e) => setIsbn_livros(e.target.value)}
-          className="input-livro"
+          style={{
+            marginBottom: "10px",
+            padding: "8px",
+            width: "300px",
+          }}
         />
 
         <input
           type="text"
           placeholder="Inserir Titulo Livro..."
           onChange={(e) => setTitulo_livros(e.target.value)}
-          className="input-livro"
+          style={{
+            marginBottom: "10px",
+            padding: "8px",
+            width: "300px",
+          }}
         />
         <input
           type="file"
-          placeholder="Inserir Foto Livro..."
           onChange={(e) => setFoto_livros(e.target.files[0])}
-          className="file-livro"
+          style={{
+            marginBottom: "10px",
+          }}
         />
         <input
           type="text"
           placeholder="Inserir ID sessão..."
           onChange={(e) => setId_secao(e.target.value)}
-          className="input-livro"
+          style={{
+            marginBottom: "10px",
+            padding: "8px",
+            width: "300px",
+          }}
         />
 
-        <input
-          type="text"
+        <textarea
           placeholder="Inserir Sinopse Livro..."
           onChange={(e) => setSinopse_livros(e.target.value)}
+          style={{
+            marginBottom: "10px",
+            padding: "8px",
+            width: "300px",
+          }}
         />
 
-        <input
+        <button
           type="button"
-          value="Enviar Livro"
+          style={{
+            padding: "8px",
+            width: "300px",
+            backgroundColor: "#007bff",
+            color: "#fff",
+            border: "none",
+            cursor: "pointer",
+          }}
           onClick={() => adicionarLivro()}
-        />
+        >
+          Enviar Livro
+        </button>
+      </div>
+
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-around",
+          marginTop: "20px",
+        }}
+      >
+        
       </div>
     </div>
   );
