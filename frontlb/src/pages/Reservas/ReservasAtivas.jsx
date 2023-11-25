@@ -5,6 +5,12 @@ import { Form, Link } from "react-router-dom";
 import axios from "axios";
 
 export default function ReservasAtivas() {
+  
+  useEffect(() => {
+    axios.get(`http://127.0.0.1:8000/verReservasAtivas`).then((res) => {
+      setDados(res.data);
+    });
+  }, []);
   return (
     <div
       style={{
@@ -36,6 +42,7 @@ export default function ReservasAtivas() {
                       flexDirection: "column",
                       
                 }}>
+                  
           <th>Nome retirante:</th>
           <th>Nome Livro:</th>
           <th>Data entrega:</th>
