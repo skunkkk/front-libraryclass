@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
+=======
+ import React, { useState } from "react";
+>>>>>>> b3b034de449f089e729ffb0ce1dfb09467086131
 import "../Reservas/InserirReservas.css";
 import { Form, Link } from "react-router-dom";
 import axios from "axios";
@@ -65,12 +69,35 @@ export default function InserirReservas() {
       <div className="alinhar-reservas">
         <div className="reservas">
           <h1>Reservas</h1>
+<<<<<<< HEAD
+=======
+          {/* <div className="container-search">
+        <Form className="d-flex">
+          <Form.Control
+            type="search"
+            placeholder="Inserir reserva"
+            className="input-reservas"
+            aria-label="Search"
+            value={""}
+            onChange={(e)=>setId_reservas(e.target.value)}
+          />
+        </Form>
+      </div> */}
+          <input
+            type="search"
+            placeholder="Inserir reserva..."
+            className="input-reservas"
+            aria-label="Search"
+            onChange={(e) => setId_reservas(e.target.value)}
+          />
+>>>>>>> b3b034de449f089e729ffb0ce1dfb09467086131
           <div>
             <button className="btn btn-primary">Reservas Ativas</button>{" "}
             <button className="btn btn-secondary">
               Emprestimos Finalizadas
             </button>
           </div>
+<<<<<<< HEAD
           <label htmlFor="">Digite o numero da reserva para filtrar</label>
           <input type="search" name="" id="" />
           <table>
@@ -96,6 +123,34 @@ export default function InserirReservas() {
           </table>
         </div>
       </div>
+=======
+          <input
+            type="button"
+            className="button-reservas"
+            value="Liberar Reserva"
+            onClick={() => liberarReserva()}
+          />
+          <div>
+            <input
+              type="button"
+              className="button-reservas"
+              value="Negar Reserva"
+              onClick={() => negar()}
+            />
+
+            <div className="botao-redirect">
+              <div>
+                <input
+                  type="button"
+                  className="button-r.ativas"
+                  value="R.Ativas"
+                />
+              </div>
+            </div>
+          </div>
+>>>>>>> b3b034de449f089e729ffb0ce1dfb09467086131
+    </div>
+    </div>
     </div>
   );
 }

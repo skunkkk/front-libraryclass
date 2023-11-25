@@ -1,0 +1,73 @@
+.container-verumlivro {
+    width: 100vw;
+    height: auto;
+    background-color: #143788b2;
+
+    
+}
+
+.titulolivro {
+    height: 20vh;
+    width: 100vw;
+    font-size: 30pt arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-infolivro{
+    height: 60vh;
+    width: 100vw;
+   display: flex;
+    padding-top: 5rem;
+    justify-content: space-around;
+    width: 60vw;
+}
+
+.img-livro{
+    border: 1px solid black;
+    height: 30vh;
+    width: 20vw;
+}
+
+.sinopse{
+    border: 1px solid black;
+    height: 30vh;
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify; 
+}
+
+.box-verumlivro{
+    display: flex;
+}
+
+.botao-reservar{
+    height: 45vh;
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.btnreservar{
+    border: 1px solid black;
+    width: 25vw;
+    height: 15vh;
+    background-color: #143788e7;
+}
+
+.container-resenhas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+    padding: 1rem;
+    border: 1px solid black;
+    background-color: transparent;
+}

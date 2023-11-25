@@ -1,6 +1,6 @@
 import React from 'react'
 
-import "../Reservas/InserirReservas.css";
+import "../Reservas/ReservasAtivas.css";
 import { Form, Link } from "react-router-dom";
 import axios from "axios";
 
@@ -27,7 +27,23 @@ export default function ReservasAtivas() {
         <div style={{
             
         }}>
-        <h1>Reservas ativas</h1>
+           <header className="header">
+        <h1 className="page-title">Reservas Ativas</h1>
+
+        <div className="form-input-group">
+          <label className="search-input-label" htmlFor="search">
+            <input
+              className="search-input"
+              type="search"
+              name="search"
+              id="search"
+              placeholder="Search..."
+              required
+            />
+          </label>
+        </div>
+      </header>
+     
          </div>
         <div className='search'>
 

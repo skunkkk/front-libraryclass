@@ -99,6 +99,7 @@ export default function MyRoutes() {
 
                 < Route path='/cadastro' element={<Cadastro />} />
                 < Route path='/login' element={<Login />} />
+                {/* < Route path='/VerUmLivro' element={<VerUmLivro />} />  */}
 
 
 
