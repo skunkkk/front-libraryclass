@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./inicio-library.css";
-import { Button, Form } from "react-bootstrap";
 import CardLivro from "./CardLivro";
 import axios from "axios";
 
@@ -29,16 +28,15 @@ export default function InicioLibrary() {
         <img src="logo.png" alt="" className="logo" />
       </div>
       <div className="container-search">
-        <Form className="d-flex">
-          <Form.Control
+        <form className="d-flex me-2">
+          <input className="form-control"
             type="search"
             placeholder="Procurar livros"
-            className="me-2"
             aria-label="Search"
             value={pesquisa}
             onChange={handlePesquisaChange}
           />
-        </Form>
+        </form>
       </div>
       <div className="row row-cols-1 row-cols-md-4 g-4">
         {livrosFiltrados.map((elemento) => (

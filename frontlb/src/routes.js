@@ -44,14 +44,15 @@ import Cadastro from './pages/Cadastro/Cadastro';
 import Login from './pages/Login/Login';
 import ReservasAtivas from './pages/Reservas/ReservasAtivas';
 import VizualizarLivroUnico from './pages/Livro/VizualizarLivroUnico';
+import PaginaInicial from './pages/Noticias/PaginaInicial';
 
 export default function MyRoutes() {
     return (
         <BrowserRouter>
-            <MenuH/>
+            {/* <MenuH/> */}
             <Routes>
 
-                <Route path="/" element={<Inicio />} />
+                <Route path="/" element={<PaginaInicial />} />
             
                 <Route path="/Configuracao" element={<Configuração />} />
                 <Route path="/FAQ" element={<Faq />} />
@@ -103,8 +104,9 @@ export default function MyRoutes() {
                 {/* < Route path='/VerUmLivro' element={<VerUmLivro />} />  */}
 
 
-
+                
                 < Route path='/livroUnico' element={<VizualizarLivroUnico />} />
+                < Route path='/noticias' element={<PaginaInicial/>} />
 
 
 
