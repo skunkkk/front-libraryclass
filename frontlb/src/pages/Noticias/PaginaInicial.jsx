@@ -90,7 +90,7 @@ export default function TelaNoticias() {
         ))}
       </div>
       <footer style={{ textAlign: "center", marginTop: "20px" }}>
-        <p>Entre em contato conosco: contato@noticias.com</p>
+        <p>Entre em contato conosco: coordenacaoanarita@gmail.com</p>
       </footer>
     </div>
   );

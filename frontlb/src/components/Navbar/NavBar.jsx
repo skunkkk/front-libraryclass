@@ -2,7 +2,7 @@ import React from 'react';
 import './Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faNewspaper, faBook, faCalendar } from '@fortawesome/free-solid-svg-icons';
-
+import Calendario from "./Cal.pdf"
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -25,7 +25,7 @@ const Navbar = () => {
               <a className="nav-link" href="#"><FontAwesomeIcon icon={faBook} /> LibraryClassApp</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#"><FontAwesomeIcon icon={faCalendar} /> Calendario</a>
+              <a className="nav-link"download href={Calendario}><FontAwesomeIcon icon={faCalendar} /> Calendario</a>
             </li>
           </ul>
           <button className="btn btn-custom">Área do Usuário</button>
