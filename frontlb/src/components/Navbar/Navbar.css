@@ -1,0 +1,12 @@
+
+.btn-custom {
+    background-color: #6610f2; /* Esta é a cor indigo-300 do Bootstrap */
+    color: #fff; 
+  }
+  
+  .btn-custom:hover {
+    background-color: #560ac0;
+  }
+.nav-item{
+    margin-right: 10px;
+}

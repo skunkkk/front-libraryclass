@@ -45,14 +45,15 @@ import Login from './pages/Login/Login';
 import ReservasAtivas from './pages/Reservas/ReservasAtivas';
 import VizualizarLivroUnico from './pages/Livro/VizualizarLivroUnico';
 import MinhasReservas from './pages/Reservas/MinhasReservas';
+import PaginaInicial from './pages/Noticias/PaginaInicial';
 
 export default function MyRoutes() {
     return (
         <BrowserRouter>
-            <MenuH/>
+            {/* <MenuH/> */}
             <Routes>
 
-                <Route path="/" element={<Inicio />} />
+                <Route path="/" element={<PaginaInicial />} />
             
                 <Route path="/Configuracao" element={<Configuração />} />
                 <Route path="/FAQ" element={<Faq />} />
@@ -104,9 +105,10 @@ export default function MyRoutes() {
                 {/* < Route path='/VerUmLivro' element={<VerUmLivro />} />  */}
 
 
-
+                
                 < Route path='/livroUnico' element={<VizualizarLivroUnico />} />
                 < Route path='/minhasreservas' element={<MinhasReservas />} />
+                < Route path='/noticias' element={<PaginaInicial/>} />
 
 
 
