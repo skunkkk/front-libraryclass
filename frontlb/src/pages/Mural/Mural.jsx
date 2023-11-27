@@ -35,7 +35,7 @@ export default function Mural() {
             <div>
               <h3>Dúvidas?</h3>
               <h4>Faça uma pergunta ao administrador</h4>
-              <input placeholder="Escreva aqui..." />
+              <input placeholder="Escreva aqui..." required/>
             </div>
           </div>
         </details>
@@ -49,12 +49,12 @@ export default function Mural() {
             </div>
             <div className="inputs-mural">
               <p style={{ color: "black" }}>Titulo:</p>
-              <input placeholder="Escreva aqui... " />
+              <input placeholder="Escreva aqui... " required/>
               <p style={{ color: "black" }}>Mensagem:</p>
-              <input placeholder="Escreva aqui... " />
+              <input placeholder="Escreva aqui... " required/>
 
               <p style={{ color: "black" }}>Cargo:</p>
-              <input placeholder="Escreva aqui... " />
+              <input placeholder="Escreva aqui... "required />
             </div>
             <button className="button-mural">Enviar</button>
           </div>

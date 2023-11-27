@@ -35,6 +35,7 @@ export default function InserirMural() {
         <textarea
           className="txtarea"
           onChange={(e) => setDescricao(e.target.value)}
+          required
         ></textarea>
         <button className="btn-enviar" onClick={() => adicionarMural()}>
           Enviar
