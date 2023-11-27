@@ -37,15 +37,15 @@ export default function InserirFicha() {
       <h1>Inserir Ficha:</h1>
 
       <label htmlFor="">Id da ficha</label>
-      <input type="text" onChange={(e) => setIdFicha(e.target.value)} />
+      <input type="text" onChange={(e) => setIdFicha(e.target.value)}  required/>
       <label htmlFor="">id da multa</label>
-      <input type="text" onChange={(e) => setIdMulta(e.target.value)} />
+      <input type="text" onChange={(e) => setIdMulta(e.target.value)} required/>
       <label htmlFor="">isbn livros</label>
-      <input type="text" onChange={(e) => setIsbnLivros(e.target.value)} />
+      <input type="text" onChange={(e) => setIsbnLivros(e.target.value)} required/>
       <label htmlFor="">id emprestimo</label>
-      <input type="text" onChange={(e) => setIdEmprestimo(e.target.value)} />
+      <input type="text" onChange={(e) => setIdEmprestimo(e.target.value)} required/>
 
-      <input type="text" placeholder="Inserir Ficha..." />
+      <input type="text" placeholder="Inserir Ficha..." required/>
 
       <button type="button" onClick={() => enviarDados()}>
         Enviar Ficha
