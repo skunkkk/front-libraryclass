@@ -1,43 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar/NavBar";
-
-const noticias = [
-  {
-    id: 1,
-    titulo: "Notícia 1",
-    imagem: "https://via.placeholder.com/600x400",
-    conteudo: "Conteúdo da notícia 1...",
-  },
-  {
-    id: 2,
-    titulo: "Notícia 2",
-    imagem: "https://via.placeholder.com/300x200",
-    conteudo: "Conteúdo da notícia 2...",
-  },
-  {
-    id: 3,
-    titulo: "Notícia 3",
-    imagem: "https://via.placeholder.com/300x200",
-    conteudo: "Conteúdo da notícia 3...",
-  },
-  {
-    id: 4,
-    titulo: "Notícia 4",
-    imagem: "https://via.placeholder.com/300x200",
-    conteudo: "Conteúdo da notícia 4...",
-  },
-  {
-    id: 5,
-    titulo: "Notícia 5",
-    imagem: "https://via.placeholder.com/300x200",
-    conteudo: "Conteúdo da notícia 5...",
-  },
-];
+import axios from "axios";
 
 export default function TelaNoticias() {
+  const [noticias, setNoticias] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:8000/ultimasPublicacoes').then((res) => {
+      const noticiasOrdenadas = res.data.sort((a, b) => b.id - a.id);
+      setNoticias(noticiasOrdenadas);
+    });
+  }, []);
+
   return (
     <div>
-      <Navbar/>
+      <Navbar />
       <div
         style={{
           display: "grid",
@@ -48,7 +25,7 @@ export default function TelaNoticias() {
           padding: "10px",
         }}
       >
-        {noticias.map((noticia) => (
+        {noticias.map((noticia, index) => (
           <div
             key={noticia.id}
             style={{
@@ -56,11 +33,13 @@ export default function TelaNoticias() {
               overflow: "hidden",
               borderRadius: "8px",
               boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
-              gridRow: noticia.id === 1 ? "span 2" : "auto",
+              gridColumn: index === 0 ? "span 2" : "auto", // Ajustado para index === 0
             }}
           >
             <img
-              src={noticia.imagem}
+              src={`http://localhost:8000/storage/noticias/${
+                noticia.imagem_publicacao.split("/")[1]
+              }`}
               alt={noticia.titulo}
               style={{
                 width: "100%",
