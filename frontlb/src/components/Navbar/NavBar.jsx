@@ -48,28 +48,19 @@ const Navbar = () => {
             <>
               <ul className="navbar-nav">
                 <li className="nav-item">
-        <Link to={"/VerAutor"}/>
-
-                  <a className="nav-link active" href="#">
-                    
-                    <FontAwesomeIcon icon={faPencil} /> Editar Autor
-                    
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <Link className="nav-link" to={"/VerAutor"}>
                     <FontAwesomeIcon icon={faEye} /> Ver Autor
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <Link className="nav-link active" to={"/CriarAutor"}>
                     <FontAwesomeIcon icon={faPlus} /> Criar Autor
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" download href={Calendario}>
+                  <Link className="nav-link" to={"/NavegacaoADM"}>
                     <FontAwesomeIcon icon={faArrowAltCircleLeft} /> Voltar
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </>

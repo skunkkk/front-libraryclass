@@ -26,19 +26,7 @@ export default function CriarAutor() {
     <div className="container-Autor">
       <Navbar />
       <div className="navbar-reservas">
-        <Link to={"/editarautor/:id"}>
-          <p>Editar Autor</p>
-        </Link>
-        <Link to={"/VerAutor"}>
-          <p>Ver Autor</p>
-        </Link>
-        <Link to={"/CriarAutor"}>
-          <p>Criar Autor</p>
-        </Link>
-
-        <Link to={"/NavegacaoADM"}>
-          <p>Voltar</p>
-        </Link>
+    
       </div>
       <div className="alinharInput">
         <div className="classInput">
@@ -48,11 +36,12 @@ export default function CriarAutor() {
             className="input-autor"
             placeholder="Insira o ID"
             required
+            onChange={(e) => setId(e.target.value)}
           />
         </div>
         <div
           className="classInput"
-          onChange={(e) => setAutor_nome(e.target.value)}
+          
         >
           <label>Nome do autor: </label>
           <input
@@ -60,11 +49,12 @@ export default function CriarAutor() {
             className="input-autor"
             placeholder="Insira o Autor"
             required
+            onChange={(e) => setAutor_nome(e.target.value)}
           />
         </div>
         <div
           className="classInput"
-          onChange={(e) => setAutor_nacionalidade(e.target.value)}
+          
         >
           <label>Nacionalidade do autor: </label>
           <input
@@ -72,6 +62,7 @@ export default function CriarAutor() {
             className="input-autor"
             placeholder="Insira a Nacionalidade Autor"
             required
+            onChange={(e) => setAutor_nacionalidade(e.target.value)}
           />
         </div>
       </div>
