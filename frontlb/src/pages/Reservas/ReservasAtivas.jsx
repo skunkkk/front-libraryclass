@@ -64,6 +64,7 @@ export default function ReservasAtivas() {
             type="search"
             name="search"
             id="search"
+            required
             placeholder={`Pesquisar por ${
               tipoPesquisa === 'nome_retirante'
                 ? 'nome do retirante'

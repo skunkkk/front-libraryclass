@@ -42,21 +42,21 @@ export default function CriarAvaliacoes() {
           onChange={(e) => setId_avaliacoesPeriodicas(e.target.value)}
         >
           <label>ID avaliação: </label>
-          <input type="text" className="input-avaliacao" />
+          <input type="text" className="input-avaliacao" required/>
         </div>
         <div
           className="classInput"
           onChange={(e) => setIsbn_livros(e.target.value)}
         >
           <label>ISBN: </label>
-          <input type="text" className="input-avaliacao" />
+          <input type="text" className="input-avaliacao" required/>
         </div>
         <div
           className="classInput"
           onChange={(e) => setDescricao(e.target.value)}
         >
           <label>Descrição: </label>
-          <input type="text" className="input-avaliacao" />
+          <input type="text" className="input-avaliacao" required/>
         </div>
       </div>
       <button

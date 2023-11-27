@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 import "./CriarAutor.css";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 import axios from "axios"; 
+=======
+import axios from "axios";
+import Navbar from "../../components/Navbar/NavBar";
+
+>>>>>>> d3d51f7cd7e68d55949bb3076e68f351653889ba
 export default function CriarAutor() {
   const [id, setId] = useState("");
   const [autor_nome, setAutor_nome] = useState("");
@@ -23,20 +29,9 @@ export default function CriarAutor() {
   }
   return (
     <div className="container-Autor">
+      <Navbar />
       <div className="navbar-reservas">
-        <Link to={"/editarautor/:id"}>
-          <p>Editar Autor</p>
-        </Link>
-        <Link to={"/VerAutor"}>
-          <p>Ver Autor</p>
-        </Link>
-        <Link to={"/CriarAutor"}>
-          <p>Criar Autor</p>
-        </Link>
-
-        <Link to={"/NavegacaoADM"}>
-          <p>Voltar</p>
-        </Link>
+    
       </div>
       <div className="alinharInput">
         <div className="classInput">
@@ -45,28 +40,34 @@ export default function CriarAutor() {
             type="text"
             className="input-autor"
             placeholder="Insira o ID"
+            required
+            onChange={(e) => setId(e.target.value)}
           />
         </div>
         <div
           className="classInput"
-          onChange={(e) => setAutor_nome(e.target.value)}
+          
         >
           <label>Nome do autor: </label>
           <input
             type="text"
             className="input-autor"
             placeholder="Insira o Autor"
+            required
+            onChange={(e) => setAutor_nome(e.target.value)}
           />
         </div>
         <div
           className="classInput"
-          onChange={(e) => setAutor_nacionalidade(e.target.value)}
+          
         >
           <label>Nacionalidade do autor: </label>
           <input
             type="text"
             className="input-autor"
             placeholder="Insira a Nacionalidade Autor"
+            required
+            onChange={(e) => setAutor_nacionalidade(e.target.value)}
           />
         </div>
       </div>

@@ -35,7 +35,7 @@ export default function InicioLibrary() {
             aria-label="Search"
             value={pesquisa}
             onChange={handlePesquisaChange}
-          />
+            required/>
         </form>
       </div>
       <div className="row row-cols-1 row-cols-md-4 g-4">

@@ -29,7 +29,6 @@ import InserirFicha from './pages/FichasLivros/InserirFicha';
 import VerFichas from './pages/FichasLivros/VerFichas';
 import VerUnicaFicha from './pages/FichasLivros/VerUnicaFicha';
 import CriarAutor from './pages/Autor/CriarAutor';
-import VerMural from './pages/MuralADM/VerMural';
 import EditarLivro from './pages/Livro/EditarLivro';
 import InserirLivro from './pages/Livro/InserirLivro';
 import VerLivro from './pages/Livro/VerLivro';
@@ -38,7 +37,6 @@ import NotFound from './pages/NotFound/NotFound';
 import VerAutor from './pages/Autor/VerAutor';
 import MenuH from './components/menu-h/MenuH';
 import EditarAutor from './pages/Autor/EditarAutor';
-import CriarEmprestimo from './pages/Emprestimo/CriarEmprestimo';
 import VerEmprestimo from './pages/Emprestimo/VerEmprestimo';
 import Cadastro from './pages/Cadastro/Cadastro';
 import Login from './pages/Login/Login';
@@ -46,6 +44,9 @@ import ReservasAtivas from './pages/Reservas/ReservasAtivas';
 import VizualizarLivroUnico from './pages/Livro/VizualizarLivroUnico';
 import MinhasReservas from './pages/Reservas/MinhasReservas';
 import PaginaInicial from './pages/Noticias/PaginaInicial';
+import NoticiasCompleta from './pages/Noticias/NoticiasCompleta';
+import UmaNoticia from './pages/Noticias/UmaNoticia';
+import CriarNoticia from './pages/Noticias/CriarNoticia';
 
 export default function MyRoutes() {
     return (
@@ -78,7 +79,6 @@ export default function MyRoutes() {
                 <Route path='/VerLivro' element={<VerLivro />} />
                 < Route path='/InserirReservas' element={<InserirReservas />} />
                 < Route path='/ReservasAtivas' element={<ReservasAtivas />} />
-                < Route path='/VerMural' element={<VerMural />} />
                 < Route path='/EditarLivro' element={<EditarLivro />} />
                 < Route path='/InserirLivro' element={<InserirLivro />} />
 
@@ -98,7 +98,6 @@ export default function MyRoutes() {
                 < Route path='/VerUmaFicha' element={<VerUnicaFicha />} />
 
                 < Route path='/veremprestimo' element={<VerEmprestimo />} />
-                < Route path='/criaremprestimo' element={<CriarEmprestimo />} />\
 
                 < Route path='/cadastro' element={<Cadastro />} />
                 < Route path='/login' element={<Login />} />
@@ -108,7 +107,13 @@ export default function MyRoutes() {
                 
                 < Route path='/livroUnico' element={<VizualizarLivroUnico />} />
                 < Route path='/minhasreservas' element={<MinhasReservas />} />
+
+
+
                 < Route path='/noticias' element={<PaginaInicial/>} />
+                < Route path='/noticiascompleta' element={<NoticiasCompleta/>} />
+                < Route path='/noticias/:id' element={<UmaNoticia/>} />
+                < Route path='/noticias/criar' element={<CriarNoticia/>} />
 
 
 

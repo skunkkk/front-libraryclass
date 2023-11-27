@@ -71,6 +71,7 @@ export default function Login() {
         >
           Entrar
         </button>
+        <br></br>
 
         <input type="button" value="checar" className="botao-cadastro" />
       </div>

@@ -119,6 +119,7 @@ export default function VisualizarLivroUnico() {
         <textarea
           placeholder="Escreva sua resenha..."
           value={resenhaTexto}
+          required
           onChange={(e) => setResenhaTexto(e.target.value)}
           style={{
             width: "100%",

@@ -37,26 +37,29 @@ export default function CriarEmprestimo() {
         </Link>
       </div>
       <div className="box1">
-        <div
-          className="classInput"
-          onChange={(e) => setIsbn_livros(e.target.value)}
-        >
+        <div className="classInput">
           <label>ISBN: </label>
-          <input type="text" />
+          <input
+            type="text"
+            onChange={(e) => setIsbn_livros(e.target.value)}
+            required
+          />
         </div>
-        <div
-          className="classInput"
-          onChange={(e) => setId_usuarios(e.target.value)}
-        >
+        <div className="classInput">
           <label>Usuário: </label>
-          <input type="text" />
+          <input
+            type="text"
+            onChange={(e) => setId_usuarios(e.target.value)}
+            required
+          />
         </div>
-        <div
-          className="classInput"
-          onChange={(e) => setData_emprestimos(e.target.value)}
-        >
+        <div className="classInput">
           <label>Data: </label>
-          <input type="date" />
+          <input
+            type="date"
+            onChange={(e) => setData_emprestimos(e.target.value)}
+            required
+          />
         </div>
         <button onClick={() => adicionarEmprestimo()}>Criar</button>
       </div>
