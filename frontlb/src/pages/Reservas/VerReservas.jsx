@@ -23,11 +23,13 @@ export default function VerReservas() {
             type="text"
             placeholder="Inserir reserva para deletar"
             className="input-reservas"
+            required
           />
           <input
             type="button"
             value="Deletar Reserva"
             className="button-reservas"
+            required
           />
         </div>
       </div>
