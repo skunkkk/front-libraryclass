@@ -29,7 +29,6 @@ import InserirFicha from './pages/FichasLivros/InserirFicha';
 import VerFichas from './pages/FichasLivros/VerFichas';
 import VerUnicaFicha from './pages/FichasLivros/VerUnicaFicha';
 import CriarAutor from './pages/Autor/CriarAutor';
-
 import EditarLivro from './pages/Livro/EditarLivro';
 import InserirLivro from './pages/Livro/InserirLivro';
 import VerLivro from './pages/Livro/VerLivro';
@@ -38,7 +37,6 @@ import NotFound from './pages/NotFound/NotFound';
 import VerAutor from './pages/Autor/VerAutor';
 import MenuH from './components/menu-h/MenuH';
 import EditarAutor from './pages/Autor/EditarAutor';
-import CriarEmprestimo from './pages/Emprestimo/CriarEmprestimo';
 import VerEmprestimo from './pages/Emprestimo/VerEmprestimo';
 import Cadastro from './pages/Cadastro/Cadastro';
 import Login from './pages/Login/Login';
@@ -80,6 +78,7 @@ export default function MyRoutes() {
                 < Route path='/ReservasAtivas' element={<ReservasAtivas />} />
                 < Route path='/EditarLivro' element={<EditarLivro />} />
                 < Route path='/InserirLivro' element={<InserirLivro />} />
+
                 < Route path='/VerLivro' element={<VerLivro />} />
                 < Route path='/VerReservas' element={<VerReservas />} />
                 < Route path='/VerSessoes' element={<VerSessoes />} />
@@ -96,7 +95,6 @@ export default function MyRoutes() {
                 < Route path='/VerUmaFicha' element={<VerUnicaFicha />} />
 
                 < Route path='/veremprestimo' element={<VerEmprestimo />} />
-                < Route path='/criaremprestimo' element={<CriarEmprestimo />} />\
 
                 < Route path='/cadastro' element={<Cadastro />} />
                 < Route path='/login' element={<Login />} />

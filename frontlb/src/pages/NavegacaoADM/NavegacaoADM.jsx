@@ -41,7 +41,7 @@ export default function NavegacaoADM() {
         </tr>
         <tr>
           <td>
-            <Link to={"/CriarEmprestimo"}>
+            <Link to={"/VerEmprestimo"}>
               <button className="button-adm">Emprestimos</button>
             </Link>
           </td>
