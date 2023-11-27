@@ -48,6 +48,7 @@ import MinhasReservas from './pages/Reservas/MinhasReservas';
 import PaginaInicial from './pages/Noticias/PaginaInicial';
 import NoticiasCompleta from './pages/Noticias/NoticiasCompleta';
 import UmaNoticia from './pages/Noticias/UmaNoticia';
+import CriarNoticia from './pages/Noticias/CriarNoticia';
 
 export default function MyRoutes() {
     return (
@@ -116,6 +117,7 @@ export default function MyRoutes() {
                 < Route path='/noticias' element={<PaginaInicial/>} />
                 < Route path='/noticiascompleta' element={<NoticiasCompleta/>} />
                 < Route path='/noticias/:id' element={<UmaNoticia/>} />
+                < Route path='/noticias/criar' element={<CriarNoticia/>} />
 
 
 
