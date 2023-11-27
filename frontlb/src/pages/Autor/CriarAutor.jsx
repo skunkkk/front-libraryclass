@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./CriarAutor.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import Navbar from "../../components/Navbar/NavBar";
+
 export default function CriarAutor() {
   const [id, setId] = useState("");
   const [autor_nome, setAutor_nome] = useState("");
@@ -21,7 +23,9 @@ export default function CriarAutor() {
     }
   }
   return (
+    
     <div className="container-Autor">
+      <Navbar/>
       <div className="navbar-reservas">
         <Link to={"/editarautor/:id"}>
           <p>Editar Autor</p>
