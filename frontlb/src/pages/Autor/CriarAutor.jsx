@@ -1,13 +1,9 @@
 import React, { useState } from "react";
 import "./CriarAutor.css";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
-import axios from "axios"; 
-=======
 import axios from "axios";
 import Navbar from "../../components/Navbar/NavBar";
 
->>>>>>> d3d51f7cd7e68d55949bb3076e68f351653889ba
 export default function CriarAutor() {
   const [id, setId] = useState("");
   const [autor_nome, setAutor_nome] = useState("");
