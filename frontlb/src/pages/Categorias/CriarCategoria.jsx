@@ -25,6 +25,7 @@ export default function CriarCategoria() {
           type="text"
           name="descricao_categoria"
           id="descricao_categoria"
+          required
           onChange={(palavra) => setDescricao(palavra.target.value)}
         />
       </div>
@@ -34,6 +35,7 @@ export default function CriarCategoria() {
           type="text"
           name="id_secao"
           id="id_secao"
+          required
           onChange={(palavra) => setIdSecao(palavra.target.value)}
         />
       </div>
