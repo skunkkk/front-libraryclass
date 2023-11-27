@@ -1,5 +1,6 @@
 import React from 'react';
 import './Navbar.css';
+import LogoEscola from './LogoEscola.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome, faNewspaper, faBook, faCalendar } from '@fortawesome/free-solid-svg-icons';
 import Calendario from "./Cal.pdf"
@@ -8,7 +9,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
         <a className="navbar-brand" href="#">
-          <img src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company" height="30" className="d-inline-block align-top"/>
+          <img src={LogoEscola} alt="Your Company" height="30" className="d-inline-block align-top"/>
         </a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
