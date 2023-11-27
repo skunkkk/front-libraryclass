@@ -37,15 +37,35 @@ export default function InserirFicha() {
       <h1>Inserir Ficha:</h1>
 
       <label htmlFor="">Id da ficha</label>
-      <input type="text" onChange={(e) => setIdFicha(e.target.value)} />
+      <input type="text" onChange={(e) => setIdFicha(e.target.value)} style={{
+        marginBottom: "10px",
+        padding: "8px",
+        width: "300px",
+      }} />
       <label htmlFor="">id da multa</label>
-      <input type="text" onChange={(e) => setIdMulta(e.target.value)} />
+      <input type="text" onChange={(e) => setIdMulta(e.target.value)} style={{
+        marginBottom: "10px",
+        padding: "8px",
+        width: "300px",
+      }} />
       <label htmlFor="">isbn livros</label>
-      <input type="text" onChange={(e) => setIsbnLivros(e.target.value)} />
+      <input type="text" onChange={(e) => setIsbnLivros(e.target.value)} style={{
+        marginBottom: "10px",
+        padding: "8px",
+        width: "300px",
+      }} />
       <label htmlFor="">id emprestimo</label>
-      <input type="text" onChange={(e) => setIdEmprestimo(e.target.value)} />
+      <input type="text" onChange={(e) => setIdEmprestimo(e.target.value)} style={{
+        marginBottom: "10px",
+        padding: "8px",
+        width: "300px",
+      }} />
 
-      <input type="text" placeholder="Inserir Ficha..." />
+      <input type="text" placeholder="Inserir Ficha..." style={{
+        marginBottom: "10px",
+        padding: "8px",
+        width: "300px",
+      }} />
 
       <button type="button" onClick={() => enviarDados()}>
         Enviar Ficha
