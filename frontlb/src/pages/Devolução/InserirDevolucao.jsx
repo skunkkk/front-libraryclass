@@ -24,27 +24,21 @@ export default function InserirDevolucao() {
   }
   return (
     <div className="container-inserirDevolucao">
-      <div
-        className="classInput"
-        onChange={(e) => setId_devolucoes(e.target.value)}
-      >
+      <div className="classInput">
         <label>ID da devolução: </label>
-        <input type="text" />
+        <input type="text" onChange={(e) => setId_devolucoes(e.target.value)}  required/>
       </div>
-      <div
-        className="classInput"
-        onChange={(e) => setId_usuarios(e.target.value)}
-      >
+      <div className="classInput">
         <label>ID usuario: </label>
-        <input type="text" />
+        <input type="text" onChange={(e) => setId_usuarios(e.target.value)}  required />
       </div>
-
-      <div
-        className="classInput"
-        onChange={(e) => setData_devolucao(e.target.value)}
-      >
+     
+      <div className="classInput">
         <label>Data: </label>
-        <input type="text" />
+        <input
+          type="text"
+          onChange={(e) => setData_devolucao(e.target.value)}
+          required/>
       </div>
       <button onClick={() => adicionarDevolucao()}>Inserir</button>
     </div>
