@@ -61,6 +61,7 @@ export default function InserirReservas() {
               placeholder="Insira o codigo da reserva..."
               className="input-reservas"
               aria-label="Search"
+              required
               onChange={(e) => setId_reservas(e.target.value)}
             />
             <table style={{ width: "100%", marginTop: "20px" }}>

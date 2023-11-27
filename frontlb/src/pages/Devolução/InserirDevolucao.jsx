@@ -24,29 +24,40 @@ export default function InserirDevolucao() {
   }
   return (
     <div className="container-inserirDevolucao">
-      <div
-        className="classInput"
-        onChange={(e) => setId_devolucoes(e.target.value)}
+      <h1>Inserir devolução</h1>
+      <div className="classInput"
+        style={{
+          backgroundColor: 'transparent', marginBottom: "10px",
+          padding: "8px",
+          width: "300px",
+        }}
       >
-        <label>ID da devolução: </label>
-        <input type="text" />
-      </div>
-      <div
-        className="classInput"
-        onChange={(e) => setId_usuarios(e.target.value)}
-      >
-        <label>ID usuario: </label>
-        <input type="text" />
+        <label style={{ color: 'black' }}>ID da devolução: </label>
+        <input type="text" onChange={(e) => setId_devolucoes(e.target.value)} required />
+
+        <label style={{ color: 'black' }}>ID usuario: </label>
+        <input type="text" onChange={(e) => setId_usuarios(e.target.value)} required />
+
+
+
+        <label style={{ color: 'black' }}>Data: </label>
+        <input
+          type="text"
+          onChange={(e) => setData_devolucao(e.target.value)}
+          required />
+        <button 
+        style={{ 
+          marginTop: '1rem',
+          padding: "8px",
+          width: "230px",
+          backgroundColor: "#007bff",
+          color: "#fff",
+          border: "none",
+          cursor: "pointer",
+      
+      }} onClick={() => adicionarDevolucao()}>Inserir</button>
       </div>
 
-      <div
-        className="classInput"
-        onChange={(e) => setData_devolucao(e.target.value)}
-      >
-        <label>Data: </label>
-        <input type="text" />
-      </div>
-      <button onClick={() => adicionarDevolucao()}>Inserir</button>
     </div>
   );
 }

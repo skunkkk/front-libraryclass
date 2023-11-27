@@ -42,6 +42,7 @@ export default function InserirPublicacao() {
         type="text"
         placeholder="Inserir Publicação..."
         onChange={(e) => setMensagem(e.target.value)}
+        required
         style={{
           marginBottom: "10px",
           padding: "8px",
@@ -52,6 +53,7 @@ export default function InserirPublicacao() {
         type="button"
         value="Enviar Publicação"
         onClick={() => adicionarPublicacao()}
+        
         style={{
           marginBottom: "10px",
           padding: "8px",

@@ -29,6 +29,7 @@ export default function InserirSessoes() {
         placeholder="descrição"
         id="descrição"
         className="input-livro"
+        required
         onChange={(elemento) => setDescricao(elemento.target.value)}
       />
       <input type="button" onClick={enviarDados} value="Enviar" />

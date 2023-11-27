@@ -62,6 +62,7 @@ export default function InserirLivro() {
         <input
           type="text"
           placeholder="Inserir ISBN do Livro"
+          required
           onChange={(e) => setIsbn_livros(e.target.value)}
           style={{
             marginBottom: "10px",
@@ -73,6 +74,7 @@ export default function InserirLivro() {
         <input
           type="text"
           placeholder="Inserir Titulo Livro..."
+          required
           onChange={(e) => setTitulo_livros(e.target.value)}
           style={{
             marginBottom: "10px",
@@ -82,6 +84,7 @@ export default function InserirLivro() {
         />
         <input
           type="file"
+          required
           onChange={(e) => setFoto_livros(e.target.files[0])}
           style={{
             marginBottom: "10px",
@@ -90,6 +93,7 @@ export default function InserirLivro() {
         <input
           type="text"
           placeholder="Inserir ID sessão..."
+          required
           onChange={(e) => setId_secao(e.target.value)}
           style={{
             marginBottom: "10px",
@@ -100,6 +104,7 @@ export default function InserirLivro() {
 
         <textarea
           placeholder="Inserir Sinopse Livro..."
+          required
           onChange={(e) => setSinopse_livros(e.target.value)}
           style={{
             marginBottom: "10px",

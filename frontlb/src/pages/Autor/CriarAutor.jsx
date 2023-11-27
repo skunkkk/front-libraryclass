@@ -23,9 +23,8 @@ export default function CriarAutor() {
     }
   }
   return (
-    
     <div className="container-Autor">
-      <Navbar/>
+      <Navbar />
       <div className="navbar-reservas">
         <Link to={"/editarautor/:id"}>
           <p>Editar Autor</p>
@@ -48,6 +47,7 @@ export default function CriarAutor() {
             type="text"
             className="input-autor"
             placeholder="Insira o ID"
+            required
           />
         </div>
         <div
@@ -59,6 +59,7 @@ export default function CriarAutor() {
             type="text"
             className="input-autor"
             placeholder="Insira o Autor"
+            required
           />
         </div>
         <div
@@ -70,6 +71,7 @@ export default function CriarAutor() {
             type="text"
             className="input-autor"
             placeholder="Insira a Nacionalidade Autor"
+            required
           />
         </div>
       </div>

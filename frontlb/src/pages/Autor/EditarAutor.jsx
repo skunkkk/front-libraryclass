@@ -59,14 +59,14 @@ export default function EditarAutor() {
               className="input-autor"
               value={dadosForms.autor_nome}
               onChange={(e) => setAutor_nome(e.target.value)}
-            />
+              required/>
             <label>Nacionalidade do autor: </label>
             <input
               className="input-autor"
               type="text"
               value={dadosForms.autor_nacionalidade}
               onChange={(e) => setAutor_nacionalidade(e.target.value)}
-            />
+              required/>
           </div>
         </div>
         <button className="button-autor" onClick={() => editar()}>
