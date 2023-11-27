@@ -20,7 +20,7 @@ export default function EditarLivro() {
         <div className="livro">Livro 1</div>
         <div className="livro">Livro 2</div>
       </div>
-      <input type="button" value="Editar Livro" />
+      <input type="button" value="Editar Livro"/>
     </div>
   );
 }
