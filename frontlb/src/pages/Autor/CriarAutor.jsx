@@ -9,7 +9,6 @@ export default function CriarAutor() {
   const [autor_nome, setAutor_nome] = useState("");
   const [autor_nacionalidade, setAutor_nacionalidade] = useState("");
 
-
   async function adicionarAutor() {
     const dados = {
       id,
@@ -24,50 +23,79 @@ export default function CriarAutor() {
     }
   }
   return (
-    <div className="container-Autor">
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        textAlign: "center",
+        justifyContent: "center",
+        flexDirection: "column",
+        width: "100vw",
+      }}
+    >
       <Navbar />
-      <div className="navbar-reservas">
-    
-      </div>
-      <div className="alinharInput">
-        <div className="classInput">
-          <label>ID: </label>
+      <div className="navbar-reservas"></div>
+      <div
+        className="alinharInput"
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+        <h1>Criar Autor:</h1>
+        <div>
           <input
             type="text"
-            className="input-autor"
             placeholder="Insira o ID"
             required
             onChange={(e) => setId(e.target.value)}
+            style={{
+              marginBottom: "10px",
+              padding: "8px",
+              width: "300px",
+            }}
           />
         </div>
-        <div
-          className="classInput"
-          
-        >
-          <label>Nome do autor: </label>
+        <div className="classInput">
           <input
             type="text"
-            className="input-autor"
-            placeholder="Insira o Autor"
+            placeholder="Nome do Autor"
             required
             onChange={(e) => setAutor_nome(e.target.value)}
+            style={{
+              marginBottom: "10px",
+              padding: "8px",
+              width: "300px",
+            }}
           />
         </div>
-        <div
-          className="classInput"
-          
-        >
-          <label>Nacionalidade do autor: </label>
+        <div className="classInput">
           <input
             type="text"
-            className="input-autor"
-            placeholder="Insira a Nacionalidade Autor"
+            placeholder="Nacionalidade do Autor"
             required
             onChange={(e) => setAutor_nacionalidade(e.target.value)}
+            style={{
+              marginBottom: "10px",
+              padding: "8px",
+              width: "300px",
+            }}
           />
         </div>
       </div>
-      <button className="button-autor" onClick={() => adicionarAutor()}>
+      <button
+        type="button"
+        style={{
+          padding: "8px",
+          width: "300px",
+          backgroundColor: "#007bff",
+          color: "#fff",
+          border: "none",
+          cursor: "pointer",
+        }}
+        onClick={() => adicionarAutor()}
+      >
         Criar autor
       </button>
     </div>

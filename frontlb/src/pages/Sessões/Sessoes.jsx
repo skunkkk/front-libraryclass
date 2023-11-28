@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../Sessões/Sessoes.css";
 import axios from "axios";
-import { Link } from "react-router-dom";
+
 import Navbar from "../../components/Navbar/NavBar";
 export default function InserirSessoes() {
   const [descricao, setDescricao] = useState("");
@@ -14,16 +14,8 @@ export default function InserirSessoes() {
   }
   return (
     <div className="container-sessoes">
+
       <Navbar/>
-      <div className="navbar">
-        <p>Inserir Seção</p>  
-        <Link to={"/VerSessoes"}>
-          <p>Ver Seções</p>
-        </Link>
-        <Link to={"/NavegacaoADM"}>
-          <p>Voltar</p>
-        </Link>
-      </div>
       <h1>Criar seção</h1>
       <label>Descrição</label>
       <input

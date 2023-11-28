@@ -84,8 +84,10 @@ export default function MyRoutes() {
 
                 < Route path='/VerLivro' element={<VerLivro />} />
                 < Route path='/VerReservas' element={<VerReservas />} />
-                < Route path='/VerSessoes' element={<VerSessoes />} />
-                < Route path='/Sessoes' element={<Sessoes />} />
+
+                < Route path='/versessoes' element={<VerSessoes />} />
+                < Route path='/sessoes' element={<Sessoes />} />
+
                 < Route path='/CriarAutor' element={<CriarAutor />} />
                 < Route path='/VerAutor' element={<VerAutor />} />
                 < Route path='/editarautor/:id' element={<EditarAutor />} />

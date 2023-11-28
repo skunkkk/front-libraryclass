@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import Navbar from "../../components/Navbar/NavBar";
 
 export default function InserirReservas() {
   const [id_reservas, setId_reservas] = useState();
 
   async function liberarReserva() {
     try {
-      const response = await axios.post(
-        "http://127.0.0.1:8000/reservas",
-        { id_reservas }
-      );
+      const response = await axios.post("http://127.0.0.1:8000/reservas", {
+        id_reservas,
+      });
       console.log(response.data);
     } catch (erros) {
       console.log(erros);
@@ -36,22 +36,12 @@ export default function InserirReservas() {
         alignItems: "center",
         textAlign: "center",
         justifyContent: "center",
-        height: "100vh",
+
         fontFamily: "Arial, sans-serif",
       }}
     >
-      <div className="container-reservas" style={{ width: "80%", margin: "auto" }}>
-        <div className="navbar-reservas" style={{ background: "#333", color: "white", padding: "10px", marginBottom: "20px" }}>
-          <p style={{ fontSize: "1.5em", fontWeight: "bold", margin: 0 }}>
-            Inserir reservas
-          </p>
-          <Link to={"/VerReservas"} style={{ textDecoration: "none", color: "white", marginLeft: "20px" }}>
-            <p style={{ fontSize: "1.2em", margin: 0 }}>Ver reservas</p>
-          </Link>
-          <Link to={"/NavegacaoADM"} style={{ textDecoration: "none", color: "white", marginLeft: "20px" }}>
-            <p style={{ fontSize: "1.2em", margin: 0 }}>Voltar</p>
-          </Link>
-        </div>
+      <div className="container-reservas" style={{}}>
+        <Navbar></Navbar>
 
         <div className="alinhar-reservas">
           <div className="reservas">

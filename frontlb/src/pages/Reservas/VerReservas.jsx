@@ -1,20 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Navbar from "../../components/Navbar/NavBar";
 
 export default function VerReservas() {
   return (
     <div className="container-reservas">
-      <div className="navbar-reservas">
-        <Link to={"/InserirReservas"}>
-          <p>Inserir reservas</p>
-        </Link>
-
-        <p>Ver reservas</p>
-
-        <Link to={"/NavegacaoADM"}>
-          <p>Voltar</p>
-        </Link>
-      </div>
+      <Navbar></Navbar>
+      <div className="navbar-reservas"></div>
       <div className="alinhar-reservas">
         <div className="reservas">
           <h1>Reservas Feitas:</h1>
