@@ -1,5 +1,6 @@
 import React from "react";
 import "./Navbar.css";
+import Logo from "./LogoEscola.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHome,
@@ -12,6 +13,17 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Calendario from "./Cal.pdf";
 
+//   return (
+//     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+//       <div className="container">
+//         <a className="navbar-brand" href="#">
+//           <img
+//             src={Logo}
+//             alt="Your Company"
+//             height="30"
+//             className="d-inline-block align-top"
+//           />
+//         </a>
 import { Link, useLocation } from "react-router-dom";
 const Navbar = () => {
   const location = useLocation();
@@ -142,6 +154,15 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
+        <a className="navbar-brand" href="#">
+          {" "}
+          <img
+            src={Logo}
+            alt="Your Company"
+            height="30"
+            className="d-inline-block align-top"
+          />
+        </a>
         <div
           className="collapse navbar-collapse justify-content-end"
           id="navbarNav"
