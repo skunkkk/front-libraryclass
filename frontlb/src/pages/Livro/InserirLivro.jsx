@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Navbar from "../../components/Navbar/NavBar";
 
 export default function InserirLivro() {
   const [isbn_livros, setIsbn_livros] = useState("");
@@ -41,6 +42,7 @@ export default function InserirLivro() {
         height: "100vh",
       }}
     >
+       <Navbar/>
       <Link
         to="/EditarLivro"
         style={{ textDecoration: "none", color: "#007bff" }}

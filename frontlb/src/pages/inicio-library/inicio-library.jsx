@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./inicio-library.css";
 import CardLivro from "./CardLivro";
 import axios from "axios";
+import Navbar from "../../components/Navbar/NavBar";
 
 export default function InicioLibrary() {
   const [dados, setDados] = useState([]);
@@ -23,6 +24,7 @@ export default function InicioLibrary() {
 
   return (
     <div className="container-inicio-library">
+       <Navbar/>
       <div className="Titulo">
         <h1 className="nome">LibraryClass</h1>
         <img src="logo.png" alt="" className="logo" />

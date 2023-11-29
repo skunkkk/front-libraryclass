@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import Navbar from "../../components/Navbar/NavBar";
 
 export default function InserirPublicacao() {
   const [id_publicacao, setId_publicacao] = useState();
@@ -37,6 +38,7 @@ export default function InserirPublicacao() {
         height: "100vh",
       }}
     >
+       <Navbar/>
       <h1>Inserir Publicação:</h1>
       <input
         type="text"

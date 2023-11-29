@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./VerAvaliacoes.css";
+import Navbar from "../../components/Navbar/NavBar";
 export default function VerAvaliacoes() {
   const [data, setData] = useState([]);
 
@@ -13,6 +14,7 @@ export default function VerAvaliacoes() {
   console.log(data);
   return (
     <div className="container-veravaliacao">
+       <Navbar/>
       <div className="navbar-reservas">
         <Link to={"/CriarAvaliacoes"}>
           <p>Criar Avaliação</p>

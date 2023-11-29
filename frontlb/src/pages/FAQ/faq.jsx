@@ -1,8 +1,10 @@
 import React from "react";
 import "./faq.css";
+import Navbar from "../../components/Navbar/NavBar";
 export default function Faq() {
   return (
     <div className="config-container">
+       <Navbar/>
       <div className="Titulo-faq">
         <h1 className="nome-faq">LibraryClass</h1>
         <img src="logo.png" alt="" className="logo-faq" />

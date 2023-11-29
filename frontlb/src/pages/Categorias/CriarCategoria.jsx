@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./VerCategoria.css";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import Navbar from "../../components/Navbar/NavBar";
 
 export default function CriarCategoria() {
   const [descricao, setDescricao] = useState("");
@@ -21,6 +22,7 @@ export default function CriarCategoria() {
     <div className="container-verCategoria"
     style={{backgroundColor:"transparent"}}
     >
+       <Navbar/>
       <div className="classInput"
         style={{
           backgroundColor: "transparent",

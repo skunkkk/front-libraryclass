@@ -1,9 +1,11 @@
 import React from 'react'
 import './VerUmLivro.css'
 import CardResenha from '../../components/resenha/Resenha'
+import Navbar from '../../components/Navbar/NavBar'
 export default function VerUmLivro() {
     return (
         <div className='container-verumlivro'>
+             <Navbar/>
             <div className="titulolivro"><h1>Titulo do livro</h1></div>
             <div className="box-verumlivro">
                 <div className='container-infolivro'>

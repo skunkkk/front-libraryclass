@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./VerAutor.css";
 import { Link } from "react-router-dom";
+import Navbar from "../../components/Navbar/NavBar";
 export default function VerAutor() {
   const [data, setData] = useState([]);
 
@@ -16,6 +17,7 @@ export default function VerAutor() {
   console.log(data);
   return (
     <div className="container-VerAutor">
+       <Navbar/>
       <div className="navbar-reservas">
         <Link to={"/editarautor/:id"}>
           <p>Editar Autor</p>

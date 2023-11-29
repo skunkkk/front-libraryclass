@@ -10,20 +10,10 @@ import {
   faEye,
   faPlus,
   faArrowAltCircleLeft,
+  faPenToSquare,
 } from "@fortawesome/free-solid-svg-icons";
 import Calendario from "./Cal.pdf";
 
-//   return (
-//     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-//       <div className="container">
-//         <a className="navbar-brand" href="#">
-//           <img
-//             src={Logo}
-//             alt="Your Company"
-//             height="30"
-//             className="d-inline-block align-top"
-//           />
-//         </a>
 import { Link, useLocation } from "react-router-dom";
 const Navbar = () => {
   const location = useLocation();
@@ -31,7 +21,7 @@ const Navbar = () => {
   let conteudoNav;
 
   switch (location.pathname) {
-    case "/criarautor":
+    case "/CriarAutor":
       conteudoNav = (
         <>
           <ul className="navbar-nav">
@@ -106,12 +96,12 @@ const Navbar = () => {
         <>
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link className="nav-link" to={"/VerReservas"}>
+              <Link className="nav-link active" to={"/VerReservas"}>
                 <FontAwesomeIcon icon={faEye} /> Ver Reservas
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" to={"/InserirReservas"}>
+              <Link className="nav-link" to={"/InserirReservas"}>
                 <FontAwesomeIcon icon={faPlus} /> Criar Reservas
               </Link>
             </li>
@@ -124,7 +114,170 @@ const Navbar = () => {
         </>
       );
       break;
+      case "/VerAutor":
+        conteudoNav = (
+          <>
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <Link className="nav-link active" to={"/VerAutor"}>
+                  <FontAwesomeIcon icon={faEye} /> Ver Autor
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to={"/CriarAutor"}>
+                  <FontAwesomeIcon icon={faPlus} /> Criar Autor
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to={"/editarautor/:id"}>
+                  <FontAwesomeIcon icon={faPenToSquare} /> Editar Autor
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to={"/NavegacaoADM"}>
+                  <FontAwesomeIcon icon={faArrowAltCircleLeft} /> Voltar
+                </Link>
+              </li>
+            
+            </ul>
+          </>
+        );
+        break;
 
+        case "/editarautor/:id":
+          conteudoNav = (
+            <>
+              <ul className="navbar-nav">
+                <li className="nav-item">
+                  <Link className="nav-link" to={"/VerAutor"}>
+                    <FontAwesomeIcon icon={faEye} /> Ver Autor
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link active" to={"/editarautor/:id"}>
+                    <FontAwesomeIcon icon={faPenToSquare} /> Editar Autor
+                  </Link>
+                </li>
+                <li className="nav-item">
+                <Link className="nav-link" to={"/CriarAutor"}>
+                  <FontAwesomeIcon icon={faPlus} /> Criar Autor
+                </Link>
+              </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to={"/NavegacaoADM"}>
+                    <FontAwesomeIcon icon={faArrowAltCircleLeft} /> Voltar
+                  </Link>
+                </li>
+              </ul>
+            </>
+          );
+          break;
+
+          case "/VerAvaliacao":
+            conteudoNav = (
+              <>
+                <ul className="navbar-nav">
+                  <li className="nav-item">
+                    <Link className="nav-link active" to={"/VerAvaliacao"}>
+                      <FontAwesomeIcon icon={faEye} /> Ver Avaliação
+                    </Link>
+                  </li>
+        
+                  <li className="nav-item">
+                  <Link className="nav-link" to={"/CriarAvaliacoes"}>
+                    <FontAwesomeIcon icon={faPlus} /> Criar Avaliação
+                  </Link>
+                </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to={"/NavegacaoADM"}>
+                      <FontAwesomeIcon icon={faArrowAltCircleLeft} /> Voltar
+                    </Link>
+                  </li>
+                </ul>
+              </>
+            );
+            break;
+
+            case "/CriarAvaliacoes":
+              conteudoNav = (
+                <>
+                  <ul className="navbar-nav">
+                    <li className="nav-item">
+                      <Link className="nav-link" to={"/VerAvaliacao"}>
+                        <FontAwesomeIcon icon={faEye} /> Ver Avaliação
+                      </Link>
+                    </li>
+                  
+                    <li className="nav-item">
+                    <Link className="nav-link active" to={"CriarAvaliacoes"}>
+                      <FontAwesomeIcon icon={faPlus} /> Criar Avaliação
+                    </Link>
+                  </li>
+                    <li className="nav-item">
+                      <Link className="nav-link" to={"/NavegacaoADM"}>
+                        <FontAwesomeIcon icon={faArrowAltCircleLeft} /> Voltar
+                      </Link>
+                    </li>
+                  </ul>
+                </>
+              );
+              break;
+
+              case "/verCategoria":
+            conteudoNav = (
+              <>
+                <ul className="navbar-nav">
+                  <li className="nav-item">
+                    <Link className="nav-link active" to={"/verCategoria"}>
+                      <FontAwesomeIcon icon={faEye} /> Ver Categoria
+                    </Link>
+                  </li>
+        
+                  <li className="nav-item">
+                  <Link className="nav-link" to={"/CriarCategoria"}>
+                    <FontAwesomeIcon icon={faPlus} /> Criar Categoria
+                  </Link>
+                </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to={"/NavegacaoADM"}>
+                      <FontAwesomeIcon icon={faArrowAltCircleLeft} /> Voltar
+                    </Link>
+                  </li>
+                </ul>
+              </>
+            );
+            break;
+
+            case "/CriarCategoria":
+            conteudoNav = (
+              <>
+                <ul className="navbar-nav">
+                  <li className="nav-item">
+                    <Link className="nav-link " to={"/verCategoria"}>
+                      <FontAwesomeIcon icon={faEye} /> Ver Categoria
+                    </Link>
+                  </li>
+        
+                  <li className="nav-item">
+                  <Link className="nav-link active" to={"/CriarCategoria"}>
+                    <FontAwesomeIcon icon={faPlus} /> Criar Categoria
+                  </Link>
+                </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to={"/NavegacaoADM"}>
+                      <FontAwesomeIcon icon={faArrowAltCircleLeft} /> Voltar
+                    </Link>
+                  </li>
+                </ul>
+              </>
+            );
+            break;
+
+
+
+              
+    
+  
     default:
       conteudoNav = (
         <ul className="navbar-nav">

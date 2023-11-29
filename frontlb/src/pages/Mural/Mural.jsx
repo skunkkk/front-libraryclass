@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Mural.css";
 import Post from "../../components/post/post";
 import MenuH from "../../components/menu-h/MenuH";
+import Navbar from "../../components/Navbar/NavBar";
 
 export default function Mural() {
   const [data, setData] = useState([]);
@@ -12,6 +13,7 @@ export default function Mural() {
     //     azul : #143788
     // branco : #f1ebe2
     <div className="container-mural">
+       <Navbar/>
       <div className="titulo-mural">
         {/* <div class="hamburger-menu">
     <input id="menu__toggle" type="checkbox" />

@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "../../components/Navbar/NavBar";
 
 export default function VerUnicaFicha() {
   return (
@@ -13,6 +14,7 @@ export default function VerUnicaFicha() {
         height: "100vh",
       }}
     >
+       <Navbar/>
       <h1>Ficha Unica:</h1>
       <li></li>
     </div>

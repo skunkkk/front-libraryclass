@@ -1,6 +1,7 @@
 import axios from "axios";
 import React from "react";
 import { useState } from "react";
+import Navbar from "../../components/Navbar/NavBar";
 
 export default function InserirFicha() {
   const [idficha, setIdFicha] = useState("");
@@ -34,6 +35,7 @@ export default function InserirFicha() {
         height: "100vh",
       }}
     >
+       <Navbar/>
       <h1>Inserir Ficha:</h1>
 
       <label htmlFor="">Id da ficha</label>

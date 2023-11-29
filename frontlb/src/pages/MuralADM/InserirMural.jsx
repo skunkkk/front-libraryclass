@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./MuralADM.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import Navbar from "../../components/Navbar/NavBar";
 export default function InserirMural() {
   const [id_mural, setId_mural] = useState("");
 
@@ -21,6 +22,7 @@ export default function InserirMural() {
   }
   return (
     <div className="container-muraladm">
+       <Navbar/>
       <div className="navbar">
         <p>Inserir no mural</p>
         <Link to={"/VerMural"}>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./VerDevolucoes.css";
 import axios from "axios";
+import Navbar from "../../components/Navbar/NavBar";
 
 export default function VerDevolucoes() {
   const [data, setData] = useState([]);
@@ -13,6 +14,7 @@ export default function VerDevolucoes() {
   console.log(data);
   return (
     <div className="container-VerDevolucoes">
+       <Navbar/>
       <h1>Lista devolucoes</h1>
 
       <table>

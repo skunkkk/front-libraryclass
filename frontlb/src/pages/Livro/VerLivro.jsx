@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Navbar from "../../components/Navbar/NavBar";
 
 export default function VerLivro() {
   const [data, setData] = useState([]);
@@ -28,6 +29,7 @@ export default function VerLivro() {
         height: "100vh",
       }}
     >
+       <Navbar/>
       <div className="navbar">
         <Link to={"/InserirLivro"}>
           <p>Inserir livro</p>

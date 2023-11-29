@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./CriarAvaliacao.css";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import Navbar from "../../components/Navbar/NavBar";
 export default function CriarAvaliacoes() {
   const [id_avaliacoesPeriodicas, setId_avaliacoesPeriodicas] = useState("");
   const [isbn_livros, setIsbn_livros] = useState("");
@@ -25,6 +26,7 @@ export default function CriarAvaliacoes() {
   }
   return (
     <div className="container-avaliacao">
+       <Navbar/>
       <div className="navbar-reservas">
         <Link to={"/CriarAvaliacoes"}>
           <p>Criar Avaliação</p>

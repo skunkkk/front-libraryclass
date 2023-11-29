@@ -1,8 +1,10 @@
 import React from "react";
 import "./configuração.css";
+import Navbar from "../../components/Navbar/NavBar";
 export default function Configuração() {
   return (
     <div className="config-container">
+     
       <div className="Titulo-config">
         <h1 className="nome-config">LibraryClass</h1>
         <img src="logo.png" alt="" className="logo-config" />

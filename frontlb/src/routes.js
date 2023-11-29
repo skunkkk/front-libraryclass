@@ -131,3 +131,61 @@ export default function MyRoutes() {
               
     )
 }
+
+
+{/* 
+            
+
+
+<Route path="/Perfil" element={<Perfil />} />
+<Route path="/StatusLivro" element={<StatusLivro />} />
+<Route path="/Mural" element={<Mural />} />
+<Route path="/Library" element={<InicioLibrary />} />
+<Route path="/VerDevolucoes" element={<VerDevolucoes />} />
+<Route path="/InserirDevolucao" element={<InserirDevolucao />} />
+
+<Route path="/CriarAvaliacoes" element={<CriarAvaliacoes />} />
+<Route path="/VerUmaCategoria" element={<VerUmaCategoria />} />
+<Route path="/InserirCategoria" element={<VerCategoriaApagar />} />
+
+<Route path="/EditarCategoria" element={<EditarCategoria />} />
+<Route path="/DeletarCategoria" element={<DeletarCategoria />} />
+<Route path="/VerAvaliacoes" element={<VerAvaliacoes />} />
+<Route path="/MuralADM" element={<MuralADM />} />
+<Route path='/NavegacaoADM' element={<NavegacaoADM />} />
+<Route path='/VerPublicacao' element={<VerPublicacao />} />
+<Route path='/InserirPublicacao' element={<InserirPublicacao />} />
+<Route path='/VerLivro' element={<VerLivro />} />
+
+< Route path='/ReservasAtivas' element={<ReservasAtivas />} />
+< Route path='/EditarLivro' element={<EditarLivro />} />
+< Route path='/InserirLivro' element={<InserirLivro />} />
+
+< Route path='/VerLivro' element={<VerLivro />} />
+
+
+< Route path='/versessoes' element={<VerSessoes />} />
+
+
+
+
+
+
+
+
+< Route path='/VerFichas' element={<VerFichas />} />
+< Route path='/InserirFicha' element={<InserirFicha />} />
+
+< Route path='/VerUmaFicha' element={<VerUnicaFicha />} />
+
+< Route path='/veremprestimo' element={<VerEmprestimo />} />
+
+
+< Route path='/login' element={<Login />} />
+{/* < Route path='/VerUmLivro' element={<VerUmLivro />} />  */}
+
+
+
+// < Route path='/livroUnico' element={<VizualizarLivroUnico />} />
+// < Route path='/minhasreservas' element={<MinhasReservas />} /> */}
+

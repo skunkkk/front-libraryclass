@@ -1,9 +1,11 @@
 import React from "react";
 import "./status-livro.css";
+import Navbar from "../../components/Navbar/NavBar";
 
 export default function StatusLivro() {
   return (
     <div className="container">
+       <Navbar/>
       <div className="Titulo">
         <h1 className="nome">LibraryClass</h1>
         <img src="logo.png" alt="" className="logo" />

@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Navbar from "../../components/Navbar/NavBar";
 
 export default function VerCategoria() {
   const [data, setData] = useState([]);
@@ -21,6 +22,7 @@ export default function VerCategoria() {
 
   return (
     <div style={{ color: "black" }}>
+       <Navbar/>
       <h1>testando</h1>
       <table border={1}>
         <tr>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import "./CriarEmprestimo.css";
+import Navbar from "../../components/Navbar/NavBar";
 
 export default function CriarEmprestimo() {
   const [data_emprestimos, setData_emprestimos] = useState("");
@@ -27,6 +28,7 @@ export default function CriarEmprestimo() {
 
   return (
     <div className="container-criaremprestimo">
+       <Navbar/>
       <div className="navbar">
         <p>Criar empréstimo</p>
         <Link to={"/VerEmprestimo"}>

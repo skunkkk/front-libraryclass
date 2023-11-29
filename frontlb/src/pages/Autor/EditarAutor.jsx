@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import "./EditarAutor.css";
+import Navbar from "../../components/Navbar/NavBar";
 export default function EditarAutor() {
   const { id } = useParams();
   const [autor_nome, setAutor_nome] = useState("");
@@ -29,20 +30,9 @@ export default function EditarAutor() {
   } else {
     return (
       <div className="container-Autor">
+         <Navbar/>
         <div className="navbar-reservas">
-          <Link to={"/editarautor/:id"}>
-            <p>Editar Autor</p>
-          </Link>
-          <Link to={"/VerAutor"}>
-            <p>Ver Autor</p>
-          </Link>
-          <Link to={"/CriarAutor"}>
-            <p>Criar Autor</p>
-          </Link>
-
-          <Link to={"/NavegacaoADM"}>
-            <p>Voltar</p>
-          </Link>
+    
         </div>
         <div className="alinhar-reservas">
           <div className="inputs-autor">

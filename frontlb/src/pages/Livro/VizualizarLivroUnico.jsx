@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Navbar from "../../components/Navbar/NavBar";
 
 const fakeBookData = {
   titulo: "Aventuras no Espaço",
@@ -38,6 +39,7 @@ export default function VisualizarLivroUnico() {
         borderRadius: "10px",
       }}
     >
+       <Navbar/>
       <h1>{fakeBookData.titulo}</h1>
       <div
         style={{

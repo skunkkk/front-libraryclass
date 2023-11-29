@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import Navbar from "../../components/Navbar/NavBar";
 
 export default function VerPublicacao() {
   const [data, setData] = useState([]);
@@ -25,6 +26,7 @@ export default function VerPublicacao() {
         height: "100vh",
       }}
     >
+       <Navbar/>
       <h1>Publicações Feitas:</h1>
 
       <table border={1}>

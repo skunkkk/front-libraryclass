@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./InserirDevolucao.css";
 import axios from "axios";
+import Navbar from "../../components/Navbar/NavBar";
 export default function InserirDevolucao() {
   const [id_devolucoes, setId_devolucoes] = useState("");
   const [data_devolucao, setData_devolucao] = useState("");
@@ -32,6 +33,7 @@ export default function InserirDevolucao() {
           width: "300px",
         }}
       >
+         <Navbar/>
         <label style={{ color: 'black' }}>ID da devolução: </label>
         <input type="text" onChange={(e) => setId_devolucoes(e.target.value)} required />
 

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import Navbar from "../../components/Navbar/NavBar";
 
 export default function MinhasReservas() {
   const [id_reservas, setId_reservas] = useState();
@@ -20,6 +21,7 @@ export default function MinhasReservas() {
         fontFamily: "Arial, sans-serif",
       }}
     >
+      <Navbar></Navbar>
       <div
         className="container-reservas"
         style={{ width: "80%", margin: "auto" }}

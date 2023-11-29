@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./VerEmprestimo.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import Navbar from "../../components/Navbar/NavBar";
 export default function VerEmprestimo() {
   const [data, setData] = useState([]);
 
@@ -13,6 +14,7 @@ export default function VerEmprestimo() {
   console.log(data);
   return (
     <div className="container-veremprestimo">
+       <Navbar/>
       <div className="navbar">
         <p>Ver emprestio</p>
         <Link to={"/NavegacaoADM"}>

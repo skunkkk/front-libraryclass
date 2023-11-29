@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Navbar from "../../components/Navbar/NavBar";
 
 export default function VerSessoes() {
   const [data, setData] = useState([]);
@@ -14,7 +15,9 @@ export default function VerSessoes() {
 
   return (
     <div className="container-sessoes">
+      
       <div className="navbar">
+      <Navbar/>
         <Link to={"/Sessoes"}>
           {" "}
           <p>Inserir Seção</p>

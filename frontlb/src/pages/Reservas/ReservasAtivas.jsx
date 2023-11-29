@@ -4,6 +4,7 @@ import EmprestimoCard from './EmprestimosCard';
 import ReactPaginate from 'react-paginate';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import Navbar from '../../components/Navbar/NavBar';
 
 export default function ReservasAtivas() {
   const [dados, setDados] = useState([]);
@@ -45,6 +46,7 @@ export default function ReservasAtivas() {
 
   return (
     <div className="container mt-4 text-center">
+      <Navbar/>
       <h1 className="mb-4">Reservas Ativas</h1>
 
       <div className="row justify-content-center mb-4">
