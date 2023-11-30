@@ -1,34 +1,68 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar/NavBar";
+import { useNavigate, useParams } from "react-router-dom";
+import axios from "axios";
+import './VizualizarLivro.css';
 
-const fakeBookData = {
-  titulo: "Aventuras no Espaço",
-  foto: "https://via.placeholder.com/150",
-  sinopse:
-    "Em uma galáxia distante, um grupo de heróis embarca em uma jornada épica...",
-  resenhas: [
-    { id: 1, autor: "Autor 1", texto: "Ótimo livro!" },
-    { id: 2, autor: "Autor 2", texto: "Uma história cativante." },
-  ],
-};
 
-export default function VisualizarLivroUnico() {
-  const [resenhaTexto, setResenhaTexto] = useState("");
+export default function VisualizarLivroUnico({route}) {
+const {id}=useParams();
+const [livro,setLivro]=useState({});
+const [textoResenha,setTextoResenha]=useState('');
+const [tituloResenha,setTituloResenha]=useState('');
+const [resenhaLivro,setResenhaLivro]=useState([]);
+const [data,setData]=useState('');
+const [status_reserva,setStatusReserva]=useState(false);
+const id_user=12345678;
+useEffect(()=>{
+  axios.get(`http://localhost:8000/livros/${id}`).then((res)=>setLivro(res.data))
+  axios.get(`http://localhost:8000/resenhasLivro/${livro.isbn_livros}`).then((res)=>setResenhaLivro(res.data))
+},[]);
+console.log(livro)
 
   const adicionarResenha = () => {
-    const novaResenha = {
-      id: fakeBookData.resenhas.length + 1,
-      autor: "Novo Autor",
-      texto: resenhaTexto,
-    };
-
-    fakeBookData.resenhas = [...fakeBookData.resenhas, novaResenha];
-
-    setResenhaTexto("");
+    try{
+      axios.post('http://localhost:8000/resenhas',{
+        'titulo_resenhas':textoResenha,
+        'descricao_resenhas':tituloResenha,
+        'id_usuarios':id_user,
+        'isbn_livros':livro.isbn_livros
+      })
+      .then((response)=>alert("Resenha Adicionada"))
+    }catch(erro){
+      console.log(erro);
+    }
   };
 
+  const obterDataAtual = () => {
+    const data = new Date();
+    const ano = data.getFullYear();
+    const mes = String(data.getMonth() + 1).padStart(2, '0');
+    const dia = String(data.getDate()).padStart(2, '0');
+    return `${ano}-${mes}-${dia}`;
+  };
+
+  const pegarEmprestado =()=>{
+    const data = obterDataAtual();
+    setData(data);
+    axios.post(`http://localhost:8000/emprestimos`,{
+      "data_emprestimos" : data,
+      "id_usuarios" : id_user,
+      "isbn_livros" : livro.isbn_livros
+    })
+    .then(
+      axios.post(`http://localhost:8000/reservas`,{
+        "data_reservas": data,
+        "status_reserva":status_reserva,
+        "id_usuarios":id_user,
+        "isbn_livros":livro.isbn_livros
+      })
+      .then((res)=>console.log(res.data))
+    );
+  }
+
   return (
-    <div
+    <div 
       style={{
         display: "flex",
         flexDirection: "column",
@@ -40,7 +74,7 @@ export default function VisualizarLivroUnico() {
       }}
     >
        <Navbar/>
-      <h1>{fakeBookData.titulo}</h1>
+      <h1>{livro.titulo_livros}</h1>
       <div
         style={{
           display: "flex",
@@ -55,7 +89,8 @@ export default function VisualizarLivroUnico() {
       >
         <div style={{ flex: "1.3" }}>
           <img
-            src={fakeBookData.foto}
+          
+          src={livro.foto_livros ? `http://localhost:8000/storage/livros/${livro.foto_livros.split("/")[1]}` : ''}
             alt="Capa do Livro"
             style={{ width: "100%", borderRadius: "5px" }}
           />
@@ -70,9 +105,9 @@ export default function VisualizarLivroUnico() {
             justifyContent: "center",
           }}
         >
-          <p>{fakeBookData.sinopse}</p>
-          <p style={{ marginTop: "10px", fontWeight: "bold" }}>
-            Autor: {fakeBookData.resenhas[0].autor}
+          <p style={{color:'black'}}>{livro.sinopse_livros}</p>
+          <p style={{ marginTop: "10px", fontWeight: "bold",color:'black' }}>
+            {/* Autor: {livro ? livro.autor.autor_nome : '' } */}
           </p>
         </div>
         <div
@@ -82,6 +117,7 @@ export default function VisualizarLivroUnico() {
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center", 
+            color:'black'
           }}
         >
           <button
@@ -94,15 +130,16 @@ export default function VisualizarLivroUnico() {
               cursor: "pointer",
               width: "80%",
             }}
+            onClick={()=>pegarEmprestado()}
           >
             Pegar Emprestado
           </button>
         </div>
       </div>
       <h2 style={{ marginTop: "20px" }}>Resenhas</h2>
-      {fakeBookData.resenhas.map((resenha) => (
+      {resenhaLivro.map((resenha) => (
         <div
-          key={resenha.id}
+          key={resenha.id_resenhas}
           style={{
             border: "1px solid #ddd",
             padding: "10px",
@@ -113,16 +150,26 @@ export default function VisualizarLivroUnico() {
             boxShadow: "0 0 5px rgba(0, 0, 0, 0.1)",
           }}
         >
-          <p>Autor: {resenha.autor}</p>
-          <p>{resenha.texto}</p>
+          <p style={{color:'black'}}>Usuario: {resenha.usuario.nome}</p>
+          <p style={{color:'black'}}>titulo resenha: {resenha.titulo_resenhas}</p>
+          <p style={{color:'black'}}>{resenha.descricao_resenhas}</p>
         </div>
       ))}
       <div style={{ width: "50%", marginTop: "20px" }}>
+        <div>
+          <h3 className="display-8">Escreva sua resenha</h3>
+          <input type="text" placeholder="insira o titulo da resenha..." style={{
+            width: "100%",
+            marginBottom: "10px",
+            padding: "10px",
+            borderRadius: "5px",
+          }} 
+          onChange={(e)=>setTituloResenha(e.target.value)}
+          />
         <textarea
           placeholder="Escreva sua resenha..."
-          value={resenhaTexto}
           required
-          onChange={(e) => setResenhaTexto(e.target.value)}
+          onChange={(e) => setTextoResenha(e.target.value)}
           style={{
             width: "100%",
             marginBottom: "10px",
@@ -147,6 +194,8 @@ export default function VisualizarLivroUnico() {
         >
           Adicionar Resenha
         </button>
+        </div>
+        
       </div>
     </div>
   );

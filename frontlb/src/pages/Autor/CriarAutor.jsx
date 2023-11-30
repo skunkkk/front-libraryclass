@@ -5,13 +5,11 @@ import axios from "axios";
 import Navbar from "../../components/Navbar/NavBar";
 
 export default function CriarAutor() {
-  const [id, setId] = useState("");
   const [autor_nome, setAutor_nome] = useState("");
   const [autor_nacionalidade, setAutor_nacionalidade] = useState("");
 
   async function adicionarAutor() {
     const dados = {
-      id,
       autor_nome,
       autor_nacionalidade,
     };
@@ -44,19 +42,7 @@ export default function CriarAutor() {
         }}
       >
         <h1>Criar Autor:</h1>
-        <div>
-          <input
-            type="text"
-            placeholder="Insira o ID"
-            required
-            onChange={(e) => setId(e.target.value)}
-            style={{
-              marginBottom: "10px",
-              padding: "8px",
-              width: "300px",
-            }}
-          />
-        </div>
+       
         <div className="classInput">
           <input
             type="text"

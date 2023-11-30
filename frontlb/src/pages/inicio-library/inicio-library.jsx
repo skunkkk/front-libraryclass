@@ -23,9 +23,11 @@ export default function InicioLibrary() {
   );
 
   return (
+    <>
     <div className="container-inicio-library">
        <Navbar/>
-      <div className="Titulo">
+       <div className="container-conteudo">
+        <div className="Titulo">
         <h1 className="nome">LibraryClass</h1>
         <img src="logo.png" alt="" className="logo" />
       </div>
@@ -55,6 +57,10 @@ export default function InicioLibrary() {
         ))}
       </div>
       {/* <h1>rafael arrume essa zona urgente que diacho eh esse aqui de componente que tem 3 responsabilidades diferentes arrume esse codigo e deixe ele perfeito, arrume o componente cards para receber as props da maneira correta o codigo ja esta ai dos livros mais emprestados o resto eh com voce,criei outro componente para substituir ate voce terminar essa joça</h1> */}
+       </div>
+      
     </div>
+    </>
+    
   );
 }

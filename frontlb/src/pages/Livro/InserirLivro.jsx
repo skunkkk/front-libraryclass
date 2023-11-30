@@ -9,6 +9,7 @@ export default function InserirLivro() {
   const [foto_livros, setFoto_livros] = useState(null);
   const [sinopse_livros, setSinopse_livros] = useState("");
   const [id_secao, setId_secao] = useState("");
+  const [id, setId_Autor] = useState("");
 
   async function adicionarLivro() {
     const formData = new FormData();
@@ -17,14 +18,15 @@ export default function InserirLivro() {
     formData.append("foto_livros", foto_livros);
     formData.append("sinopse_livros", sinopse_livros);
     formData.append("id_secao", id_secao);
+    formData.append("id", id);
+
 
     console.log(formData);
     try {
       const response = await axios.post(
         "http://127.0.0.1:8000/livros",
         formData
-      );
-      console.log(response.data);
+      ).then((res)=>alert(res.data.message));
     } catch (erros) {
       console.log(erros);
     }
@@ -88,6 +90,17 @@ export default function InserirLivro() {
           placeholder="Inserir ID sessão..."
           required
           onChange={(e) => setId_secao(e.target.value)}
+          style={{
+            marginBottom: "10px",
+            padding: "8px",
+            width: "300px",
+          }}
+        />
+        <input
+          type="text"
+          placeholder="Inserir ID do autor..."
+          required
+          onChange={(e) => setId_Autor(e.target.value)}
           style={{
             marginBottom: "10px",
             padding: "8px",

@@ -714,19 +714,19 @@ const Navbar = () => {
       conteudoNav = (
         <ul className="navbar-nav">
           <li className="nav-item">
-            <a className="nav-link active" href="#">
+            <Link className="nav-link active" to={'/'}>
               <FontAwesomeIcon icon={faHome} /> Home
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <Link className="nav-link" to={'/noticiascompleta'}>
               <FontAwesomeIcon icon={faNewspaper} /> Noticias
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="#">
+            <Link className="nav-link" to={'/Library'}>
               <FontAwesomeIcon icon={faBook} /> LibraryClassApp
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
             <a className="nav-link" download href={Calendario}>
@@ -739,7 +739,7 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container">
-        <a className="navbar-brand" href="#">
+        <Link className="navbar-brand" to={'/'}>
           {" "}
           <img
             src={Logo}
@@ -747,7 +747,7 @@ const Navbar = () => {
             height="30"
             className="d-inline-block align-top"
           />
-        </a>
+        </Link>
         <div
           className="collapse navbar-collapse justify-content-end"
           id="navbarNav"

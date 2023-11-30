@@ -107,7 +107,7 @@ export default function MyRoutes() {
 
 
                 
-                < Route path='/livroUnico' element={<VizualizarLivroUnico />} />
+                < Route path='/livroUnico/:id' element={<VizualizarLivroUnico />} />
                 < Route path='/minhasreservas' element={<MinhasReservas />} />
 
 
