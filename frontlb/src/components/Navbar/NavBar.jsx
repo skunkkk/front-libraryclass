@@ -74,12 +74,12 @@ const Navbar = () => {
           <ul className="navbar-nav">
             <li className="nav-item">
               <Link className="nav-link" to={"/VerReservas"}>
-                <FontAwesomeIcon icon={faEye} /> Ver Reservas
+                <FontAwesomeIcon icon={faEye} /> Ver Reservas Ativas
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link active" to={"/InserirReservas"}>
-                <FontAwesomeIcon icon={faPlus} /> Criar Reservas
+                <FontAwesomeIcon icon={faPlus} /> Ver Reservas
               </Link>
             </li>
             <li className="nav-item">
@@ -97,12 +97,12 @@ const Navbar = () => {
           <ul className="navbar-nav">
             <li className="nav-item">
               <Link className="nav-link active" to={"/VerReservas"}>
-                <FontAwesomeIcon icon={faEye} /> Ver Reservas
+                <FontAwesomeIcon icon={faEye} /> Ver Reservas Ativas
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to={"/InserirReservas"}>
-                <FontAwesomeIcon icon={faPlus} /> Criar Reservas
+                <FontAwesomeIcon icon={faPlus} /> Ver Reservas
               </Link>
             </li>
             <li className="nav-item">

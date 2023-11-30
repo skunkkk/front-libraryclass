@@ -17,37 +17,20 @@ export default function NavegacaoADM() {
             </Link>
           </td>
           <td>
-            <Link to={"/InserirPublicacao"}>
+            <Link to={"/noticias/criar"}>
               <button className="button-adm">Publicações</button>
             </Link>
           </td>
         </tr>
         <tr>
           <td>
-            <Link to={"/MuralADM"}>
-              <button className="button-adm">Murais</button>
-            </Link>
-          </td>
-          <td>
             <Link to={"/InserirLivro"}>
               <button className="button-adm">Livros</button>
             </Link>
           </td>
           <td>
-            <Link to={"/VerFichas"}>
-              <button className="button-adm">Fichas Livros</button>
-            </Link>
-          </td>
-        </tr>
-        <tr>
-          <td>
             <Link to={"/VerEmprestimo"}>
               <button className="button-adm">Emprestimos</button>
-            </Link>
-          </td>
-          <td>
-            <Link to={"/InserirDevolucao"}>
-              <button className="button-adm">Devoluções</button>
             </Link>
           </td>
           <td>

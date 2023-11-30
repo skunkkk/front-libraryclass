@@ -47,6 +47,7 @@ import PaginaInicial from './pages/Noticias/PaginaInicial';
 import NoticiasCompleta from './pages/Noticias/NoticiasCompleta';
 import UmaNoticia from './pages/Noticias/UmaNoticia';
 import CriarNoticia from './pages/Noticias/CriarNoticia';
+import ReservaFeita from './pages/Reservas/ReservaFeita';
 
 export default function MyRoutes() {
     return (
@@ -60,30 +61,35 @@ export default function MyRoutes() {
                 <Route path="/FAQ" element={<Faq />} />
                 <Route path="/Perfil" element={<Perfil />} />
                 <Route path="/StatusLivro" element={<StatusLivro />} />
-                <Route path="/Mural" element={<Mural />} />
                 <Route path="/Library" element={<InicioLibrary />} />
+                <Route path='/NavegacaoADM' element={<NavegacaoADM />} />
+
                 <Route path="/VerDevolucoes" element={<VerDevolucoes />} />
                 <Route path="/InserirDevolucao" element={<InserirDevolucao />} />
-                <Route path="/CriarCategoria" element={<CriarCategoria />} />
+
                 <Route path="/CriarAvaliacoes" element={<CriarAvaliacoes />} />
+                <Route path="/VerAvaliacoes" element={<VerAvaliacoes />} />
+
+                <Route path="/CriarCategoria" element={<CriarCategoria />} />
                 <Route path="/VerUmaCategoria" element={<VerUmaCategoria />} />
                 <Route path="/InserirCategoria" element={<VerCategoriaApagar />} />
+
                 <Route path="/verCategoria" element={<VerCategoria />} />
                 <Route path="/EditarCategoria" element={<EditarCategoria />} />
                 <Route path="/DeletarCategoria" element={<DeletarCategoria />} />
-                <Route path="/VerAvaliacoes" element={<VerAvaliacoes />} />
-                <Route path="/MuralADM" element={<MuralADM />} />
-                <Route path='/NavegacaoADM' element={<NavegacaoADM />} />
+                
                 <Route path='/VerPublicacao' element={<VerPublicacao />} />
                 <Route path='/InserirPublicacao' element={<InserirPublicacao />} />
+
                 <Route path='/VerLivro' element={<VerLivro />} />
+                < Route path='/InserirLivro' element={<InserirLivro />} />
+
                 < Route path='/InserirReservas' element={<InserirReservas />} />
                 < Route path='/ReservasAtivas' element={<ReservasAtivas />} />
                 < Route path='/EditarLivro' element={<EditarLivro />} />
-                < Route path='/InserirLivro' element={<InserirLivro />} />
 
                 < Route path='/VerLivro' element={<VerLivro />} />
-                < Route path='/VerReservas' element={<VerReservas />} />
+                < Route path='/VerReservas' element={<ReservasAtivas />} />
 
                 < Route path='/versessoes' element={<VerSessoes />} />
                 < Route path='/sessoes' element={<Sessoes />} />
@@ -116,6 +122,9 @@ export default function MyRoutes() {
                 < Route path='/noticiascompleta' element={<NoticiasCompleta/>} />
                 < Route path='/noticias/:id' element={<UmaNoticia/>} />
                 < Route path='/noticias/criar' element={<CriarNoticia/>} />
+
+                < Route path='/reservas/:id_reserva' element={<ReservaFeita/>} />
+
 
 
 

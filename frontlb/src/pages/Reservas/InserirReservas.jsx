@@ -1,15 +1,17 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import Navbar from "../../components/Navbar/NavBar";
+import { format } from 'date-fns';
+
 
 export default function InserirReservas() {
   const [id_reservas, setId_reservas] = useState();
-
-  async function liberarReserva() {
+  const [reservas,setReservas]=useState([]);
+  async function liberarReserva(reservaid) {
     try {
-      const response = await axios.post("http://127.0.0.1:8000/reservas", {
-        id_reservas,
+      const response = await axios.put(`http://127.0.0.1:8000/reservas/${reservaid}`, {
+        status_reserva:1,
       });
       console.log(response.data);
     } catch (erros) {
@@ -17,16 +19,20 @@ export default function InserirReservas() {
     }
   }
 
-  async function negar() {
+  async function negar(reservaid) {
     try {
       const response = await axios.delete(
-        `http://127.0.0.1:8000/reservas/${id_reservas}`
+        `http://127.0.0.1:8000/reservas/${reservaid}`
       );
       console.log(response.data);
     } catch (erros) {
       console.log(erros);
     }
   }
+console.log(reservas)
+  useEffect(()=>{
+    axios.get(`http://localhost:8000/obterReserva`).then((res)=>setReservas(res.data))
+  },[])
 
   return (
     <div
@@ -58,6 +64,7 @@ export default function InserirReservas() {
               <thead>
                 <tr>
                   <th>ID reserva</th>
+                  <th>data da reserva</th>
                   <th>Localização livro</th>
                   <th>Título livro</th>
                   <th>CPF/RA do retirante</th>
@@ -66,29 +73,36 @@ export default function InserirReservas() {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>2AB</td>
-                  <td>NARNIA</td>
-                  <td>12345678sp</td>
-                  <td>João</td>
+                {reservas.map((reserva)=>(
+                 <tr>
+                  <td>{reserva.id_reservas}</td>
+                  <td>
+                  {format(new Date(reserva.data_reservas), 'dd/MM/yyyy')}
+                  </td>
+                  
+                  <td>{reserva.id_secao}</td>
+                  <td>{reserva.titulo_livros}</td>
+                  <td>{reserva.id_usuarios}</td>
+                  <td>{reserva.nome}</td>
                   <td>
                     <div>
                       <button
                         className="btn btn-primary"
-                        onClick={() => liberarReserva()}
+                        onClick={() => liberarReserva(reserva.id_reservas)}
                       >
                         Liberar reserva
                       </button>{" "}
                       <button
                         className="btn btn-danger"
-                        onClick={() => negar()}
+                        onClick={() => negar(reserva.id_reservas)}
                       >
                         Cancelar reserva
                       </button>
                     </div>
                   </td>
-                </tr>
+                </tr> 
+                ))}
+                
               </tbody>
             </table>
           </div>

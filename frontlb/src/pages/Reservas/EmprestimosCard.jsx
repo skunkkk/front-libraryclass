@@ -1,7 +1,16 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 
 const EmprestimoCard = ({ id_reserva,nome_retirante, nome_livro, data_entrega }) => {
+const [status,setStatus]=useState(false)
+    useEffect(()=>{
 
+    },[status])
+    async function devolverLivro(idreserva){
+           await axios.delete(`http://localhost:8000/reservas/${idreserva}`).then(console.log('funcionou'))
+           setStatus(!status);
+           console.log(status)
+      }
     return (
         <div className="card p-6 mb-2" style={{ width: '100%' }}>
             <div >
@@ -20,7 +29,7 @@ const EmprestimoCard = ({ id_reserva,nome_retirante, nome_livro, data_entrega })
                     <div>{data_entrega}</div>
                 </div>
                 <div >
-                    <button className="btn btn-primary px-4 py-2">Devolver Livro</button>
+                    <button className="btn btn-primary px-4 py-2" onClick={()=>devolverLivro(id_reserva)}>Devolver Livro</button>
                 </div>
             </div>
             <hr className="m-0" />

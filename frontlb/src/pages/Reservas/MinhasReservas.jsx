@@ -1,88 +1,70 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import axios from "axios";
-import Navbar from "../../components/Navbar/NavBar";
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
-export default function MinhasReservas() {
-  const [id_reservas, setId_reservas] = useState();
+const MinhasReservas = () => {
+  const [reservas, setReservas] = useState([]);
+  const [id_usuarios,setIdUsuarios]=useState(12345678);
 
-
-
-
+  useEffect(() => {
+    axios.get(`http://localhost:8000/minhasReservas/${id_usuarios}`) 
+      .then((response) => {
+        setReservas(response.data);
+      })
+      .catch((error) => {
+        console.error('Erro ao obter reservas:', error);
+      });
+  }, []);
+console.log(reservas)
   return (
     <div
       style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        textAlign: "center",
-        justifyContent: "center",
-        height: "100vh",
-        fontFamily: "Arial, sans-serif",
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '20px',
+        background: '#f0f0f0',
+        minHeight: '100vh',
       }}
     >
-      <Navbar></Navbar>
-      <div
-        className="container-reservas"
-        style={{ width: "80%", margin: "auto" }}
-      >
+      <h1 style={{ fontSize: '2.5em', marginBottom: '20px' }}>Suas Reservas</h1>
+      {reservas.length === 0 ? (
+        <p style={{ fontSize: '1.5em', color: '#555' }}>Você não possui reservas.</p>
+      ) : (
         <div
-          className="navbar-reservas"
           style={{
-            background: "#333",
-            color: "white",
-            padding: "10px",
-            marginBottom: "20px",
-             
+            width: '80%',
+            background: '#fff',
+            borderRadius: '10px',
+            padding: '20px',
+            boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)',
           }}
         >
-          <p style={{ fontSize: "1.5em", fontWeight: "bold", margin: 0 }}>
-            Minhas Reservas
-          </p>
-          <Link
-            to={"/VerReservas"}
-            style={{
-              textDecoration: "none",
-              color: "white",
-              marginLeft: "20px",
-            }}
-          >
-           
-            <p style={{ fontSize: "1.2em", margin: 0 }}>Voltar</p>
-          </Link>
+          {reservas.map((reserva) => (
+            <div
+              key={reserva.id_reservas}
+              style={{
+                border: '1px solid #ddd',
+                padding: '10px',
+                margin: '10px',
+                background: '#fff',
+                borderRadius: '5px',
+                boxShadow: '0 0 5px rgba(0, 0, 0, 0.1)',
+              }}
+            >
+              <p style={{ fontSize: '1.2em', color: '#333', marginBottom: '5px' }}>
+                Reserva #{reserva.id_reservas}
+              </p>
+              <p style={{ fontSize: '1em', color: '#555' }}>
+                Data da Reserva: {reserva.data_reservas}
+              </p>
+              {/* Adicione mais informações conforme necessário */}
+            </div>
+          ))}
         </div>
-
-        <div className="alinhar-reservas">
-          <div className="reservas">
-            <h1 style={{ marginBottom: "10px" }}></h1>
-         
-            <table style={{ width: "100%", marginTop: "20px" }}>
-              <thead>
-                <tr>
-                  <th>ID reserva</th>
-                  <th>Localização livro</th>
-                  <th>Título livro</th>
-                  <th>CPF/RA do retirante</th>
-                  <th>Usuário retirante</th>
-                 
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>2AB</td>
-                  <td>NARNIA</td>
-                  <td>12345678sp</td>
-                  <td>João</td>
-                  <td>
-
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
+      )}
     </div>
   );
-}
+};
+
+export default MinhasReservas;

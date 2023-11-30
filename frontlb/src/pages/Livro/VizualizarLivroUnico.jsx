@@ -6,6 +6,7 @@ import './VizualizarLivro.css';
 
 
 export default function VisualizarLivroUnico({route}) {
+const navigate = useNavigate();
 const {id}=useParams();
 const [livro,setLivro]=useState({});
 const [textoResenha,setTextoResenha]=useState('');
@@ -57,7 +58,10 @@ console.log(livro)
         "id_usuarios":id_user,
         "isbn_livros":livro.isbn_livros
       })
-      .then((res)=>console.log(res.data))
+      .then((res) => {
+        const id_reserva = res.data.id_reservas;
+        navigate(`/reservas/${id_reserva}`);
+      })
     );
   }
 

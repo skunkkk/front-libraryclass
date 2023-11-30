@@ -5,6 +5,8 @@ import ReactPaginate from 'react-paginate';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import Navbar from '../../components/Navbar/NavBar';
+import { format } from 'date-fns';
+
 
 export default function ReservasAtivas() {
   const [dados, setDados] = useState([]);
@@ -12,24 +14,12 @@ export default function ReservasAtivas() {
   const [tipoPesquisa, setTipoPesquisa] = useState('nome_retirante');
   const [pageNumber, setPageNumber] = useState(0);
   const itemsPerPage = 4; // Número de itens por página
+  const [atualiza,setAtualiza]=useState(false);
 
   useEffect(() => {
-    // Axios para buscar dados do backend
-    // axios.get(`http://127.0.0.1:8000/obterReservaAtivas`).then((res) => {
-    //   setDados(res.data);
-    // });
-
-    // Usando dados fictícios enquanto não há dados reais
-    const dadosFicticios = [];
-    for (let i = 1; i <= 20; i++) {
-      dadosFicticios.push({
-        id_reserva: i,
-        nome_retirante: `Retirante ${i}`,
-        nome_livro: `Livro ${i}`,
-        data_entrega: `2023-12-${i < 10 ? '0' + i : i}`,
-      });
-    }
-    setDados(dadosFicticios);
+     axios.get(`http://127.0.0.1:8000/obterReservaAtivas`).then((res) => {
+       setDados(res.data);
+     });
   }, []);
 
   const filtrarEmprestimos = () => {
@@ -37,6 +27,8 @@ export default function ReservasAtivas() {
       String(emprestimo[tipoPesquisa]).toLowerCase().includes(filtro.toLowerCase())
     );
   };
+
+  
 
   const pageCount = Math.ceil(filtrarEmprestimos().length / itemsPerPage);
 
@@ -83,12 +75,12 @@ export default function ReservasAtivas() {
       {filtrarEmprestimos()
         .slice(pageNumber * itemsPerPage, (pageNumber + 1) * itemsPerPage)
         .map((emprestimo) => (
-          <div key={emprestimo.id_reserva} className="col-md-6 mx-auto mb-4">
+          <div key={emprestimo.id_reservas} className="col-md-6 mx-auto mb-4">
             <EmprestimoCard
-              nome_retirante={emprestimo.nome_retirante}
-              nome_livro={emprestimo.nome_livro}
-              data_entrega={emprestimo.data_entrega}
-              id_reserva={emprestimo.id_reserva}
+              nome_retirante={emprestimo.nome}
+              nome_livro={emprestimo.titulo_livros}
+              data_entrega={format(new Date(emprestimo.data_reservas), 'dd/MM/yyyy')}
+              id_reserva={emprestimo.id_reservas}
             />
           </div>
         ))}
