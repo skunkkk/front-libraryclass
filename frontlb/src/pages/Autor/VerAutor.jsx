@@ -18,21 +18,7 @@ export default function VerAutor() {
   return (
     <div className="container-VerAutor">
        <Navbar/>
-      <div className="navbar-reservas">
-        <Link to={"/editarautor/:id"}>
-          <p>Editar Autor</p>
-        </Link>
-
-        <p>Ver Autor</p>
-
-        <Link to={"/CriarAutor"}>
-          <p>Criar Autor</p>
-        </Link>
-
-        <Link to={"/NavegacaoADM"}>
-          <p>Voltar</p>
-        </Link>
-      </div>
+ 
       <div className="alinhar-autores">
         <div className="autores">
           <h1>Autores</h1>

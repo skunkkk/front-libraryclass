@@ -23,15 +23,7 @@ export default function InserirMural() {
   return (
     <div className="container-muraladm">
        <Navbar/>
-      <div className="navbar">
-        <p>Inserir no mural</p>
-        <Link to={"/VerMural"}>
-          <p>Ver murais</p>
-        </Link>
-        <Link to={"/NavegacaoADM"}>
-          <p>Voltar</p>
-        </Link>
-      </div>
+      
       <div className="box1">
         <h1>Inserir mensagem no mural</h1>
         <textarea

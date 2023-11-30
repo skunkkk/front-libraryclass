@@ -45,17 +45,17 @@ const Navbar = () => {
       );
       break;
 
-    case "/Sessoes":
+    case "/sessoes":
       conteudoNav = (
         <>
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link className="nav-link" to={"/VerAutor"}>
+              <Link className="nav-link" to={"/versessoes"}>
                 <FontAwesomeIcon icon={faEye} /> Ver Sessão
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" to={"/CriarAutor"}>
+              <Link className="nav-link active" to={"/sessoes"}>
                 <FontAwesomeIcon icon={faPlus} /> Criar Sessão
               </Link>
             </li>
@@ -647,6 +647,57 @@ const Navbar = () => {
                         </>
                       );
                       break;
+
+                      case "/InserirPublicacao":
+                        conteudoNav = (
+                          <>
+                            <ul className="navbar-nav">
+                              <li className="nav-item">
+                                <Link className="nav-link" to={"/VerPublicacao"}>
+                                  <FontAwesomeIcon icon={faEye} /> Ver Publicação
+                                </Link>
+                              </li>
+                    
+                              <li className="nav-item">
+                              <Link className="nav-link active" to={"/InserirPublicacao"}>
+                                <FontAwesomeIcon icon={faPlus} /> Criar Publicação
+                              </Link>
+                            </li>
+                              <li className="nav-item">
+                                <Link className="nav-link" to={"/NavegacaoADM"}>
+                                  <FontAwesomeIcon icon={faArrowAltCircleLeft} /> Voltar
+                                </Link>
+                              </li>
+                            </ul>
+                          </>
+                        );
+                        break;
+
+                        case "/versessoes":
+                          conteudoNav = (
+                            <>
+                              <ul className="navbar-nav">
+                                <li className="nav-item">
+                                  <Link className="nav-link active" to={"/versessoes"}>
+                                    <FontAwesomeIcon icon={faEye} /> Ver Sessões
+                                  </Link>
+                                </li>
+                                <li className="nav-item">
+                              <Link className="nav-link" to={"/sessoes"}>
+                                <FontAwesomeIcon icon={faPlus} /> Criar Sessão
+                              </Link>
+                            </li>
+                      
+    
+                                <li className="nav-item">
+                                  <Link className="nav-link" to={"/NavegacaoADM"}>
+                                    <FontAwesomeIcon icon={faArrowAltCircleLeft} /> Voltar
+                                  </Link>
+                                </li>
+                              </ul>
+                            </>
+                          );
+                          break;
   
 
 

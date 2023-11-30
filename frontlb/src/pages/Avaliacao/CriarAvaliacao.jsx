@@ -25,44 +25,74 @@ export default function CriarAvaliacoes() {
     }
   }
   return (
-    <div className="container-avaliacao">
-       <Navbar/>
-      <div className="navbar-reservas">
-        <Link to={"/CriarAvaliacoes"}>
-          <p>Criar Avaliação</p>
-        </Link>
-        <Link to={"/VerAvaliacoes"}>
-          <p>Ver Avaliações</p>
-        </Link>
-        <Link to={"/NavegacaoADM"}>
-          <p>Voltar</p>
-        </Link>
-      </div>
-      <div className="alinhar-inputs">
-        <div
-          className="classInput"
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        textAlign: "center",
+        justifyContent: "center",
+        flexDirection: "column",
+        width: "100vw",
+        height: "",
+      }}
+    >
+      <Navbar />
+
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
+     
           onChange={(e) => setId_avaliacoesPeriodicas(e.target.value)}
-        >
-          <label>ID avaliação: </label>
-          <input type="text" className="input-avaliacao" required/>
-        </div>
-        <div
-          className="classInput"
-          onChange={(e) => setIsbn_livros(e.target.value)}
-        >
-          <label>ISBN: </label>
-          <input type="text" className="input-avaliacao" required/>
-        </div>
-        <div
-          className="classInput"
+          <input type="text"  placeholder="ID avaliação:" required   style={{
+            marginBottom: "10px",
+            padding: "8px",
+            width: "300px",
+          }}/>
+       
+       
+          
+          <input
+            type="text"
+            placeholder="ISBN:"
+            required
+            onChange={(e) => setIsbn_livros(e.target.value)}
+            style={{
+              marginBottom: "10px",
+              padding: "8px",
+              width: "300px",
+            }}
+          />
+     
+       
+         
+          <input
+            type="text"
+            placeholder="Descrição:"
+            required
           onChange={(e) => setDescricao(e.target.value)}
-        >
-          <label>Descrição: </label>
-          <input type="text" className="input-avaliacao" required/>
-        </div>
+
+            style={{
+              marginBottom: "10px",
+              padding: "8px",
+              width: "300px",
+            }}
+          />
+     
       </div>
       <button
-        className="button-avaliacao"
+        type="button"
+        style={{
+          padding: "8px",
+          width: "300px",
+          backgroundColor: "#007bff",
+          color: "#fff",
+          border: "none",
+          cursor: "pointer",
+        }}
         onClick={() => adicionarAvaliacoes()}
       >
         Criar avaliação

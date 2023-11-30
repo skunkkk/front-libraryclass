@@ -32,7 +32,7 @@ export default function InserirFicha() {
         justifyContent: "center",
         flexDirection: "column",
         width: "100vw",
-        height: "100vh",
+        height: "",
       }}
     >
        <Navbar/>

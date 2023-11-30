@@ -21,7 +21,7 @@ export default function VerFichas() {
         justifyContent: "center",
         flexDirection: "column",
         width: "100vw",
-        height: "100vh",
+        height: "",
       }}
     >
        <Navbar/>

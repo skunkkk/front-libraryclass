@@ -39,26 +39,11 @@ export default function InserirLivro() {
         justifyContent: "center",
         flexDirection: "column",
         width: "100vw",
-        height: "100vh",
+        height: "",
       }}
     >
        <Navbar/>
-      <Link
-        to="/EditarLivro"
-        style={{ textDecoration: "none", color: "#007bff" }}
-      >
-        <p>Editar livro</p>
-      </Link>
-      <Link to="/VerLivro" style={{ textDecoration: "none", color: "#007bff" }}>
-        <p>Ver Livro</p>
-      </Link>
-      <Link
-        to="/NavegacaoADM"
-        style={{ textDecoration: "none", color: "#007bff" }}
-      >
-        <p>Voltar</p>
-      </Link>
-
+    
       <h1>Inserir Livro:</h1>
       <div
         style={{

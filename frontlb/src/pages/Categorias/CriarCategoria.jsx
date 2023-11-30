@@ -19,14 +19,21 @@ export default function CriarCategoria() {
   }
 
   return (
-    <div className="container-verCategoria"
-    style={{backgroundColor:"transparent"}}
-    >
+    <div style={{
+      display: "flex",
+      alignItems: "center",
+      textAlign: "center",
+      justifyContent: "center",
+      flexDirection: "column",
+      width: "100vw",
+      height: "",
+    }}>
        <Navbar/>
       <div className="classInput"
         style={{
-          backgroundColor: "transparent",
-          color: 'black'
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
         }}
 
 

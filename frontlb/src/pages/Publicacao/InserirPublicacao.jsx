@@ -26,19 +26,21 @@ export default function InserirPublicacao() {
     }
   }
   return (
+    
     <div
       style={{
         display: "flex",
-        alignItems: "cen  ter",
+        alignItems: "center",
         textAlign: "center",
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
         width: "100vw",
-        height: "100vh",
+        height: "",
       }}
     >
-       <Navbar/>
+        <Navbar/>
+     
       <h1>Inserir Publicação:</h1>
       <input
         type="text"

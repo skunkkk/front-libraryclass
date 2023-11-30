@@ -153,9 +153,9 @@ export default function MyRoutes() {
 
 <Route path='/VerLivro' element={<VerLivro />} />
 
-< Route path='/ReservasAtivas' element={<ReservasAtivas />} />
 
-< Route path='/InserirLivro' element={<InserirLivro />} />
+
+
 
 
 

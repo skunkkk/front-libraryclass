@@ -25,41 +25,83 @@ export default function InserirDevolucao() {
   }
   return (
     <div className="container-inserirDevolucao">
-      <h1>Inserir devolução</h1>
-      <div className="classInput"
+      <Navbar />
+      
+      <div
+        className="classInput"
         style={{
-          backgroundColor: 'transparent', marginBottom: "10px",
-          padding: "8px",
-          width: "300px",
+          display: "flex",
+          alignItems: "center",
+          textAlign: "center",
+          justifyContent: "center",
+          flexDirection: "column",
+          width: "100vw",
+          height: "",
         }}
       >
-         <Navbar/>
-        <label style={{ color: 'black' }}>ID da devolução: </label>
-        <input type="text" onChange={(e) => setId_devolucoes(e.target.value)} required />
+        <h1>Inserir devolução</h1>
+        <label
+          style={{
+            color: "black",
+            marginBottom: "10px",
+            padding: "8px",
+            width: "300px",
+          }}
+        >
+          ID da devolução:{" "}
+        </label>
+        <input
+          type="text"
+          onChange={(e) => setId_devolucoes(e.target.value)}
+          required
+        />
 
-        <label style={{ color: 'black' }}>ID usuario: </label>
-        <input type="text" onChange={(e) => setId_usuarios(e.target.value)} required />
+        <label
+          style={{
+            color: "black",
+            marginBottom: "10px",
+            padding: "8px",
+            width: "300px",
+          }}
+        >
+          ID usuario:{" "}
+        </label>
+        <input
+          type="text"
+          onChange={(e) => setId_usuarios(e.target.value)}
+          required
+        />
 
-
-
-        <label style={{ color: 'black' }}>Data: </label>
+        <label
+          style={{
+            color: "black",
+            marginBottom: "10px",
+            padding: "8px",
+            width: "300px",
+          }}
+        >
+          Data:{" "}
+        </label>
         <input
           type="text"
           onChange={(e) => setData_devolucao(e.target.value)}
-          required />
-        <button 
-        style={{ 
-          marginTop: '1rem',
-          padding: "8px",
-          width: "230px",
-          backgroundColor: "#007bff",
-          color: "#fff",
-          border: "none",
-          cursor: "pointer",
-      
-      }} onClick={() => adicionarDevolucao()}>Inserir</button>
+          required
+        />
+        <button
+          style={{
+            marginTop: "1rem",
+            padding: "8px",
+            width: "230px",
+            backgroundColor: "#007bff",
+            color: "#fff",
+            border: "none",
+            cursor: "pointer",
+          }}
+          onClick={() => adicionarDevolucao()}
+        >
+          Inserir
+        </button>
       </div>
-
     </div>
   );
 }
