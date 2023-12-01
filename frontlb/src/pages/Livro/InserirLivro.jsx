@@ -41,7 +41,6 @@ export default function InserirLivro() {
         justifyContent: "center",
         flexDirection: "column",
         width: "100vw",
-        height: "",
       }}
     >
        <Navbar/>

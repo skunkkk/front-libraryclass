@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar/NavBar";
 import axios from "axios";
-
+import './PaginaInicial.css'
 export default function TelaNoticias() {
   const [noticias, setNoticias] = useState([]);
 
@@ -13,17 +13,9 @@ export default function TelaNoticias() {
   }, []);
 
   return (
-    <div>
+    <div className="container-principal">
       <Navbar />
       <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr 1fr",
-          gap: "10px",
-          height: "100%",
-          justifyContent: "center",
-          padding: "10px",
-        }}
       >
         {noticias.map((noticia, index) => (
           <div

@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import Navbar from '../../components/Navbar/NavBar';
 import { format } from 'date-fns';
-
+import './ReservasAtivas.css';
 
 export default function ReservasAtivas() {
   const [dados, setDados] = useState([]);
@@ -37,12 +37,13 @@ export default function ReservasAtivas() {
   };
 
   return (
-    <div className="container mt-4 text-center">
+    <div className="container-reservas ">
       <Navbar/>
-      <h1 className="mb-4">Reservas Ativas</h1>
+      
 
-      <div className="row justify-content-center mb-4">
-        <div className="col-md-4">
+      <div className="conteudo-reservas column justify-content-center mb-4">
+      <h1 className="mb-4 ">Reservas Ativas</h1>
+        <div className="inputs-reservas col-md-4">
           <select
             className="form-control"
             onChange={(e) => setTipoPesquisa(e.target.value)}

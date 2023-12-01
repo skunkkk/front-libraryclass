@@ -33,7 +33,7 @@ export default function InicioLibrary() {
       </div>
       <div className="container-search">
         <form className="d-flex me-2">
-          <input className="form-control"
+          <input className="form-control "
             type="search"
             placeholder="Procurar livros"
             aria-label="Search"
@@ -56,7 +56,6 @@ export default function InicioLibrary() {
           </div>
         ))}
       </div>
-      {/* <h1>rafael arrume essa zona urgente que diacho eh esse aqui de componente que tem 3 responsabilidades diferentes arrume esse codigo e deixe ele perfeito, arrume o componente cards para receber as props da maneira correta o codigo ja esta ai dos livros mais emprestados o resto eh com voce,criei outro componente para substituir ate voce terminar essa joça</h1> */}
        </div>
       
     </div>

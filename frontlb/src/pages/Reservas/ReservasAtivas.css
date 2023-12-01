@@ -1,4 +1,32 @@
 
+.container-reservas{
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;  
+  background-color: #1481BA;
+  color: white;
+  height: 100vh;
+  width: 100vw;
+}
+
+
+.conteudo-reservas{
+  
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  background-color: #06283a94;
+  justify-content: space-between;
+  height: 40%;
+}
+
+.inputs-reservas{
+  height: 20%;
+  width: 100%;
+}
+
 /* header */
 .header {
   padding: 20px 0;
@@ -31,4 +59,19 @@
   border-radius: 0 5px 5px 0;
   border: 1px solid #ddd;
   background-color: #eee;
+}
+
+@media only screen and (max-width : 600px) {
+.conteudo-reservas{
+  width: 90%;
+  height: 80%;
+}
+
+.inputs-reservas{
+  height: 10%;
+}
+
+.form-control{
+  width: 100%;
+}
 }

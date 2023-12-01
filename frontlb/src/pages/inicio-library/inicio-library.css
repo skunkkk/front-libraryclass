@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Gloock&family=Poppins:wght@200&display=swap");
 
 .container-inicio-library {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
   height: 100vh;
   width: 100vw;
   background-image: url("../../../public/fundolib.jpg");
@@ -10,8 +15,18 @@
 }
 .container-conteudo{
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-top: 50px;
+  height: 80%;
+  width: 90%;
+  background-color: rgba(0, 0, 0, 0.281);
+  border-radius: 1rem;
 }
+
+.form-control{
+  width: 40vw;
+}
+
+
 
