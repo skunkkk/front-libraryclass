@@ -1,0 +1,9 @@
+.container-cardemp{
+    background-color: white;
+    width: 60%;
+    height: 10%;
+    color: black;
+    border-radius: 1rem;
+    padding-left: 40px;
+    font-family: Poppins;
+}

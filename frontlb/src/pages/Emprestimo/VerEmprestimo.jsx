@@ -3,6 +3,7 @@ import "./VerEmprestimo.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import Navbar from "../../components/Navbar/NavBar";
+import CardEmp from "../../components/CardEmp/CardEmp";
 export default function VerEmprestimo() {
   const [data, setData] = useState([]);
 
@@ -15,21 +16,17 @@ export default function VerEmprestimo() {
   return (
     <div className="container-veremprestimo">
        <Navbar/>
-      <div className="navbar">
-        <p>Ver emprestio</p>
-        <Link to={"/NavegacaoADM"}>
-          <p>Voltar</p>
-        </Link>
-      </div>
-      <box className="box1">
-        <div className="box-msgmurais">
-          <div className="msgmural"></div>
-          <div className="msgmural"></div>
-          <div className="msgmural"></div>
-          <div className="msgmural"></div>
-          <div className="msgmural"></div>
+      
+        <div className="box1">
+          <CardEmp />
+          <CardEmp />
+          <CardEmp />
+          <CardEmp />
+          <CardEmp />
+          <CardEmp />
+          <CardEmp />
+
         </div>
-      </box>
     </div>
   );
 }
