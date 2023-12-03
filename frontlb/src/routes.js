@@ -56,6 +56,8 @@ export default function MyRoutes() {
             <Routes>
 
                 <Route path="/" element={<PaginaInicial />} />
+                <Route path="/areausuario" element={<Inicio />} />
+
             
                 <Route path="/Configuracao" element={<Configuração />} />
                 <Route path="/FAQ" element={<Faq />} />

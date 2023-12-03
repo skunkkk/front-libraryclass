@@ -753,7 +753,7 @@ const Navbar = () => {
           id="navbarNav"
         >
           {conteudoNav}
-          <button className="btn btn-custom">Área do Usuário</button>
+          <Link to="/areausuario" className="btn btn-custom">Área do Usuário</Link>
         </div>
       </div>
     </nav>
