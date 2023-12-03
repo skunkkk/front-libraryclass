@@ -7,6 +7,15 @@
   .btn-custom:hover {
     background-color: #560ac0;
   }
+
+  .btn-custom-logout:hover {
+    color: #fff;
+    background-color: #c00a3e;
+  }
+  .btn-custom-logout {
+    color: #d4d1d1;
+    background-color: #940726;
+  }
 .nav-item{
     margin-right: 10px;
 }

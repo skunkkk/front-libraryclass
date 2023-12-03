@@ -14,11 +14,19 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Calendario from "./Cal.pdf";
 
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 const Navbar = () => {
   const location = useLocation();
   console.log(location.pathname);
   let conteudoNav;
+  const navigate=useNavigate();
+  const token = localStorage.getItem("authData");
+
+
+  function logout(){
+    localStorage.clear();
+    navigate('/');
+  }
 
   switch (location.pathname) {
     case "/CriarAutor":
@@ -753,7 +761,8 @@ const Navbar = () => {
           id="navbarNav"
         >
           {conteudoNav}
-          <Link to="/areausuario" className="btn btn-custom">Área do Usuário</Link>
+          {token ? <button className="btn btn-custom-logout" onClick={()=>logout()}>Sair</button> :<Link to="/areausuario" className="btn btn-custom">Área do Usuário</Link>}
+          
         </div>
       </div>
     </nav>

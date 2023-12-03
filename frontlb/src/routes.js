@@ -1,5 +1,5 @@
-import React from 'react'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { useEffect } from 'react'
+import { BrowserRouter, Routes, Route, Navigate, useNavigate } from "react-router-dom";
 import Configuração from './pages/Configuração/configuração';
 import Faq from './pages/FAQ/faq';
 import Inicio from './pages/tela-inicial/incio';
@@ -48,8 +48,29 @@ import NoticiasCompleta from './pages/Noticias/NoticiasCompleta';
 import UmaNoticia from './pages/Noticias/UmaNoticia';
 import CriarNoticia from './pages/Noticias/CriarNoticia';
 import ReservaFeita from './pages/Reservas/ReservaFeita';
+import { decodeToken } from 'react-jwt';
+
+
+
+const RotaPrivada = ({ nivelDeAcesso, children, }) => {
+    const token = localStorage.getItem("authData");
+    const decodificado = decodeToken(token);
+    const tipo = decodificado?.data?.tipo;
+
+    console.log(tipo)
+
+    if (!nivelDeAcesso.includes(tipo)) {
+        return <Navigate to="/login" replace />
+
+    }
+
+    return children
+};
+
 
 export default function MyRoutes() {
+
+
     return (
         <BrowserRouter>
             {/* <MenuH/> */}
@@ -58,13 +79,12 @@ export default function MyRoutes() {
                 <Route path="/" element={<PaginaInicial />} />
                 <Route path="/areausuario" element={<Inicio />} />
 
-            
+
                 <Route path="/Configuracao" element={<Configuração />} />
                 <Route path="/FAQ" element={<Faq />} />
                 <Route path="/Perfil" element={<Perfil />} />
                 <Route path="/StatusLivro" element={<StatusLivro />} />
                 <Route path="/Library" element={<InicioLibrary />} />
-                <Route path='/NavegacaoADM' element={<NavegacaoADM />} />
 
                 <Route path="/VerDevolucoes" element={<VerDevolucoes />} />
                 <Route path="/InserirDevolucao" element={<InserirDevolucao />} />
@@ -79,7 +99,7 @@ export default function MyRoutes() {
                 <Route path="/verCategoria" element={<VerCategoria />} />
                 <Route path="/EditarCategoria" element={<EditarCategoria />} />
                 <Route path="/DeletarCategoria" element={<DeletarCategoria />} />
-                
+
                 <Route path='/VerPublicacao' element={<VerPublicacao />} />
                 <Route path='/InserirPublicacao' element={<InserirPublicacao />} />
 
@@ -98,34 +118,71 @@ export default function MyRoutes() {
 
                 < Route path='/CriarAutor' element={<CriarAutor />} />
                 < Route path='/VerAutor' element={<VerAutor />} />
-                < Route path='/editarautor/:id' element={<EditarAutor />} />
+                
+                < Route path='/editarautor/:id' element={
+                    <RotaPrivada nivelDeAcesso={["coordenador","professor"]} >
+                        <EditarAutor />
+                    </RotaPrivada>
+                } />
 
-                < Route path='/VerAvaliacao' element={<VerAvaliacoes />} />
+                < Route path='/VerAvaliacao' element={
+                    <RotaPrivada nivelDeAcesso={["coordenador"]} >
+                <VerAvaliacoes />
+                    </RotaPrivada>
+                } />
 
                 < Route path='/VerFichas' element={<VerFichas />} />
-                < Route path='/InserirFicha' element={<InserirFicha />} />
+                < Route path='/InserirFicha' element={
+                    <RotaPrivada nivelDeAcesso={["coordenador"]} >
+                        <InserirFicha />
+                    </RotaPrivada>
+                } />
 
                 < Route path='/VerUmaFicha' element={<VerUnicaFicha />} />
 
-                < Route path='/veremprestimo' element={<VerEmprestimo />} />
+                < Route path='/veremprestimo' element={
+                <RotaPrivada nivelDeAcesso={["coordenador"]} >
+                    <VerEmprestimo />
+                </RotaPrivada>
+                } />
 
                 < Route path='/cadastro' element={<Cadastro />} />
                 < Route path='/login' element={<Login />} />
                 {/* < Route path='/VerUmLivro' element={<VerUmLivro />} />  */}
 
 
-                
+
                 < Route path='/livroUnico/:id' element={<VizualizarLivroUnico />} />
                 < Route path='/minhasreservas' element={<MinhasReservas />} />
 
 
 
-                < Route path='/noticias' element={<PaginaInicial/>} />
-                < Route path='/noticiascompleta' element={<NoticiasCompleta/>} />
-                < Route path='/noticias/:id' element={<UmaNoticia/>} />
-                < Route path='/noticias/criar' element={<CriarNoticia/>} />
+                < Route path='/noticias' element={<PaginaInicial />} />
+                < Route path='/noticiascompleta' element={<NoticiasCompleta />} />
+                < Route path='/noticias/:id' element={<UmaNoticia />} />
 
-                < Route path='/reservas/:id_reserva' element={<ReservaFeita/>} />
+
+
+                <Route
+                    path="/noticias/criar"
+                    element={
+                        <RotaPrivada nivelDeAcesso={["coordenador"]} >
+                            <CriarNoticia />
+                        </RotaPrivada>
+                    }
+                />
+
+                <Route path='/NavegacaoADM' element={
+                    <RotaPrivada nivelDeAcesso={["coordenador"]} >
+                        <NavegacaoADM />
+                    </RotaPrivada>
+                } />
+
+
+
+                {/* < RotaPrivada path='/noticias/criar' element={<CriarNoticia />} /> */}
+
+                < Route path='/reservas/:id_reserva' element={<ReservaFeita />} />
 
 
 
@@ -139,7 +196,7 @@ export default function MyRoutes() {
 
             </Routes >
         </BrowserRouter >
-              
+
     )
 }
 
