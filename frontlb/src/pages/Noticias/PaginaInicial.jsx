@@ -13,16 +13,17 @@ export default function TelaNoticias() {
   }, []);
 
   return (
-    <div className="container-principal">
+    <div >
       <Navbar />
-      <div className="top-principal">
-      <p>"Leia, Explore, Aprenda."</p>  
-      <h1 className="titulo-principal">Library Class</h1>
-      <span className="personalizar-button"></span>
-      <button alt=""className="button-principal">Cadastrar-se</button>
       
-      </div>
       <div
+       style={{
+        display: "grid",
+        gridTemplateColumns: "1fr 1fr 1fr",
+        gap: "10px",
+        height: "100%",
+        justifyContent: "center",
+        padding: "10px",}}
       >
         {noticias.map((noticia, index) => (
           <div
