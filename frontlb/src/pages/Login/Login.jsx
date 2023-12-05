@@ -66,7 +66,7 @@ export default function Login() {
         </div>
         <button
           type="button"
-          className="botao-login"
+          className="botao-cadastro"
           onClick={() => handleLogin()}
         >
           Entrar

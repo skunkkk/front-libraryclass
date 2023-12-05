@@ -13,7 +13,11 @@ export default function TelaNoticias() {
   }, []);
 
   return (
-    <div >
+    <div style={{
+      backgroundColor: '#3EAEF4',
+      height : '100vh',
+      width : '100vw',
+      }} >
       <Navbar />
       
       <div
