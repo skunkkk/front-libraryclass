@@ -1,9 +1,7 @@
 .container-login{
   height: 100vh;
   width: 100vw;
-  background-image: url("../../../public/fundolib.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #3EAEF4;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,11 +70,6 @@
     top: -20px;
     color: #3EAEF4;
     font-size: 0.9rem;
-  }
-
-  .botao-login{
-    margin-top: 2rem;
-    width: 40vw;
   }
 
   .logar{

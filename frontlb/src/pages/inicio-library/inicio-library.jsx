@@ -26,11 +26,15 @@ export default function InicioLibrary() {
     <>
     <div className="container-inicio-library">
        <Navbar/>
-       <div className="container-conteudo">
-        <div className="Titulo">
-        <h1 className="nome">LibraryClass</h1>
+       <div className="Titulo">
+        <h1 style={{
+            color : 'white',
+            fontFamily : 'Poppins'
+        }}>LibraryClass</h1>
         <img src="logo.png" alt="" className="logo" />
       </div>
+       <div className="container-conteudo">
+        
       <div className="container-search">
         <form className="d-flex me-2">
           <input className="form-control "
@@ -42,7 +46,7 @@ export default function InicioLibrary() {
             required/>
         </form>
       </div>
-      <div className="row row-cols-1 row-cols-md-4 g-4">
+      <div className=" row row-cols-1 row-cols-md-4 g-4">
         {livrosFiltrados.map((elemento) => (
           <div key={elemento.isbn_livros} className="col">
             <div className="card" style={{ width: "200px", height: "200px" }}>

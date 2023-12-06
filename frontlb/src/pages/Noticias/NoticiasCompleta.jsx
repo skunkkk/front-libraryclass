@@ -13,9 +13,14 @@ const NoticiasCompleta = () => {
   
 
   return (
-    <div>
+    <div style={{
+      backgroundColor: '#3EAEF4',
+      height : '100vh',
+      width : '100vw',
+      color : 'white',
+    }}>
       <Navbar />
-      <div style={{ padding: "20px", display: "flex", flexDirection: "column", alignItems: "center" }}>
+      <div style={{ padding: "20px", display: "flex", flexDirection: "column", alignItems: "center"}}>
         <h1>Todas as Notícias</h1>
         <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between" }}>
           {noticias.map((noticia) => (
@@ -41,7 +46,7 @@ const NoticiasCompleta = () => {
           ))}
         </div>
       </div>
-      <footer style={{ textAlign: "center", marginTop: "20px" }}>
+      <footer style={{ textAlign: "center", marginTop: "20px"}}>
         <p>Entre em contato conosco: coordenacaoanarita@gmail.com</p>
       </footer>
     </div>
