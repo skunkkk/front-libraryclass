@@ -116,7 +116,11 @@ export default function MyRoutes() {
                 < Route path='/versessoes' element={<VerSessoes />} />
                 < Route path='/sessoes' element={<Sessoes />} />
 
-                < Route path='/CriarAutor' element={<CriarAutor />} />
+                < Route path='/CriarAutor' element={  <RotaPrivada nivelDeAcesso={["coordenador","professor"]} >
+                        <CriarAutor />
+                    </RotaPrivada>}
+                    
+                 />
                 < Route path='/VerAutor' element={<VerAutor />} />
                 
                 < Route path='/editarautor/:id' element={
@@ -158,7 +162,9 @@ export default function MyRoutes() {
 
 
                 < Route path='/noticias' element={<PaginaInicial />} />
+                
                 < Route path='/noticiascompleta' element={<NoticiasCompleta />} />
+
                 < Route path='/noticias/:id' element={<UmaNoticia />} />
 
 
