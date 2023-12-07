@@ -16,19 +16,29 @@ export default function VerAutor() {
   }, []);
   console.log(data);
   return (
-    <div className="container-VerAutor">
-       <Navbar/>
- 
+    <div
+      className="container-VerAutor"
+      style={{
+        display: "flex",
+        alignItems: "center",
+        textAlign: "center",
+        flexDirection: "column",
+        width: "100vw",
+        height: "100vh",
+      }}
+    >
+      <Navbar />
+
       <div className="alinhar-autores">
         <div className="autores">
           <h1>Autores</h1>
 
-          <table>
+          <table border={1}>
             <tr className="autores-caracter">
-              <th>id do autor</th>
-              <th>nome do autor</th>
-              <th>nacionalidade do autor</th>
-              <th>ações</th>
+              <td>id do autor</td>
+              <td>nome do autor</td>
+              <td>nacionalidade do autor</td>
+              <td>ações</td>
             </tr>
             {data.map((elemento) => (
               <tr>
@@ -37,7 +47,6 @@ export default function VerAutor() {
                 <td>{elemento.autor_nacionalidade}</td>
                 <td>
                   <button onClick={() => apagar(elemento.id)}>Apagar</button>
-                  <Link to={`/editarautor/${elemento.id}`}>Editar</Link>
                 </td>
               </tr>
             ))}

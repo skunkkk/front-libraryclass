@@ -136,11 +136,7 @@ const Navbar = () => {
                   <FontAwesomeIcon icon={faPlus} /> Criar Autor
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to={"/editarautor/:id"}>
-                  <FontAwesomeIcon icon={faPenToSquare} /> Editar Autor
-                </Link>
-              </li>
+           
               <li className="nav-item">
                 <Link className="nav-link" to={"/NavegacaoADM"}>
                   <FontAwesomeIcon icon={faArrowAltCircleLeft} /> Voltar
