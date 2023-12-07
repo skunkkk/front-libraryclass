@@ -30,21 +30,7 @@ export default function VerLivro() {
       }}
     >
        <Navbar/>
-      <div className="navbar">
-        <Link to={"/InserirLivro"}>
-          <p>Inserir livro</p>
-        </Link>
-        <Link to={"/EditarLivro"}>
-          {" "}
-          <p>Editar livro</p>{" "}
-        </Link>
-
-        <p>Ver Livro</p>
-
-        <Link to={"/NavegacaoADM"}>
-          <p>Voltar</p>
-        </Link>
-      </div>
+    
       <h1>Livros Cadastrados:</h1>
       <table border={1}>
         <tr>
