@@ -14,7 +14,6 @@ export default function TelaNoticias() {
 
   return (
     <div style={{
-      backgroundColor: '#3EAEF4',
       height : '100vh',
       width : '100vw',
       }} >
@@ -37,7 +36,7 @@ export default function TelaNoticias() {
               overflow: "hidden",
               borderRadius: "8px",
               boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
-              gridColumn: index === 0 ? "span 2" : "auto", // Ajustado para index === 0
+              gridColumn: index === 0 ? "span 2" : "auto", 
             }}
           >
             <img

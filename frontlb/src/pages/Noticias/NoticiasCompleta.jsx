@@ -14,10 +14,9 @@ const NoticiasCompleta = () => {
 
   return (
     <div style={{
-      backgroundColor: '#3EAEF4',
       height : '100vh',
       width : '100vw',
-      color : 'white',
+      color : 'black',
     }}>
       <Navbar />
       <div style={{ padding: "20px", display: "flex", flexDirection: "column", alignItems: "center"}}>
@@ -40,14 +39,14 @@ const NoticiasCompleta = () => {
                 alt={noticia.titulo}
                 style={{ width: "100%", maxHeight: "400px", objectFit: "cover" }}
               />
-              <p>{noticia.conteudo}</p>
+              <p style={{color:'black'}}>{noticia.conteudo}</p>
               <Link to={`/noticias/${noticia.id_publicacao}`}>Leia mais</Link>
             </div>
           ))}
         </div>
       </div>
       <footer style={{ textAlign: "center", marginTop: "20px"}}>
-        <p>Entre em contato conosco: coordenacaoanarita@gmail.com</p>
+        <p style={{color:'black'}}>Entre em contato conosco: coordenacaoanarita@gmail.com</p>
       </footer>
     </div>
   );

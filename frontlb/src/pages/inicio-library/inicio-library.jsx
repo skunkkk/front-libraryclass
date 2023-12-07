@@ -28,10 +28,9 @@ export default function InicioLibrary() {
        <Navbar/>
        <div className="Titulo">
         <h1 style={{
-            color : 'white',
+            color : 'black',
             fontFamily : 'Poppins'
         }}>LibraryClass</h1>
-        <img src="logo.png" alt="" className="logo" />
       </div>
        <div className="container-conteudo">
         
