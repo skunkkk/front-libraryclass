@@ -1,22 +1,21 @@
 import React, { useEffect, useState } from "react";
-import "./Login.css";
+import { useNavigate } from "react-router-dom";
 import { useJwt } from "react-jwt";
-const token = localStorage.getItem("authData");
+import "./Login.css";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
-  const { decodedToken, hasExpired } = useJwt(token);
-  console.log(token);
+  const token = localStorage.getItem("authData");
+  const { hasExpired } = useJwt(token);
 
   useEffect(() => {
-    if (hasExpired) {
-      console.log("O token expirou.");
-    } else {
-      console.log("Token decodificado:", decodedToken);
+    if (token) {
+      navigate("/");
     }
-  }, [decodedToken, hasExpired]);
+  }, [token, navigate]);
 
   const handleLogin = async () => {
     const response = await fetch("http://127.0.0.1:8000/login", {
@@ -29,12 +28,10 @@ export default function Login() {
 
     if (response.ok) {
       const data = await response.json();
-
-      // Armazene o token no armazenamento local
       localStorage.setItem("authData", JSON.stringify(data));
-      console.log("Login bem-sucedido! Token armazenado:", data.token);
+      navigate("/");
     } else {
-      console.error("Falha na autenticação");
+      alert("Falha na autenticação");
     }
   };
 
@@ -71,9 +68,7 @@ export default function Login() {
         >
           Entrar
         </button>
-        <br></br>
-
-        <input type="button" value="checar" className="botao-cadastro" />
+        <br />
       </div>
     </div>
   );

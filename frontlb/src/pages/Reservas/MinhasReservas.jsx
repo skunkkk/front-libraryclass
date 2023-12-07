@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Navbar from '../../components/Navbar/NavBar';
+import { decodeToken } from 'react-jwt';
 
 const MinhasReservas = () => {
   const [reservas, setReservas] = useState([]);
-  const [id_usuarios,setIdUsuarios]=useState(12345678);
+  const token = localStorage.getItem("authData");
+  const decodificado = decodeToken(token);
+  const id_usuarios = decodificado?.sub;
 
   useEffect(() => {
     axios.get(`http://localhost:8000/minhasReservas/${id_usuarios}`) 

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar/NavBar";
 import axios from "axios";
 import './PaginaInicial.css'
+import { Link } from "react-router-dom";
 export default function TelaNoticias() {
   const [noticias, setNoticias] = useState([]);
 
@@ -11,6 +12,14 @@ export default function TelaNoticias() {
       setNoticias(noticiasOrdenadas);
     });
   }, []);
+
+  const truncateContent = (content, maxLength) => {
+    const words = content.split(" ");
+    if (words.length > maxLength) {
+      return words.slice(0, maxLength).join(" ") + "...";
+    }
+    return content;
+  };
 
   return (
     <div style={{
@@ -29,6 +38,7 @@ export default function TelaNoticias() {
         padding: "10px",}}
       >
         {noticias.map((noticia, index) => (
+          
           <div
             key={noticia.id}
             style={{
@@ -39,6 +49,15 @@ export default function TelaNoticias() {
               gridColumn: index === 0 ? "span 2" : "auto", 
             }}
           >
+            <Link
+          to={`/noticias/${noticia.id_publicacao}`}
+          key={noticia.id}
+          style={{
+            textDecoration: "none",
+            color: "inherit",
+            gridColumn: index === 0 ? "span 2" : "auto",
+          }}
+        >
             <img
               src={`http://localhost:8000/storage/noticias/${
                 noticia.imagem_publicacao.split("/")[1]
@@ -65,9 +84,10 @@ export default function TelaNoticias() {
                 {noticia.titulo}
               </h3>
               <p style={{ color: "#fff", fontSize: "14px" }}>
-                {noticia.conteudo}
+              {truncateContent(noticia.conteudo, 15)}
               </p>
             </div>
+        </Link>
           </div>
         ))}
       </div>

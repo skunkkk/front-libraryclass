@@ -1,11 +1,13 @@
 import axios from "axios";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../../components/Navbar/NavBar";
 
 export default function CriarNoticia() {
   const [titulo, setTitulo] = useState("");
   const [conteudo, setConteudo] = useState("");
   const [imagem_publicacao, setImagem] = useState(null);
+  const navigate = useNavigate();
 
   async function criarNoticia() {
     const formData = new FormData();
@@ -15,15 +17,13 @@ export default function CriarNoticia() {
     formData.append("id_usuarios", 123);
 
     try {
-        for (let pair of formData.entries()) {
-            console.log(pair[0] + ": " + pair[1]);
-          }
-
       const response = await axios.post(
         "http://localhost:8000/publicacoes",
-        formData,
+        formData
       );
       console.log(response.data);
+
+      navigate('/noticias');
     } catch (erros) {
       console.log(erros);
     }
@@ -31,67 +31,66 @@ export default function CriarNoticia() {
 
   return (
     <>
-    <Navbar/>
-    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "70vh" }}>
-      <div style={{ width: "400px", padding: "20px", boxShadow: "0 4px 8px rgba(0,0,0,0.1)", borderRadius: "8px" }}>
-        <h1 style={{ textAlign: "center", marginBottom: "20px" }}>Criar Notícia</h1>
+      <Navbar />
+      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "70vh" }}>
+        <div style={{ width: "400px", padding: "20px", boxShadow: "0 4px 8px rgba(0,0,0,0.1)", borderRadius: "8px" }}>
+          <h1 style={{ textAlign: "center", marginBottom: "20px" }}>Criar Notícia</h1>
 
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-          <label htmlFor="titulo">Título:</label>
-          <input
-            type="text"
-            id="titulo"
-            required
-            onChange={(e) => setTitulo(e.target.value)}
-            style={{
-              marginBottom: "10px",
-              padding: "8px",
-              width: "100%",
-            }}
-          />
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+            <label htmlFor="titulo">Título:</label>
+            <input
+              type="text"
+              id="titulo"
+              required
+              onChange={(e) => setTitulo(e.target.value)}
+              style={{
+                marginBottom: "10px",
+                padding: "8px",
+                width: "100%",
+              }}
+            />
 
-          <label htmlFor="conteudo">Conteúdo:</label>
-          <textarea
-            id="conteudo"
-            required
-            onChange={(e) => setConteudo(e.target.value)}
-            style={{
-              marginBottom: "10px",
-              padding: "8px",
-              width: "100%",
-              minHeight: "100px", 
-            }}
-          />
+            <label htmlFor="conteudo">Conteúdo:</label>
+            <textarea
+              id="conteudo"
+              required
+              onChange={(e) => setConteudo(e.target.value)}
+              style={{
+                marginBottom: "10px",
+                padding: "8px",
+                width: "100%",
+                minHeight: "100px",
+              }}
+            />
 
-          <label htmlFor="imagem">Imagem:</label>
-          <input
-            type="file"
-            id="imagem"
-            required
-            onChange={(e) => setImagem(e.target.files[0])}
-            style={{
-              marginBottom: "10px",
-            }}
-          />
+            <label htmlFor="imagem">Imagem:</label>
+            <input
+              type="file"
+              id="imagem"
+              required
+              onChange={(e) => setImagem(e.target.files[0])}
+              style={{
+                marginBottom: "10px",
+              }}
+            />
 
-          <button
-            type="button"
-            style={{
-              padding: "8px",
-              width: "100%",
-              backgroundColor: "#007bff",
-              color: "#fff",
-              border: "none",
-              cursor: "pointer",
-            }}
-            onClick={() => criarNoticia()}
-          >
-            Enviar Notícia
-          </button>
+            <button
+              type="button"
+              style={{
+                padding: "8px",
+                width: "100%",
+                backgroundColor: "#007bff",
+                color: "#fff",
+                border: "none",
+                cursor: "pointer",
+              }}
+              onClick={() => criarNoticia()}
+            >
+              Enviar Notícia
+            </button>
+          </div>
         </div>
       </div>
-    </div>
     </>
-
   );
 }

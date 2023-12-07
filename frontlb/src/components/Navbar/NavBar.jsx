@@ -11,16 +11,22 @@ import {
   faPlus,
   faArrowAltCircleLeft,
   faPenToSquare,
+  faTicket,
+  faLock,
 } from "@fortawesome/free-solid-svg-icons";
 import Calendario from "./Cal.pdf";
 
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { decodeToken } from "react-jwt";
 const Navbar = () => {
   const location = useLocation();
   console.log(location.pathname);
   let conteudoNav;
   const navigate=useNavigate();
   const token = localStorage.getItem("authData");
+  const decodificado = decodeToken(token);
+  const tipo = decodificado?.data?.tipo;
+  console.log(tipo)
 
 
   function logout(){
@@ -737,6 +743,22 @@ const Navbar = () => {
               <FontAwesomeIcon icon={faCalendar} /> Calendario
             </a>
           </li>
+          {
+            tipo=="usuario_comum" ?   <li className="nav-item">
+            <a className="btn btn-custom" onClick={()=>navigate('/minhasreservas')} >
+              <FontAwesomeIcon icon={faTicket} /> Minhas Reservas
+            </a>
+          </li> : ""
+          }
+          {
+            tipo =="professor" || tipo=="coordenador" || tipo=="diretor" ? <li className="nav-item">
+            <a className="btn btn-warning" onClick={()=>navigate('/navegacaoadm')} >
+              <FontAwesomeIcon icon={faLock} /> Administrador
+            </a>
+          </li> : ""
+          }
+        
+          
         </ul>
       );
   }

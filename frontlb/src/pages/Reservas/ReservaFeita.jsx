@@ -6,17 +6,19 @@ const ReservaFeita = () => {
   const { id_reserva } = useParams();
 
   return (
+    <>
+      <Navbar/>
     <div
       style={{
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
-        height: '100vh',
-        backgroundColor: '#f0f0f0', 
+        height: '90vh',
+        backgroundColor: '#f0f0f0',
+        marginTop:-50
       }}
     >
-      <Navbar></Navbar>
       <div
         style={{
           background: '#fff',
@@ -63,6 +65,7 @@ const ReservaFeita = () => {
         </p>
       </div>
     </div>
+    </>
   );
 };
 

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./Cadastro.css";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+
 export default function Cadastro() {
   const [id_usuarios, setId_usuarios] = useState("");
   const [nome, setNome] = useState("");
@@ -11,6 +13,8 @@ export default function Cadastro() {
   const [password, setPassword] = useState("");
   const [telefone, setTelefone] = useState("");
   const [observacoes, setObservacoes] = useState("...");
+
+  const navigate = useNavigate();
 
   async function enviarDados() {
     const dadosDoFormulario = {
@@ -29,7 +33,14 @@ export default function Cadastro() {
         "http://127.0.0.1:8000/users",
         dadosDoFormulario
       );
-      console.log(response.data);
+
+      const loginResponse = await axios.post("http://127.0.0.1:8000/login", {
+        email,
+        password,
+      });
+
+      localStorage.setItem("authData", JSON.stringify(loginResponse.data));
+      navigate("/");
     } catch (erros) {
       console.log(erros);
     }
@@ -68,7 +79,6 @@ export default function Cadastro() {
             />
             <label>Nome</label>
           </div>
-
           <div className="box-user-cadastro">
             <input
               type="tel"

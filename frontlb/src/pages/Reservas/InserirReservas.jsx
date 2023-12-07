@@ -80,7 +80,7 @@ console.log(reservas)
                   {format(new Date(reserva.data_reservas), 'dd/MM/yyyy')}
                   </td>
                   
-                  <td>{reserva.id_secao}</td>
+                  <td>{reserva.descricao}</td>
                   <td>{reserva.titulo_livros}</td>
                   <td>{reserva.id_usuarios}</td>
                   <td>{reserva.nome}</td>

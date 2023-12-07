@@ -7,7 +7,7 @@ export default function NavegacaoADM() {
       <table className="tabela-adm">
         <tr>
           <td>
-            <Link to={"/Sessoes"}>
+            <Link to={"/sessoes"}>
               <button className="button-adm"> Seções </button>
             </Link>
           </td>
@@ -18,7 +18,7 @@ export default function NavegacaoADM() {
           </td>
           <td>
             <Link to={"/noticias/criar"}>
-              <button className="button-adm">Publicações</button>
+              <button className="button-adm">Noticias</button>
             </Link>
           </td>
         </tr>
@@ -29,18 +29,6 @@ export default function NavegacaoADM() {
             </Link>
           </td>
           <td>
-            <Link to={"/VerEmprestimo"}>
-              <button className="button-adm">Emprestimos</button>
-            </Link>
-          </td>
-          <td>
-            <Link to={"/CriarCategoria"}>
-              <button className="button-adm">Categorias</button>
-            </Link>
-          </td>
-        </tr>
-        <tr>
-          <td>
             <Link to={"/CriarAvaliacoes"}>
               <button className="button-adm">Avaliações Periódicas</button>
             </Link>
@@ -50,6 +38,10 @@ export default function NavegacaoADM() {
               <button className="button-adm">Autor</button>
             </Link>
           </td>
+        </tr>
+        <tr>
+          
+          
           <td>
             <Link to={"/Login"}>
               <button className="button-adm">Sair</button>
