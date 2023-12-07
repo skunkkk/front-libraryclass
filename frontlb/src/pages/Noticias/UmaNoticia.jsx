@@ -28,11 +28,11 @@ const UmaNoticia = () => {
           alt={noticia.titulo}
           style={{ width: "100%", maxHeight: "400px", objectFit: "cover" }}
         />
-        <p>{noticia.conteudo}</p>
+        <p style={{color:'black'}}>{noticia.conteudo}</p>
         <Link to="/noticiascompleta">Voltar para Todas as Notícias</Link>
       </div>
       <footer style={{ textAlign: "center", marginTop: "20px" }}>
-        <p>Entre em contato conosco: coordenacaoanarita@gmail.com</p>
+        <p style={{color:'black'}}>Entre em contato conosco: coordenacaoanarita@gmail.com</p>
       </footer>
     </div>
   );
