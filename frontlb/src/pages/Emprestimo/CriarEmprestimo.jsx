@@ -29,15 +29,7 @@ export default function CriarEmprestimo() {
   return (
     <div className="container-criaremprestimo">
        <Navbar/>
-      <div className="navbar">
-        <p>Criar empréstimo</p>
-        <Link to={"/VerEmprestimo"}>
-          <p>Ver empréstimo</p>
-        </Link>
-        <Link to={"/NavegacaoADM"}>
-          <p>Voltar</p>
-        </Link>
-      </div>
+  
       <div className="box1">
         <div className="classInput">
           <label>ISBN: </label>

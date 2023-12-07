@@ -24,7 +24,8 @@ export default function VerSessoes() {
       width: "100vw",
       height: "",
     }}
-  >
+  > 
+  <Navbar></Navbar>
       
       
     

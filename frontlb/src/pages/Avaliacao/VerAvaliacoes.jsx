@@ -15,17 +15,7 @@ export default function VerAvaliacoes() {
   return (
     <div className="container-veravaliacao">
        <Navbar/>
-      <div className="navbar-reservas">
-        <Link to={"/CriarAvaliacoes"}>
-          <p>Criar Avaliação</p>
-        </Link>
-        <Link to={"/VerAvaliacoes"}>
-          <p>Ver Avaliações</p>
-        </Link>
-        <Link to={"/NavegacaoADM"}>
-          <p>Voltar</p>
-        </Link>
-      </div>
+  
       <div className="alinhar-inputs-ver">
         <h1>Avaliacoes Periodicas Feitas :</h1>
 

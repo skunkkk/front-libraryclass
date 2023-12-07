@@ -1,5 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import Navbar from '../../components/Navbar/NavBar';
 
 const ReservaFeita = () => {
   const { id_reserva } = useParams();
@@ -15,6 +16,7 @@ const ReservaFeita = () => {
         backgroundColor: '#f0f0f0', 
       }}
     >
+      <Navbar></Navbar>
       <div
         style={{
           background: '#fff',

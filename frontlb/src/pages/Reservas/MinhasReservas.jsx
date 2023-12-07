@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import Navbar from '../../components/Navbar/NavBar';
 
 const MinhasReservas = () => {
   const [reservas, setReservas] = useState([]);
@@ -27,6 +28,7 @@ console.log(reservas)
         minHeight: '100vh',
       }}
     >
+      <Navbar></Navbar>
       <h1 style={{ fontSize: '2.5em', marginBottom: '20px' }}>Suas Reservas</h1>
       {reservas.length === 0 ? (
         <p style={{ fontSize: '1.5em', color: '#555' }}>Você não possui reservas.</p>
