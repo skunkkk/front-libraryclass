@@ -46,7 +46,7 @@ export default function CriarAvaliacoes() {
         }}
       >
      
-          onChange={(e) => setId_avaliacoesPeriodicas(e.target.value)}
+         
           <input type="text"  placeholder="ID avaliação:" required   style={{
             marginBottom: "10px",
             padding: "8px",

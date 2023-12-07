@@ -14,20 +14,21 @@ export default function VerSessoes() {
   console.log(data);
 
   return (
-    <div className="container-sessoes">
+    <div className="container-sessoes"
+    style={{
+      display: "flex",
+      alignItems: "center",
+      textAlign: "center",
+      justifyContent: "center",
+      flexDirection: "column",
+      width: "100vw",
+      height: "",
+    }}
+  >
       
-      <div className="navbar">
-      <Navbar/>
-        <Link to={"/Sessoes"}>
-          {" "}
-          <p>Inserir Seção</p>
-        </Link>
-        <p>Ver Seções</p>
-        <Link to={"/NavegacaoADM"}>
-          <p>Voltar</p>
-        </Link>
-      </div>
-      <h1>testando</h1>
+      
+    
+      <h1>Sessoes</h1>
       <table border={1}>
         <tr>
           <th>id</th>
