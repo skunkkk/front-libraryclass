@@ -3,23 +3,26 @@
 .card-livro {
   position: relative;
   overflow: hidden;
-  width: 70%;
+  width: 100%;
   height: 30vh;
   transition: 0.3s;
-  margin: 1% 1% 1% 1%; 
+  margin: 1% 1% 1% 1%;
 }
 
 .card-livro img {
-  width: 70%;
-  height: 100%;
   object-fit: cover;
+}
+
+.livro-imagem {
+  height: 300vh;
+  width: 3000px;
 }
 
 .livro-titulo {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 70%;
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
   text-align: center;
@@ -34,14 +37,14 @@
 
 @media screen and (max-width: 767px) {
   .card-livro {
-    height: 40vh; 
-    width: 50%;   
-    margin: 10px auto; 
+    height: 40vh;
+    width: 100%;
+    margin: 10px auto;
   }
 
   .card-livro img {
-    height: 100%; 
-    width: 85%;   
+    height: 100%;
+    width: 85%;
   }
 
   .livro-titulo {

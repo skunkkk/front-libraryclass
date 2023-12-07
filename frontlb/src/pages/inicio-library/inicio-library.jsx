@@ -49,7 +49,7 @@ export default function InicioLibrary() {
         </div>
         <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mt-2">
           {livrosFiltrados.map((elemento) => (
-            <div key={elemento.isbn_livros} onClick={() => handleLivroClick(elemento.isbn_livros)} className="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+            <div key={elemento.isbn_livros} onClick={() => handleLivroClick(elemento.isbn_livros)} >
               <CardLivro
                 titulo={elemento.titulo_livros}
                 imagem={`http://localhost:8000/storage/livros/${elemento.foto_livros.split("/")[1]}`}
